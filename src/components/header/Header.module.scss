@@ -1,13 +1,10 @@
-//@import "../../styles/variables/global.scss";
-
 .header {
   display: flex;
   justify-content: space-between;
   width: 1110px;
   height: 58px;
-  background-color: orangered;
   margin: 32px auto 0;
-  //font-family: var(--font-family-main);
+  align-items: center;
 }
 
 .logoWrapper {

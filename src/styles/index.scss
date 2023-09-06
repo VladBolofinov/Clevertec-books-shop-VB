@@ -3,4 +3,11 @@
 .app {
   min-height: 100vh;
   font-family: var(--font-family-main);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  .wrapper-middle-section {
+    display: flex;
+  }
 }
