@@ -1,0 +1,26 @@
+//@import "../../styles/variables/global.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1110px;
+  height: 58px;
+  background-color: orangered;
+  margin: 32px auto 0;
+  //font-family: var(--font-family-main);
+}
+
+.logoWrapper {
+  display: flex;
+  .logo{
+    width: 194px;
+    height: 40px;
+  }
+  .headerName {
+    padding-left: 99px;
+  }
+}
+
+.authorisation {
+  width: 300px;
+}
