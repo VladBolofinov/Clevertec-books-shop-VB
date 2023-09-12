@@ -5,33 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/MainLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/MainLogoName.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/IconMenu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/IconSearch.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/IconView.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/filterIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo/FacebookLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo/InstagramLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo/LinkedinLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo/VkLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/IconStar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pictures/BookPhoto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pictures/bookNotFound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/booksList/bookItem/BookItem.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/booksList/bookItem/BookItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/build/buildLoaders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/build/buildLoaders.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/filterPanel/FilterPanel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/booksList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/booksList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logo-name.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +34,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/100nout/Desktop/Clevertec-books-shop-VB/src/assets/img/icons&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\100nout\\Desktop\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/100nout/Desktop/Clevertec-books-shop-VB/src/assets/img/pictures",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\100nout\\Desktop\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\pictures" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\icons" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\img" />
     </key>
@@ -89,7 +75,7 @@
       <workItem from="1694171249077" duration="601000" />
       <workItem from="1694425934811" duration="114000" />
       <workItem from="1694432622188" duration="9912000" />
-      <workItem from="1694525910449" duration="6785000" />
+      <workItem from="1694525910449" duration="11783000" />
     </task>
     <servers />
   </component>

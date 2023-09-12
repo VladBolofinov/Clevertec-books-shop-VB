@@ -7,15 +7,15 @@ interface ButtonProps {
     text?: string;
     margin?: string;
     height?: string;
-    backgroundColor?: string;
+    background?: string;
     fontWeight?: string;
     fontSize?: string;
     color?: string;
 }
 
-export const MyButton = ({ width, svgIcon, text, margin, height, backgroundColor, fontWeight, fontSize, color }: ButtonProps) => {
+export const MyButton = ({ width, svgIcon, text, margin, height, background, fontWeight, fontSize, color }: ButtonProps) => {
     return (
-        <button style={{ width, margin, height, backgroundColor, fontWeight, fontSize, color }} className={styles.myButton}>
+        <button style={{ width, margin, height, background, fontWeight, fontSize, color }} className={styles.myButton}>
             {svgIcon}
             {text}
         </button>

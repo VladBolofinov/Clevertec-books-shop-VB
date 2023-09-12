@@ -13,7 +13,7 @@ export const  FilterPanel = () => {
         text: 'По рейтингу',
         margin: '0 0 0 367px',
         height: '38px',
-        backgroundColor: 'white',
+        background: 'white',
         fontWeight: '400',
         fontSize: '14px',
         color: '#A7A7A7',
@@ -26,8 +26,8 @@ export const  FilterPanel = () => {
             </div>
                 <MyButton width={'55px'} height={'45px'} margin={'0 0 0 490px'} {...buttonProps}></MyButton>
             <div className={styles.btnWrapper}>
-                <MyButton width={'38px'} height={'38px'} svgIcon={<IconMenu/>} backgroundColor={'white'}/>
-                <MyButton width={'38px'} height={'38px'} svgIcon={<IconView/>} backgroundColor={'white'}/>
+                <MyButton width={'38px'} height={'38px'} svgIcon={<IconMenu/>} background={'white'}/>
+                <MyButton width={'38px'} height={'38px'} svgIcon={<IconView/>} background={'white'}/>
             </div>
         </div>
     )
