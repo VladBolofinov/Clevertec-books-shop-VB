@@ -6,12 +6,16 @@
   margin: 32px auto 0;
   align-items: center;
 }
+span {
+  width: 150px;
+  font-weight: 600;
+}
 
 .logoWrapper {
   display: flex;
   .logo{
-    width: 194px;
-    height: 40px;
+    display: flex;
+    align-items: center;
   }
   .headerName {
     padding-left: 99px;
@@ -19,5 +23,7 @@
 }
 
 .authorisation {
+  display: flex;
+  align-items: center;
   width: 300px;
 }

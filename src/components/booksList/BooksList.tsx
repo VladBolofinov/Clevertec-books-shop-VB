@@ -1,5 +1,5 @@
 import styles from './booksList.module.scss';
-import {FilterPanel} from "./filterPanel/FilterPanel";
+import {FilterPanel} from "../filterPanel/FilterPanel";
 export const BooksList = () => {
     return (
         <div className={styles.wrapper}>

@@ -1,0 +1,29 @@
+.panelWrapper {
+  width:825px;
+  height: 38px;
+  margin: 62px 0 32px 0;
+  display: flex;
+  .inputWrapper {
+    position: relative;
+  }
+  input {
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    padding: 10px 0 10px 35px;
+  }
+  .btnWrapper {
+    width: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 219px;
+    justify-content: space-between;
+  }
+}
+
+
