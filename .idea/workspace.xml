@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/icons/IconStar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/pictures/BookPhoto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/pictures/bookNotFound.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/booksList/bookItem/BookItem.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/booksList/bookItem/BookItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/booksList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/booksList.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItem/BookItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItem/BookItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/100nout/Desktop/Clevertec-books-shop-VB/src/assets/img/pictures",
+    "last_opened_file_path": "C:/Users/100nout/Desktop/Clevertec-books-shop-VB/src/components/booksList/bookItemRow",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,16 +46,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components\booksList\bookItemRow" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\pictures" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\icons" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components\booksList\bookItemRow" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\logo" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\img" />
-      <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components\header" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,7 +71,8 @@
       <workItem from="1694171249077" duration="601000" />
       <workItem from="1694425934811" duration="114000" />
       <workItem from="1694432622188" duration="9912000" />
-      <workItem from="1694525910449" duration="11783000" />
+      <workItem from="1694525910449" duration="11925000" />
+      <workItem from="1694680720906" duration="7664000" />
     </task>
     <servers />
   </component>
