@@ -1,16 +1,18 @@
 import './styles/index.scss';
 import {Header} from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
-import {Menu} from "./components/menu/Menu";
-import {BooksList} from "./components/booksList/BooksList";
+import {Link, Route, Routes} from "react-router-dom";
+import {Suspense} from "react";
+import {MainPageAsync} from "./pages/MainPage/MainPage.async";
+import {RulesPageAsync} from "./pages/RulesPage/RulesPage.async";
+import {ContractOfferPageAsync} from "./pages/ContractOfferPage/ContractOfferPage.async";
+import AppRouter from "./providers/router/AppRouter";
 const App = () => {
     return (
         <div className='app'>
+            <Link to={'/'}>На главную</Link>
             <Header/>
-            <div className='wrapper-middle-section'>
-                <Menu/>
-                <BooksList/>
-            </div>
+            <AppRouter/>
             <Footer/>
         </div>
     )

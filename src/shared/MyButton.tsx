@@ -11,11 +11,12 @@ interface ButtonProps {
     fontWeight?: string;
     fontSize?: string;
     color?: string;
+    onClick?: () => void;
 }
 
-export const MyButton = ({ width, svgIcon, text, margin, height, background, fontWeight, fontSize, color }: ButtonProps) => {
+export const MyButton = ({ width, svgIcon, text, margin, height, background, fontWeight, fontSize, color, onClick }: ButtonProps) => {
     return (
-        <button style={{ width, margin, height, background, fontWeight, fontSize, color }} className={styles.myButton}>
+        <button onClick={onClick} style={{ width, margin, height, background, fontWeight, fontSize, color }} className={styles.myButton}>
             {svgIcon}
             {text}
         </button>

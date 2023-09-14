@@ -1,4 +1,5 @@
 import styles from './Menu.module.scss';
+import {Link} from "react-router-dom";
 export const Menu = () => {
     return  (
         <div className={styles.menu}>
@@ -18,8 +19,8 @@ export const Menu = () => {
             <p>Справочники <span>0</span></p>
             <p>Фантастика <span>0</span></p>
             <p>Юмористическая литература <span>0</span></p>
-                <h3 className={styles.extraInformation}>Правила пользования</h3>
-                <h3 className={styles.extraInformation}>Договор оферты</h3>
+                <h3 className={styles.extraInformation}><Link to={'/rules'}>Правила пользования</Link></h3>
+                <h3 className={styles.extraInformation}><Link to={'/contract_offer'}>Договор оферты</Link></h3>
         </div>
     )
 }

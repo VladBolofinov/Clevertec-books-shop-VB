@@ -3,9 +3,13 @@ import IconSearch from '../../assets/img/icons/IconSearch.svg';
 import IconFilter from '../../assets/img/icons/filterIcon.svg';
 import IconMenu from '../../assets/img/icons/IconMenu.svg';
 import IconView from '../../assets/img/icons/IconView.svg';
-import {MyButton} from "../sharedComponents/MyButton";
+import {MyButton} from "../../shared/MyButton";
+import {FC} from "react";
 
-export const  FilterPanel = () => {
+interface IFilterPanel {
+    changeDirection: () => void;
+}
+export const  FilterPanel:FC<IFilterPanel> = ({changeDirection}) => {
     //button props tips
     const buttonProps = {
         width: '148px',
@@ -27,7 +31,7 @@ export const  FilterPanel = () => {
                 <MyButton width={'55px'} height={'45px'} margin={'0 0 0 490px'} {...buttonProps}></MyButton>
             <div className={styles.btnWrapper}>
                 <MyButton width={'38px'} height={'38px'} svgIcon={<IconMenu/>} background={'white'}/>
-                <MyButton width={'38px'} height={'38px'} svgIcon={<IconView/>} background={'white'}/>
+                <MyButton onClick={()=>changeDirection()} width={'38px'} height={'38px'} svgIcon={<IconView/>} background={'white'}/>
             </div>
         </div>
     )

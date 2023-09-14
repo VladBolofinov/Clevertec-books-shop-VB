@@ -2,12 +2,12 @@ import stylesRow from './BookItemRow.module.scss';
 import bookPhoto from '../../../assets/img/pictures/BookPhoto.png';
 import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import IconStar from '../../../assets/img/icons/IconStar.svg';
-import {MyButton} from "../../sharedComponents/MyButton";
+import {MyButton} from "../../../shared/MyButton";
 
 export const BookItemRow = () => {
     return (
         <div className={stylesRow.bookCard}>
-            <img src={bookPhoto} alt="book image"/>
+            <img className={stylesRow.bookImg} src={bookPhoto} alt="book image"/>
             <div className={stylesRow.wrapperElemsImg}>
                 <p className={stylesRow.bookName}>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих</p>
                 <p className={stylesRow.bookAuthor}>Адитья Бхаргава, Патрик Нимейер, 2019</p>

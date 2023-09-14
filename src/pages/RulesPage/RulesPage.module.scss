@@ -1,0 +1,20 @@
+.wrapperMiddleSection {
+  display: flex;
+}
+
+.textWrapper {
+  margin-top: 62px;
+  width: 825px;
+  h4 {
+    margin-top: 32px;
+  }
+  p {
+    margin: 16px 0 0 30px;
+  }
+  .subParagraph {
+    margin: 16px 0 0 60px;
+  }
+  .subSubParagraph {
+    margin: 16px 0 0 90px;
+  }
+}

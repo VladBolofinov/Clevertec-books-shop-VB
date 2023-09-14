@@ -2,7 +2,7 @@ import stylesColumn from './BookItemColumn.module.scss';
 import bookPhoto from '../../../assets/img/pictures/BookPhoto.png';
 import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import IconStar from '../../../assets/img/icons/IconStar.svg';
-import {MyButton} from "../../sharedComponents/MyButton";
+import {MyButton} from "../../../shared/MyButton";
 
 export const BookItemColumn = () => {
     return (
