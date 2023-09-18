@@ -3,7 +3,7 @@ import IconSearch from '../../assets/img/icons/IconSearch.svg';
 import IconFilter from '../../assets/img/icons/filterIcon.svg';
 import IconMenu from '../../assets/img/icons/IconMenu.svg';
 import IconView from '../../assets/img/icons/IconView.svg';
-import {MyButton} from "../../shared/MyButton";
+import {MyButton} from "../../shared/MyButton/MyButton";
 import {FC} from "react";
 
 interface IFilterPanel {

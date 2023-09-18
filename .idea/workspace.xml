@@ -5,30 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/ContractOfferPage/ContractOfferPage.async.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ContractOfferPage/ContractOfferPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ContractOfferPage/ContractOfferPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.async.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/RulesPage/RulesPage.async.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/RulesPage/RulesPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/RulesPage/RulesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/router/AppRouter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/config/routeConfig/routeConfig.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pictures/BookPhotoBig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/MyStarReview/MyStarReview.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/MyStarReview/MyStarReview.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/booksList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/booksList.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/MyButton.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/MyButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/router/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/MyButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/MyButton/MyButton.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/MyButton/MyButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/config/routeConfig/routeConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config/routeConfig/routeConfig.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,30 +41,30 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/100nout/Desktop/Clevertec-books-shop-VB/src/pages/ContractOfferPage",
+    "last_opened_file_path": "C:/Users/100nout/Desktop/PROGRAMMING/Clevertec-books-shop-VB/src/assets/img/pictures",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\100nout\\Desktop\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\100nout\\Desktop\\PROGRAMMING\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\pictures" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\pages\ContractOfferPage" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\pages\RulesPage" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components\booksList\bookItemRow" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\pictures" />
-      <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\shared\MyButton" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components\booksList\bookItemRow" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\components" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets\img\logo" />
-      <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +80,9 @@
       <workItem from="1694425934811" duration="114000" />
       <workItem from="1694432622188" duration="9912000" />
       <workItem from="1694525910449" duration="11925000" />
-      <workItem from="1694680720906" duration="22068000" />
+      <workItem from="1694680720906" duration="22499000" />
+      <workItem from="1694966770826" duration="525000" />
+      <workItem from="1695047840845" duration="11128000" />
     </task>
     <servers />
   </component>
@@ -102,14 +94,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/shared/config/routeConfig/routeConfig.tsx</url>
-          <line>12</line>
-          <properties lambdaOrdinal="-1" />
+          <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/RulesPage/RulesPage.tsx</url>
           <line>9</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

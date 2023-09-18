@@ -1,0 +1,101 @@
+.bookLocation {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background-color: #F9F9FA;
+  margin: 42px 0;
+  color: #A7A7A7;
+  padding-left: 165px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.bookImg {
+  float: left;
+}
+.bookDescr {
+  width: 635px;
+  height: 658px;
+  margin-left: 475px;
+}
+.bookHeader {
+  margin-bottom: 24px;
+}
+.textAuthor {
+  color: #A7A7A7;
+  font-size: 18px;
+  font-weight: 700;
+}
+.aboutBook {
+  margin-top: 32px;
+  line-height: 24px;
+}
+.rank {
+  margin-top: 42px;
+}
+.grayLine {
+  display: block;
+  width: 350px;
+  background-color: #EBEBEB;
+  height: 1px;
+  margin: 16px 0;
+}
+.score {
+  margin-left:24px;
+}
+.starWrapper {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 24px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+.extraDescrHeader {
+  margin-top: 62px;
+}
+.extraDescrWrapper {
+  margin-top: 16px;
+  display: flex;
+}
+.extraDescrWrapperFirstBlock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 329px;
+  height: 184px;
+  span {
+    font-weight: 400;
+  }
+  p {
+    font-weight: 600;
+    color: #A7A7A7;
+  }
+}
+.paragraphBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.spanBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.extraDescrWrapperSecondBlock {
+  margin-left: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 635px;
+  height: 184px;
+  span {
+    font-weight: 400;
+  }
+  p {
+    font-weight: 600;
+    color: #A7A7A7;
+  }
+}
