@@ -3,8 +3,10 @@ import styles from './BookPage.module.scss';
 import bookPhotoBig from '../../assets/img/pictures/BookPhotoBig.png';
 import {MyButton} from "../../shared/MyButton/MyButton";
 import MyStarReview from "../../shared/MyStarReview/MyStarReview";
+import ReviewersAvatar from '../../assets/img/icons/reviewsAvatar.svg';
 
-const BookPage = () => {return (
+const BookPage = () => {
+    return (
         <div>
             <div className={styles.bookLocation}>
                 Бизнес-книги / Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
@@ -13,12 +15,7 @@ const BookPage = () => {return (
             <div className={styles.bookDescr}>
                 <h1 className={styles.bookHeader}>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих</h1>
                 <span className={styles.textAuthor}>Адитья Бхаргава, 2019</span>
-                <MyButton width={'350px'} height={'52px'} text={'ЗАБРОНИРОВАТЬ'}
-                          background={'linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%'}
-                          fontSize={'16px'}
-                          fontWeight={'600'}
-                          color={'white'}
-                          margin={'32px 0 62px 0'}/>
+                <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
                 <h3>О книге</h3>
                 <p className={styles.aboutBook}>Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то решены,
                     протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута, изучить многостраничные
@@ -67,7 +64,40 @@ const BookPage = () => {return (
                     </div>
                 </div>
             </div>
-        </div>
+            <h3 className={styles.extraDescrHeader}>Отзывы</h3>
+            <span className={styles.grayLine}></span>
+
+                <div className={styles.reviewersWrapper}>
+                    <ReviewersAvatar/>
+                    <p className={styles.reviewersPadding}>Иван Иванов</p>
+                    <p className={styles.reviewersPadding}>5 января 2019</p>
+                </div>
+                <MyStarReview width={'168px'}/>
+                <p className={styles.reviewersDescr}>adasdasd</p>
+
+                <div className={styles.reviewersWrapper}>
+                    <ReviewersAvatar/>
+                    <p className={styles.reviewersPadding}>Николай Качков</p>
+                    <p className={styles.reviewersPadding}>20 июня 2020</p>
+                </div>
+                <MyStarReview width={'168px'}/>
+                <p className={styles.reviewersDescr}>Учитывая ключевые сценарии поведения, курс на социально-ориентированный
+                    национальный проект не оставляет шанса для анализа существующих паттернов поведения. Для современного
+                    мира внедрение современных методик предоставляет широкие возможности для позиций, занимаемых участниками
+                    в отношении поставленных задач. Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики
+                    выводы будут в равной степени предоставлены сами себе. Вот вам яркий пример современных тенденций —
+                    глубокий уровень погружения создаёт предпосылки для своевременного выполнения сверхзадачи. И нет сомнений,
+                    что акционеры крупнейших компаний, инициированные исключительно синтетически, превращены в посмешище,
+                    хотя само их существование приносит несомненную пользу обществу.</p>
+                <div className={styles.reviewersWrapper}>
+                    <ReviewersAvatar/>
+                    <p className={styles.reviewersPadding}>Екатерина Беляева</p>
+                    <p className={styles.reviewersPadding}>18 февраля 2018</p>
+                </div>
+                <MyStarReview width={'168px'}/>
+                <p className={styles.reviewersDescr}></p>
+            <button style={{margin:'42px 0 0 0 '}} className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
+            </div>
     );
 };
 

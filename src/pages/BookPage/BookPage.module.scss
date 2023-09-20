@@ -99,3 +99,26 @@
     color: #A7A7A7;
   }
 }
+.reviewersWrapper {
+  display: flex;
+  align-items: center;
+  color: #727272;
+  margin: 16px 0;
+}
+.reviewersPadding {
+  margin-left: 24px;
+}
+
+.reviewersDescr {
+  margin-top: 16px;
+  width: 730px;
+}
+.btnStyles {
+  width:350px;
+  height:52px;
+  background:linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+  font-size:16px;
+  font-weight:600;
+  color:white;
+  margin:32px 0 62px 0;
+}
