@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './BookPage.module.scss';
 import bookPhotoBig from '../../assets/img/pictures/BookPhotoBig.png';
-import {MyButton} from "../../shared/MyButton/MyButton";
 import MyStarReview from "../../shared/MyStarReview/MyStarReview";
 import ReviewersAvatar from '../../assets/img/icons/reviewsAvatar.svg';
 

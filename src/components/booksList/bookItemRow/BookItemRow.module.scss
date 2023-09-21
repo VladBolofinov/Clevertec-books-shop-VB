@@ -40,3 +40,50 @@
   font-weight:600;
   color:white;
 }
+
+@media screen and (max-width: 1110px) {
+  .bookCard {
+    margin-bottom: 16px;
+    padding: 16px 16px;
+    width: 640px;
+    height: 240px;
+  }
+  .wrapperElemsImg {
+    width: 464px;
+    height: 152px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bookCard {
+    width: 288px;
+    height: 190px;
+    padding: 16px 8px;
+  }
+  .bookImg {
+    width: 70px;
+    height: 100px;
+  }
+  .wrapperElemsImg {
+    width: 186px;
+    height: 114px;
+  }
+  .bookName {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  .bookAuthor {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .wrapperBtnStars {
+    margin-top: 3px;
+    flex-direction: column;
+  }
+  .btnStyles {
+    width:186px;
+    margin-top: 8px;
+  }
+}

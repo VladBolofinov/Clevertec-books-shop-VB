@@ -5,3 +5,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1110px) {
+  .wrapper {
+    width: 640px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 288px;
+    justify-content: center;
+  }
+}

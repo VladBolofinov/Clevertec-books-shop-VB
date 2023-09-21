@@ -30,3 +30,26 @@
   font-weight:600;
   color:white;
 }
+
+@media screen and (max-width: 768px) {
+  .bookCard {
+    width: 288px;
+    height: 470px;
+    justify-content: space-evenly;
+  }
+  .btnStyles {
+    width:256px;
+    height:40px;
+  }
+  .bookName {
+    margin-left: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  .bookAuthor {
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

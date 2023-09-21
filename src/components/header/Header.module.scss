@@ -13,6 +13,9 @@
 
 .logoWrapper {
   display: flex;
+  .btnModal {
+    display: none;
+  }
   .logo{
     display: flex;
     align-items: center;
@@ -26,4 +29,44 @@
   display: flex;
   align-items: center;
   width: 300px;
+}
+
+@media screen and (max-width: 1110px) {
+  .header {
+    width: 768px;
+  }
+  .logoWrapper {
+    .logo {
+      display: none;
+    }
+    .btnModal {
+      display: flex;
+      background-color: white;
+      border-radius: 0px;
+      box-shadow: 0 0 0px rgba(0,0,0,0);
+      margin-left: 64px;
+    }
+    .headerName {
+      padding-left: 24px;
+    }
+  }
+  .authorisation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 320px;
+    margin: 24px auto 0;
+  }
+  .logoWrapper {
+    .btnModal {
+      margin-left: 16px;
+    }
+    .headerName {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
 }

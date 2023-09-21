@@ -14,10 +14,12 @@ export const  FilterPanel:FC<IFilterPanel> = ({changeDirectionRow,changeDirectio
     return (
         <div className={styles.panelWrapper}>
             <div className={styles.inputWrapper}>
-                <IconSearch style={{position:'absolute', zIndex:'2', margin: '10px 0 0 10px'}}/>
+                <div className={styles.wrapperInputIcon}><IconSearch/></div>
                 <input type="text" placeholder="Поиск книги или автора..."/>
             </div>
                 <button className={styles.btnFilter}><IconFilter/>По рейтингу</button>
+                <button className={styles.btnInput}><IconSearch/></button>
+                <button className={styles.btnFilterSm}><IconFilter/></button>
             <div className={styles.btnWrapper}>
                 <button className={styles.btnIcon} onClick={changeDirectionColumn}><IconMenu/></button>
                 <button className={styles.btnIcon} onClick={changeDirectionRow}><IconView/></button>

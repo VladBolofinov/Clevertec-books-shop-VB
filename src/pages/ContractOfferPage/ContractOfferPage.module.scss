@@ -17,3 +17,20 @@
     margin: 16px 0 0 90px;
   }
 }
+
+@media screen and (max-width: 1110px)  {
+  .wrapperMiddleSection {
+    justify-content: space-evenly;
+  }
+  .textWrapper {
+    margin-top: 32px;
+    width: 640px;
+  }
+}
+
+@media screen and (max-width: 768px)  {
+  .textWrapper {
+    margin-top: 24px;
+    width: 288px;
+  }
+}

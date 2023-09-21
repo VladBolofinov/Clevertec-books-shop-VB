@@ -16,10 +16,20 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     padding: 10px 0 10px 35px;
   }
+  .wrapperInputIcon {
+    position:absolute;
+    z-index:2;
+    margin: 10px 0 0 10px;
+  }
+  .btnInput {
+    background: white;
+    width: 38px;
+    height: 38px;
+    display: none;
+  }
   .btnWrapper {
     width: 92px;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-left: 219px;
     justify-content: space-between;
@@ -38,6 +48,50 @@
     font-size: 14px;
     color: #A7A7A7;
   }
+  .btnFilterSm {
+    width: 38px;
+    margin: 0 0 0 16px;
+    height: 38px;
+    background: white;
+    font-weight: 400;
+    font-size: 14px;
+    color: #A7A7A7;
+    display: none;
+  }
 }
 
-
+@media screen and (max-width: 1110px) {
+  .panelWrapper {
+    width: 640px;
+    margin: 62px 0 32px 0;
+    input {
+      width: 274px;
+    }
+    .btnWrapper {
+      margin-left: 110px;
+    }
+    .btnFilter {
+      margin: 0 0 0 290px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .panelWrapper {
+    justify-content: center;
+    .btnFilter {
+      display: none;
+    }
+    .btnFilterSm {
+      display: flex;
+    }
+    input {
+      display: none;
+    }
+    .btnInput {
+      display: block;
+    }
+    .wrapperInputIcon {
+      display: none;
+    }
+  }
+}
