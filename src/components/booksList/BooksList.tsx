@@ -5,27 +5,34 @@ import {BookItemRow} from "./bookItemRow/BookItemRow";
 import {useState} from "react";
 
 export const BooksList = () => {
-    const [bookItemDirection, setBookItemDirection] = useState(false);
-    const changeDirectionRow = () => {
-        setBookItemDirection(false);
+    const [btnBookRow, setBtnBookRow] = useState(false);
+    const [btnBookColumn, setBtnBookColumn] = useState(true);
+
+    const onChangeDirection = (btnStatus:boolean) => {
+        if (!btnStatus) {
+            setBtnBookRow(!btnBookRow);
+            setBtnBookColumn(!btnBookColumn);
+        }
     }
-    const changeDirectionColumn = () => {
-        setBookItemDirection(true);
-    }
+
     return (
         <div className={styles.wrapper}>
-            <FilterPanel changeDirectionRow={()=>changeDirectionRow()} changeDirectionColumn={()=>changeDirectionColumn()}/>
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
-            {(bookItemDirection) ? <BookItemRow/> : <BookItemColumn/>}
+            <FilterPanel
+                         btnBookRow={btnBookRow}
+                         btnBookColumn={btnBookColumn}
+                         onChangeDirection={onChangeDirection}
+            />
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
+            {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
         </div>
     )
 }
