@@ -5,13 +5,17 @@ import avatar from '../../assets/img/avatar.png';
 import IconBurgerLg from '../../assets/img/icons/IconBurgerLg.svg';
 import IconBurgerSm from '../../assets/img/icons/IconBurgerSm.svg';
 import {NavLink} from "react-router-dom";
+import {Menu} from "../menu/Menu";
+import {useState} from "react";
+
 
 export const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const svgParametres = (windowWidth: number) => {
         if (windowWidth < 1110) {
-            return <button className={styles.btnModal}><IconBurgerLg/></button>
+            return <IconBurgerLg/>
         } else if (windowWidth < 768) {
-            return <button className={styles.btnModal}><IconBurgerSm/></button>
+            return <IconBurgerSm/>
         } else {
             return null
         }
@@ -26,7 +30,7 @@ export const Header = () => {
                         <LogoName style={{marginLeft:'8px'}}/>
                 </div>
                 </NavLink>
-                {svgParametres(window.innerWidth)}
+                <button onClick={() => setIsOpen(!isOpen)} className={styles.btnModal}>{svgParametres(window.innerWidth)}</button>
                 <h1 className={styles.headerName}>Библиотека</h1>
             </div>
             <div className={styles.authorisation}>

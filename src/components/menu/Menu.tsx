@@ -1,5 +1,7 @@
 import styles from './Menu.module.scss';
 import { NavLink} from "react-router-dom";
+import IconBurgerLg from "../../assets/img/icons/IconBurgerLg.svg";
+import IconBurgerSm from "../../assets/img/icons/IconBurgerSm.svg";
 export const Menu = () => {
     return  (
         <div className={styles.menu}><NavLink
