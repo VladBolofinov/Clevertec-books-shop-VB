@@ -5,12 +5,14 @@ import avatar from '../../assets/img/avatar.png';
 import IconBurgerLg from '../../assets/img/icons/IconBurgerLg.svg';
 import IconBurgerSm from '../../assets/img/icons/IconBurgerSm.svg';
 import {NavLink} from "react-router-dom";
-import {Menu} from "../menu/Menu";
-import {useState} from "react";
+import {userSlice} from "../../providers/store/reducers/UserSlice";
+import {useAppDispatch, useAppSelector} from "../hooks/redux";
 
 
 export const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const {openModal} = userSlice.actions;
+    const dispatch = useAppDispatch();
+    const {isOpen} = useAppSelector(state => state.userReducer);
     const svgParametres = (windowWidth: number) => {
         if (windowWidth < 1110) {
             return <IconBurgerLg/>
@@ -30,7 +32,7 @@ export const Header = () => {
                         <LogoName style={{marginLeft:'8px'}}/>
                 </div>
                 </NavLink>
-                <button onClick={() => setIsOpen(!isOpen)} className={styles.btnModal}>{svgParametres(window.innerWidth)}</button>
+                <button onClick={() => dispatch(openModal(!isOpen))} className={styles.btnModal}>{svgParametres(window.innerWidth)}</button>
                 <h1 className={styles.headerName}>Библиотека</h1>
             </div>
             <div className={styles.authorisation}>

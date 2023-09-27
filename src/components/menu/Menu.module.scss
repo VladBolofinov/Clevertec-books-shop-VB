@@ -23,6 +23,14 @@
 }
 @media screen and (max-width: 1110px)  {
   .menu {
-    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 325px;
+    background-color: #a0a0a0;
+    top: 40px;
+    transform: translateX(-200%);
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 1%;
   }
 }

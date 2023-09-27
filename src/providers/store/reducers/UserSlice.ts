@@ -5,20 +5,22 @@ interface UserState {
     users: IUser[];
     isLoading: boolean;
     error: string;
+    isOpen: boolean;
 }
 
 const initialState: UserState = {
     users: [],
     isLoading: false,
-    error: ''
+    error: '',
+    isOpen: false
 }
 
 export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        increment(state, action: PayloadAction<string>) {
-            state.error += action.payload;
+        openModal(state, action: PayloadAction<boolean>) {
+            state.isOpen = action.payload;
         }
     }
 })

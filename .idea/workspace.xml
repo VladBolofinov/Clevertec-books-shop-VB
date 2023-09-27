@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/hooks/redux.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/store/reducers/UserSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/store/stateTypes/IUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/store/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menuModal/MenuModal.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menuModal/MenuModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ContractOfferPage/ContractOfferPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ContractOfferPage/ContractOfferPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RulesPage/RulesPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RulesPage/RulesPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/UserSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/reducers/UserSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,7 @@
       <workItem from="1695227326023" duration="4402000" />
       <workItem from="1695291369907" duration="17938000" />
       <workItem from="1695747169410" duration="4560000" />
-      <workItem from="1695802461245" duration="13427000" />
+      <workItem from="1695802461245" duration="20888000" />
     </task>
     <servers />
   </component>

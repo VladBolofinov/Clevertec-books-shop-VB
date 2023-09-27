@@ -2,9 +2,11 @@ import styles from './Menu.module.scss';
 import { NavLink} from "react-router-dom";
 import IconBurgerLg from "../../assets/img/icons/IconBurgerLg.svg";
 import IconBurgerSm from "../../assets/img/icons/IconBurgerSm.svg";
+import {useAppSelector} from "../hooks/redux";
 export const Menu = () => {
+    const {isOpen} = useAppSelector(state => state.userReducer);
     return  (
-        <div className={styles.menu}><NavLink
+        <div className={styles.menu} style={(isOpen) ? {transform: 'translateX(-5%)'} : null}><NavLink
             to="/"
             style={({ isActive }) => {
                 return {
