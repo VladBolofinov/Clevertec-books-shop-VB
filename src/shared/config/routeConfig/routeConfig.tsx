@@ -2,7 +2,6 @@ import {RouteProps} from "react-router-dom";
 import MainPage from "../../../pages/MainPage/MainPage";
 import RulesPage from "../../../pages/RulesPage/RulesPage";
 import ContractOfferPage from "../../../pages/ContractOfferPage/ContractOfferPage";
-import App from "../../../App";
 import BookPage from "../../../pages/BookPage/BookPage";
 
 export enum AppRoutes {

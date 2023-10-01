@@ -3,69 +3,71 @@ import styles from './BookPage.module.scss';
 import bookPhotoBig from '../../assets/img/pictures/BookPhotoBig.png';
 import MyStarReview from "../../shared/MyStarReview/MyStarReview";
 import ReviewersAvatar from '../../assets/img/icons/reviewsAvatar.svg';
+import {Menu} from "../../components/menu/Menu";
 
 const BookPage = () => {
     return (
-        <div>
-            <div className={styles.bookLocation}>
-                Бизнес-книги / Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
-            </div>
-            <img className={styles.bookImg} src={bookPhotoBig} alt="book image"/>
-            <div className={styles.bookDescr}>
-                <h1 className={styles.bookHeader}>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих</h1>
-                <span className={styles.textAuthor}>Адитья Бхаргава, 2019</span>
-                <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
-                <h3>О книге</h3>
-                <p className={styles.aboutBook}>Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то решены,
-                    протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута, изучить многостраничные
-                    фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое время?
-                    <br/>
-                    <br/>Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А грокать
-                    алгоритмы — это веселое и увлекательное занятие.</p>
-            </div>
-            <h3 className={styles.rank}>Рейтинг</h3>
-            <span className={styles.grayLine}></span>
+        <div className={styles.globalWrapper}>
+            <div className={styles.wrapper}>
+                {(window.innerWidth < 1110) ? <Menu/> : null}
+                <div className={styles.bookLocation}>
+                    Бизнес-книги / Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
+                </div>
+                <img className={styles.bookImg} src={bookPhotoBig} alt="book image"/>
+                <div className={styles.wrapperBookDescr}>
+                    <h1 className={styles.bookHeader}>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих</h1>
+                    <span className={styles.textAuthor}>Адитья Бхаргава, 2019</span>
+                    <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
+                    <h3>О книге</h3>
+                    <p className={styles.aboutBook}>Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то решены,
+                        протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута, изучить многостраничные
+                        фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое время?
+                        <br/>
+                        <br/>Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А грокать
+                        алгоритмы — это веселое и увлекательное занятие.</p>
+                </div>
+                <h3 className={styles.rank}>Рейтинг</h3>
+                <span className={styles.grayLine}></span>
                 <div className={styles.starWrapper}>
                     <MyStarReview width={'168px'}/>
                     <span>4.3</span>
                 </div>
-            <h3 className={styles.extraDescrHeader}>Подробная информация</h3>
-            <span className={styles.grayLine}></span>
-            <div className={styles.extraDescrWrapper}>
-                <div className={styles.extraDescrWrapperFirstBlock}>
-                    <div className={styles.paragraphBlock}>
-                        <p>Издательство </p>
-                        <p>Год издания </p>
-                        <p>Страниц </p>
-                        <p>Переплёт </p>
-                        <p>Формат </p>
+                <h3 className={styles.extraDescrHeader}>Подробная информация</h3>
+                <span className={styles.grayLine}></span>
+                <div className={styles.extraDescrWrapper}>
+                    <div className={styles.extraDescrWrapperFirstBlock}>
+                        <div className={styles.paragraphBlock}>
+                            <p>Издательство </p>
+                            <p>Год издания </p>
+                            <p>Страниц </p>
+                            <p>Переплёт </p>
+                            <p>Формат </p>
+                        </div>
+                        <div className={styles.spanBlock}>
+                            <span>Питер</span>
+                            <span>2019</span>
+                            <span>288</span>
+                            <span>Мягкая обложка</span>
+                            <span>70х100</span>
+                        </div>
                     </div>
-                    <div className={styles.spanBlock}>
-                        <span>Питер</span>
-                        <span>2019</span>
-                        <span>288</span>
-                        <span>Мягкая обложка</span>
-                        <span>70х100</span>
+                    <div className={styles.extraDescrWrapperSecondBlock}>
+                        <div className={styles.paragraphBlock}>
+                            <p>Жанр</p>
+                            <p>Вес</p>
+                            <p>ISBN</p>
+                            <p>Изготовитель</p>
+                        </div>
+                        <div className={styles.spanBlock}>
+                            <span>Компьютерная литература</span>
+                            <span>370 г</span>
+                            <span>978-5-4461-0923-4</span>
+                            <span>ООО «Питер Мейл». РФ, 198 206, г. Санкт-Петербург,<br/> П. А29</span> {/*напиши логику добавления br*/}
+                        </div>
                     </div>
                 </div>
-                <div className={styles.extraDescrWrapperSecondBlock}>
-                    <div className={styles.paragraphBlock}>
-                        <p>Жанр</p>
-                        <p>Вес</p>
-                        <p>ISBN</p>
-                        <p>Изготовитель</p>
-                    </div>
-                    <div className={styles.spanBlock}>
-                        <span>Компьютерная литература</span>
-                        <span>370 г</span>
-                        <span>978-5-4461-0923-4</span>
-                        <span>ООО «Питер Мейл». РФ, 198 206, г. Санкт-Петербург,<br/> Петергофское ш, д.73, лит. А29</span> {/*напиши логику добавления br*/}
-                    </div>
-                </div>
-            </div>
-            <h3 className={styles.extraDescrHeader}>Отзывы</h3>
-            <span className={styles.grayLine}></span>
-
+                <h3 className={styles.extraDescrHeader}>Отзывы</h3>
+                <span className={styles.grayLine}></span>
                 <div className={styles.reviewersWrapper}>
                     <ReviewersAvatar/>
                     <p className={styles.reviewersPadding}>Иван Иванов</p>
@@ -95,8 +97,9 @@ const BookPage = () => {
                 </div>
                 <MyStarReview width={'168px'}/>
                 <p className={styles.reviewersDescr}></p>
-            <button style={{margin:'42px 0 0 0 '}} className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
+                <button style={{margin:'42px 0 0 0 '}} className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
             </div>
+        </div>
     );
 };
 

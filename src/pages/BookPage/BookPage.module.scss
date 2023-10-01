@@ -1,21 +1,25 @@
+.globalWrapper {
+  display: flex;
+  justify-content: center;
+  width: 1110px;
+}
+.wrapperBookDescr {
+  display: block;
+}
 .bookLocation {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 64px;
   background-color: #F9F9FA;
   margin: 42px 0;
   color: #A7A7A7;
-  padding-left: 165px;
   font-weight: 400;
   font-size: 14px;
 }
 .bookImg {
   float: left;
-}
-.bookDescr {
-  width: 635px;
-  height: 658px;
-  margin-left: 475px;
+  margin-right: 30px;
 }
 .bookHeader {
   margin-bottom: 24px;
@@ -121,4 +125,72 @@
   font-weight:600;
   color:white;
   margin:32px 0 62px 0;
+}
+
+@media screen and (max-width: 1110px) {
+  .wrapper {
+    width: 768px;
+  }
+  .bookImg {
+    width: 136px;
+    height: 198px;
+  }
+  .extraDescrWrapperFirstBlock {
+    flex-wrap: nowrap;
+    width: 460px;
+  }
+  .extraDescrWrapperSecondBlock {
+    flex-wrap: nowrap;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bookLocation {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .wrapperBookDescr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bookHeader {
+    font-size: 16px;
+  }
+  .textAuthor {
+    font-size: 14px;
+  }
+  .btnStyles {
+    width: 250px;
+  }
+  .wrapper {
+    width: 320px;
+  }
+  .bookImg {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .bookHeader {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .aboutBook {
+    font-size: 14px;
+  }
+  .extraDescrWrapper {
+    flex-wrap: wrap;
+  }
+  .extraDescrWrapperFirstBlock {
+    font-size: 14px;
+  }
+  .extraDescrWrapperSecondBlock {
+    margin: 25px 0 0 0;
+    font-size: 14px;
+  }
+  .reviewersDescr {
+    width: 320px;
+    font-size: 14px;
+  }
 }

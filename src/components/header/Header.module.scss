@@ -31,9 +31,48 @@
   width: 300px;
 }
 
+.burgerBtn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burgerBtn:before {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  background-color: black;
+  height: 4px;
+  border-radius: 3px;
+}
+.burgerBtn span {
+  display: none;
+  position: absolute;
+  top: 18px;
+  width: 30px;
+  background-color: black;
+  height: 4px;
+  border-radius: 3px;
+}
+
+.burgerBtn:after {
+  display: none;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  background-color: black;
+  height: 4px;
+  border-radius: 3px;
+}
+
 @media screen and (max-width: 1110px) {
   .header {
     width: 768px;
+    margin-left: 130px;
   }
   .logoWrapper {
     .logo {
@@ -52,12 +91,30 @@
   .authorisation {
     display: none;
   }
+  .burgerBtn:before {
+    display: block;
+    top: 10px;
+    width: 30px;
+    height: 4px;
+  }
+  .burgerBtn span {
+    display: block;
+    top: 18px;
+    width: 30px;
+    height: 4px;
+  }
+  .burgerBtn:after {
+    display: block;
+    bottom: 0;
+    width: 30px;
+    height: 4px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .header {
     width: 320px;
-    margin: 24px auto 0;
+    margin: 24px 0 0 25px;
   }
   .logoWrapper {
     .btnModal {
@@ -67,5 +124,21 @@
       font-size: 18px;
       line-height: 28px;
     }
+  }
+  .burgerBtn {
+    width: 10px;
+    height: 16px;
+  }
+  .burgerBtn:before {
+    width: 20px;
+    height: 2px;
+  }
+  .burgerBtn span {
+    width: 20px;
+    height: 2px;
+  }
+  .burgerBtn:after {
+    width: 20px;
+    height: 2px;
   }
 }
