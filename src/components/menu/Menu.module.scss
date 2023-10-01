@@ -1,6 +1,5 @@
 .menu {
   width: 279px;
-  height: 824px;
   margin-top: 62px;
   display: flex;
   flex-direction: column;
@@ -25,27 +24,60 @@
 .allBooksHide {
   display: none;
 }
-
 .booksHeader {
   border-bottom: #F83600 solid 1px;
   height: 36px;
   width: 255px;
 }
-
 .extraInformation {
   margin-top: 42px;
 }
+.wrapperBottomBlock {
+  display: none;
+}
+.spanLine {
+  display: none;
+}
+
 @media screen and (max-width: 1110px)  {
   .menu {
     position: absolute;
     z-index: 3;
-    width: 325px;
-    background-color: #a0a0a0;
+    width: 502px;
+    background-color: #F9F9FA;
     top: 40px;
     transform: translateX(-200%);
     padding: 15px;
     border: 2px solid;
     border-radius: 1%;
     transition: 0.1ms;
+    .arrowMenu {
+      left: 45%;
+    }
+  }
+  .wrapperBottomBlock {
+    display: block;
+    margin: 32px 0 52px 0px;
+  }
+  .spanLine {
+    border: #BFC4C9 1px solid;
+    left: -3%;
+    position: relative;
+    width: 106%;
+    height: 2px;
+    margin-top: 50px;
+    display: block;
+  }
+}
+@media screen and (max-width: 768px)  {
+  .menu {
+    width: 288px;
+    .arrowMenu {
+      left: 80%;
+    }
+  }
+  .spanLine {
+    left: -5%;
+    width: 111%;
   }
 }

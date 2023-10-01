@@ -62,6 +62,11 @@ export const Menu = () => {
                             textDecoration: "none"
                         };
                     }}>Договор оферты</NavLink></h3>
+                <span className={styles.spanLine}></span>
+                <div className={styles.wrapperBottomBlock}>
+                    <h3 className={styles.extraInformation}>Профиль</h3>
+                    <h3 className={styles.extraInformation}>Выход</h3>
+                </div>
             </div>
         </div>
 
