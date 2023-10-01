@@ -2,16 +2,16 @@ import './styles/index.scss';
 import {Header} from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
 import AppRouter from "./providers/router/AppRouter";
-import {useAppDispatch, useAppSelector} from "./components/hooks/redux";
-import {userSlice} from "./providers/store/reducers/UserSlice";
+/*import {useAppDispatch, useAppSelector} from "./components/hooks/redux";
+import {userSlice} from "./providers/store/reducers/UserSlice";*/
 const App = () => {
-    const {isOpen} = useAppSelector(state => state.userReducer);
+    /*const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {openModal} = userSlice.actions;
-    const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();*/
     return (
-        <div className='app' onClick={() => { if (isOpen) {
+        <div className='app' /*onClick={() => { if (isOpenModal) {
             dispatch(openModal(false));
-        } }}>
+        }}}*/>
             <Header/>
             <AppRouter/>
             <Footer/>

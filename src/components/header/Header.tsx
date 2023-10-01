@@ -9,7 +9,7 @@ import {useAppDispatch, useAppSelector} from "../hooks/redux";
 export const Header = () => {
     const {openModal} = userSlice.actions;
     const dispatch = useAppDispatch();
-    const {isOpen} = useAppSelector(state => state.userReducer);
+    const {isOpenModal} = useAppSelector(state => state.userReducer);
 
     return (
         <div className={styles.header}>
@@ -20,7 +20,7 @@ export const Header = () => {
                         <LogoName style={{marginLeft:'8px'}}/>
                 </div>
                 </NavLink>
-                <div className={styles.burgerBtn} onClick={() => dispatch(openModal(!isOpen))}>
+                <div className={(!isOpenModal) ? styles.burgerBtn : styles.burgerBtnClose} onClick={() => dispatch(openModal(!isOpenModal))}>
                     <span></span>
                 </div>
                 <h1 className={styles.headerName}>Библиотека</h1>

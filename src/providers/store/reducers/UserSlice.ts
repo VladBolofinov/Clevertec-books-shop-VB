@@ -5,14 +5,16 @@ interface UserState {
     users: IUser[];
     isLoading: boolean;
     error: string;
-    isOpen: boolean;
+    isOpenModal: boolean;
+    isActiveMenu: boolean;
 }
 
 const initialState: UserState = {
     users: [],
     isLoading: false,
     error: '',
-    isOpen: false
+    isOpenModal: false,
+    isActiveMenu: true,
 }
 
 export const userSlice = createSlice({
@@ -20,7 +22,10 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         openModal(state, action: PayloadAction<boolean>) {
-            state.isOpen = action.payload;
+            state.isOpenModal = action.payload;
+        },
+        openMenu(state, action: PayloadAction<boolean>) {
+            state.isActiveMenu = action.payload;
         }
     }
 })

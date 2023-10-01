@@ -7,9 +7,23 @@
   p {
     padding: 16px 0 0 20px;
   }
+  .arrowMenu {
+    width: 14px;
+    height: 8px;
+    position: relative;
+    top: 1%;
+    left: 80%;
+    cursor: pointer;
+  }
 }
-.allBooks {
+.allBooksHeader {
   padding: 16px 0 0 20px;
+}
+.allBooksHeaderHide {
+  display: none;
+}
+.allBooksHide {
+  display: none;
 }
 
 .booksHeader {

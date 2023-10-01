@@ -7,7 +7,6 @@ import {useState} from "react";
 export const BooksList = () => {
     const [btnBookRow, setBtnBookRow] = useState(false);
     const [btnBookColumn, setBtnBookColumn] = useState(true);
-
     const onChangeDirection = (btnStatus:boolean) => {
         if (!btnStatus) {
             setBtnBookRow(!btnBookRow);
@@ -17,11 +16,9 @@ export const BooksList = () => {
 
     return (
         <div className={styles.wrapper}>
-            <FilterPanel
-                         btnBookRow={btnBookRow}
+            <FilterPanel btnBookRow={btnBookRow}
                          btnBookColumn={btnBookColumn}
-                         onChangeDirection={onChangeDirection}
-            />
+                         onChangeDirection={onChangeDirection}/>
             {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
             {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}
             {(btnBookRow) ? <BookItemRow/> : <BookItemColumn/>}

@@ -10,7 +10,6 @@
   width: 150px;
   font-weight: 600;
 }
-
 .logoWrapper {
   display: flex;
   .btnModal {
@@ -24,20 +23,17 @@
     padding-left: 99px;
   }
 }
-
 .authorisation {
   display: flex;
   align-items: center;
   width: 300px;
 }
-
 .burgerBtn {
   width: 30px;
   height: 30px;
   position: relative;
   cursor: pointer;
 }
-
 .burgerBtn:before {
   display: none;
   content: '';
@@ -57,7 +53,6 @@
   height: 4px;
   border-radius: 3px;
 }
-
 .burgerBtn:after {
   display: none;
   content: '';
@@ -68,6 +63,36 @@
   height: 4px;
   border-radius: 3px;
 }
+.burgerBtnClose {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.burgerBtnClose:before {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  background-color: black;
+  height: 4px;
+  border-radius: 3px;
+}
+.burgerBtnClose span {
+  display: none;
+}
+.burgerBtnClose:after {
+  display: none;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  background-color: black;
+  height: 4px;
+  border-radius: 3px;
+}
+
 
 @media screen and (max-width: 1110px) {
   .header {
@@ -96,18 +121,38 @@
     top: 10px;
     width: 30px;
     height: 4px;
+    transition: 0.5s;
   }
   .burgerBtn span {
     display: block;
     top: 18px;
     width: 30px;
     height: 4px;
+    transition: 0.5s;
   }
   .burgerBtn:after {
     display: block;
     bottom: 0;
     width: 30px;
     height: 4px;
+    transition: 0.5s;
+  }
+  .burgerBtnClose:before {
+    display: block;
+    top: 19px;
+    transform: rotate(-45deg);
+    background-color: #F83600;
+    transition: 0.5s;
+  }
+  .burgerBtnClose span {
+    display: none;
+  }
+  .burgerBtnClose:after {
+    display: block;
+    bottom: 7px;
+    background-color: #F83600;
+    transform: rotate(45deg);
+    transition: 0.5s;
   }
 }
 
@@ -140,5 +185,18 @@
   .burgerBtn:after {
     width: 20px;
     height: 2px;
+  }
+  .burgerBtnClose:before {
+    top: 13px;
+    width: 20px;
+    height: 2px;
+  }
+  .burgerBtnClose:after {
+    bottom: 15px;
+    width: 20px;
+    height: 2px;
+  }
+  .burgerBtnClose {
+    width: 10px;
   }
 }
