@@ -6,7 +6,7 @@ import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
 import {userSlice} from "../../providers/store/reducers/UserSlice";
 export const Menu = () => {
     const {isOpenModal,isActiveMenu} = useAppSelector(state => state.userReducer);
-    const {openMenu} = userSlice.actions;
+    const {openMenu,openModal} = userSlice.actions;
     const dispatch = useAppDispatch();
     return  (
         <div>
@@ -28,22 +28,52 @@ export const Menu = () => {
                 <h3 className={(isActiveMenu) ? styles.allBooksHeader : styles.allBooksHeaderHide}>Все книги</h3>
             </NavLink>
                 <div className={(isActiveMenu) ? null : styles.allBooksHide}>
-                    <p>Бизнес-книги <span>0</span></p>
-                    <p>Детективы <span>0</span></p>
-                    <p>Детские книги <span>0</span></p>
-                    <p>Зарубежная литература <span>0</span></p>
-                    <p>История <span>0</span></p>
-                    <p>Классическая литература <span>0</span></p>
-                    <p>Книги по психологии <span>0</span></p>
-                    <p>Компьютерная литература <span>0</span></p>
-                    <p>Культура и искусство <span>0</span></p>
-                    <p>Наука и образование <span>0</span></p>
-                    <p>Публицистическая литература <span>0</span></p>
-                    <p>Справочники <span>0</span></p>
-                    <p>Фантастика <span>0</span></p>
-                    <p>Юмористическая литература <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Бизнес-книги <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Детективы <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Детские книги <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Зарубежная литература <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>История <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Классическая литература <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Книги по психологии <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Компьютерная литература <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Культура и искусство <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Наука и образование <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Публицистическая литература <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Справочники <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Фантастика <span>0</span></p>
+                    <p onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}>Юмористическая литература <span>0</span></p>
                 </div>
-                <h3 className={styles.extraInformation}><NavLink
+                <h3 className={styles.extraInformation} onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}><NavLink
                     to="/rules"
                     style={({ isActive }) => {
                         return {
@@ -54,7 +84,9 @@ export const Menu = () => {
                 >
                     Правила пользования
                 </NavLink></h3>
-                <h3 className={styles.extraInformation}><NavLink
+                <h3 className={styles.extraInformation} onClick={() => { if (isOpenModal) {
+            dispatch(openModal(false));
+        }}}><NavLink
                     to="/contract_offer"
                     style={({ isActive }) => {
                         return {

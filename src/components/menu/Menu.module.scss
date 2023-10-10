@@ -3,6 +3,7 @@
   margin-top: 62px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   p {
     padding: 16px 0 0 20px;
   }
@@ -51,6 +52,9 @@
     border: 2px solid;
     border-radius: 1%;
     transition: 0.1ms;
+    height: 442px;
+    overflow-y: scroll;
+    overflow-x: hidden;
     .arrowMenu {
       left: 45%;
     }
