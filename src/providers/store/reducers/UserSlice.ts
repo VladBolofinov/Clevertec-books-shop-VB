@@ -6,7 +6,8 @@ interface UserState {
     isLoading: boolean;
     error: string;
     isOpenModal: boolean;
-    isActiveMenu: boolean;
+    isActiveDropDown: boolean;
+    isActiveInputBtn: boolean;
 }
 
 const initialState: UserState = {
@@ -14,7 +15,8 @@ const initialState: UserState = {
     isLoading: false,
     error: '',
     isOpenModal: false,
-    isActiveMenu: true,
+    isActiveDropDown: true,
+    isActiveInputBtn: false,
 }
 
 export const userSlice = createSlice({
@@ -24,8 +26,11 @@ export const userSlice = createSlice({
         openModal(state, action: PayloadAction<boolean>) {
             state.isOpenModal = action.payload;
         },
-        openMenu(state, action: PayloadAction<boolean>) {
-            state.isActiveMenu = action.payload;
+        openDropDownList(state, action: PayloadAction<boolean>) {
+            state.isActiveDropDown = action.payload;
+        },
+        openInputBtn(state, action: PayloadAction<boolean>) {
+            state.isActiveInputBtn = action.payload;
         }
     }
 })

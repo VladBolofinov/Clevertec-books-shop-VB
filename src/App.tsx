@@ -2,19 +2,20 @@ import './styles/index.scss';
 import {Header} from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
 import AppRouter from "./providers/router/AppRouter";
-/*import {useAppDispatch, useAppSelector} from "./components/hooks/redux";
-import {userSlice} from "./providers/store/reducers/UserSlice";*/
+import {useAppSelector} from "./components/hooks/redux";
+import {useEffect} from "react";
 const App = () => {
-    /*const {isOpenModal} = useAppSelector(state => state.userReducer);
-    const {openModal} = userSlice.actions;
-    const dispatch = useAppDispatch();*/
+    const {isOpenModal} = useAppSelector(state => state.userReducer);
+
+    useEffect(() => {
+        (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
+    }, [isOpenModal]);
+
     return (
-        <div className='app' /*onClick={() => { if (isOpenModal) {
-            dispatch(openModal(false));
-        }}}*/>
-            <Header/>
-            <AppRouter/>
-            <Footer/>
+        <div className='app'>
+                <Header/>
+                <AppRouter/>
+                <Footer/>
         </div>
     )
 }

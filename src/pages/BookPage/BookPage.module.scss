@@ -109,6 +109,17 @@
   color: #727272;
   margin: 16px 0;
 }
+.reviewersWrapperHide {
+  display: none;
+}
+.arrowMenu {
+  width: 14px;
+  height: 8px;
+  position: relative;
+  top: -1.5%;
+  left: 10%;
+  cursor: pointer;
+}
 .reviewersPadding {
   margin-left: 24px;
 }
@@ -142,6 +153,9 @@
   .extraDescrWrapperSecondBlock {
     flex-wrap: nowrap;
     margin-left: 50px;
+  }
+  .arrowMenu {
+    left: 15%;
   }
 }
 
@@ -192,5 +206,8 @@
   .reviewersDescr {
     width: 320px;
     font-size: 14px;
+  }
+  .arrowMenu {
+    left: 35%;
   }
 }

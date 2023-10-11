@@ -5,15 +5,16 @@ import ArrowMenuTop from '../../assets/img/icons/ArrowMenuTop.svg';
 import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
 import {userSlice} from "../../providers/store/reducers/UserSlice";
 export const Menu = () => {
-    const {isOpenModal,isActiveMenu} = useAppSelector(state => state.userReducer);
-    const {openMenu,openModal} = userSlice.actions;
+    const {isOpenModal,isActiveDropDown} = useAppSelector(state => state.userReducer);
+    const {openDropDownList,openModal} = userSlice.actions;
     const dispatch = useAppDispatch();
+
     return  (
         <div>
             <div className={styles.menu} style={(isOpenModal) ? {transform: 'translateX(-5%)', transition: '0.4s'} : null}>
                 <div className={styles.arrowMenu}
-                     onClick={() => dispatch(openMenu(!isActiveMenu))}>
-                    {(isActiveMenu) ? <ArrowMenuTop/> : <ArrowMenuBottom/>}
+                     onClick={() => dispatch(openDropDownList(!isActiveDropDown))}>
+                    {(isActiveDropDown) ? <ArrowMenuTop fill={'#F83600'}/> : <ArrowMenuBottom fill={'#F83600'}/>}
                 </div>
                 <NavLink
                     to="/"
@@ -25,9 +26,9 @@ export const Menu = () => {
                     }}
                 >
                 <h3 className={styles.booksHeader}>Витрина книг</h3>
-                <h3 className={(isActiveMenu) ? styles.allBooksHeader : styles.allBooksHeaderHide}>Все книги</h3>
+                <h3 className={(isActiveDropDown) ? styles.allBooksHeader : styles.allBooksHeaderHide}>Все книги</h3>
             </NavLink>
-                <div className={(isActiveMenu) ? null : styles.allBooksHide}>
+                <div className={(isActiveDropDown) ? null : styles.allBooksHide}>
                     <p onClick={() => { if (isOpenModal) {
             dispatch(openModal(false));
         }}}>Бизнес-книги <span>0</span></p>
@@ -80,8 +81,7 @@ export const Menu = () => {
                             color: isActive ? "#F83600" : "black",
                             textDecoration: "none"
                         };
-                    }}
-                >
+                    }}>
                     Правила пользования
                 </NavLink></h3>
                 <h3 className={styles.extraInformation} onClick={() => { if (isOpenModal) {
@@ -101,6 +101,5 @@ export const Menu = () => {
                 </div>
             </div>
         </div>
-
     )
 }

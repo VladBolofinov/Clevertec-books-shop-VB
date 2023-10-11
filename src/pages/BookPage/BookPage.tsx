@@ -4,8 +4,15 @@ import bookPhotoBig from '../../assets/img/pictures/BookPhotoBig.png';
 import MyStarReview from "../../shared/MyStarReview/MyStarReview";
 import ReviewersAvatar from '../../assets/img/icons/reviewsAvatar.svg';
 import {Menu} from "../../components/menu/Menu";
+import ArrowMenuTop from "../../assets/img/icons/ArrowMenuTop.svg";
+import ArrowMenuBottom from "../../assets/img/icons/ArrowMenuBottom.svg";
+import {useAppDispatch, useAppSelector} from "../../components/hooks/redux";
+import {userSlice} from "../../providers/store/reducers/UserSlice";
 
 const BookPage = () => {
+    const {isActiveDropDown} = useAppSelector(state => state.userReducer);
+    const {openDropDownList} = userSlice.actions;
+    const dispatch = useAppDispatch();
     return (
         <div className={styles.globalWrapper}>
             <div className={styles.wrapper}>
@@ -66,41 +73,45 @@ const BookPage = () => {
                         </div>
                     </div>
                 </div>
-                <h3 className={styles.extraDescrHeader}>Отзывы</h3>
+                    <h3 className={styles.extraDescrHeader}>Отзывы</h3>
+                    <div className={styles.arrowMenu}
+                         onClick={() => dispatch(openDropDownList(!isActiveDropDown))}>
+                        {(isActiveDropDown) ? <ArrowMenuTop/> : <ArrowMenuBottom/>}
+                    </div>
                 <span className={styles.grayLine}></span>
-                <div className={styles.reviewersWrapper}>
-                    <ReviewersAvatar/>
-                    <p className={styles.reviewersPadding}>Иван Иванов</p>
-                    <p className={styles.reviewersPadding}>5 января 2019</p>
+                <div className={(!isActiveDropDown) ? styles.reviewersWrapperHide : null}>
+                    <div className={styles.reviewersWrapper}>
+                        <ReviewersAvatar/>
+                        <p className={styles.reviewersPadding}>Иван Иванов</p>
+                        <p className={styles.reviewersPadding}>5 января 2019</p>
+                    </div>
+                    <MyStarReview width={'168px'}/>
+                    <p className={styles.reviewersDescr}>adasdasd</p>
+                    <div className={styles.reviewersWrapper}>
+                        <ReviewersAvatar/>
+                        <p className={styles.reviewersPadding}>Николай Качков</p>
+                        <p className={styles.reviewersPadding}>20 июня 2020</p>
+                    </div>
+                    <MyStarReview width={'168px'}/>
+                    <p className={styles.reviewersDescr}>Учитывая ключевые сценарии поведения, курс на социально-ориентированный
+                        национальный проект не оставляет шанса для анализа существующих паттернов поведения. Для современного
+                        мира внедрение современных методик предоставляет широкие возможности для позиций, занимаемых участниками
+                        в отношении поставленных задач. Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики
+                        выводы будут в равной степени предоставлены сами себе. Вот вам яркий пример современных тенденций —
+                        глубокий уровень погружения создаёт предпосылки для своевременного выполнения сверхзадачи. И нет сомнений,
+                        что акционеры крупнейших компаний, инициированные исключительно синтетически, превращены в посмешище,
+                        хотя само их существование приносит несомненную пользу обществу.</p>
+                    <div className={styles.reviewersWrapper}>
+                        <ReviewersAvatar/>
+                        <p className={styles.reviewersPadding}>Екатерина Беляева</p>
+                        <p className={styles.reviewersPadding}>18 февраля 2018</p>
+                    </div>
+                    <MyStarReview width={'168px'}/>
+                    <p className={styles.reviewersDescr}></p>
                 </div>
-                <MyStarReview width={'168px'}/>
-                <p className={styles.reviewersDescr}>adasdasd</p>
-
-                <div className={styles.reviewersWrapper}>
-                    <ReviewersAvatar/>
-                    <p className={styles.reviewersPadding}>Николай Качков</p>
-                    <p className={styles.reviewersPadding}>20 июня 2020</p>
-                </div>
-                <MyStarReview width={'168px'}/>
-                <p className={styles.reviewersDescr}>Учитывая ключевые сценарии поведения, курс на социально-ориентированный
-                    национальный проект не оставляет шанса для анализа существующих паттернов поведения. Для современного
-                    мира внедрение современных методик предоставляет широкие возможности для позиций, занимаемых участниками
-                    в отношении поставленных задач. Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики
-                    выводы будут в равной степени предоставлены сами себе. Вот вам яркий пример современных тенденций —
-                    глубокий уровень погружения создаёт предпосылки для своевременного выполнения сверхзадачи. И нет сомнений,
-                    что акционеры крупнейших компаний, инициированные исключительно синтетически, превращены в посмешище,
-                    хотя само их существование приносит несомненную пользу обществу.</p>
-                <div className={styles.reviewersWrapper}>
-                    <ReviewersAvatar/>
-                    <p className={styles.reviewersPadding}>Екатерина Беляева</p>
-                    <p className={styles.reviewersPadding}>18 февраля 2018</p>
-                </div>
-                <MyStarReview width={'168px'}/>
-                <p className={styles.reviewersDescr}></p>
                 <button style={{margin:'42px 0 0 0 '}} className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
             </div>
         </div>
     );
 };
-
 export default BookPage;
