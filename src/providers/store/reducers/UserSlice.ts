@@ -8,6 +8,8 @@ interface UserState {
     isOpenModal: boolean;
     isActiveDropDown: boolean;
     isActiveInputBtn: boolean;
+    isBookRow: boolean;
+    isBookColumn: boolean;
 }
 
 const initialState: UserState = {
@@ -17,6 +19,8 @@ const initialState: UserState = {
     isOpenModal: false,
     isActiveDropDown: true,
     isActiveInputBtn: false,
+    isBookRow: false,
+    isBookColumn: true,
 }
 
 export const userSlice = createSlice({
@@ -31,6 +35,12 @@ export const userSlice = createSlice({
         },
         openInputBtn(state, action: PayloadAction<boolean>) {
             state.isActiveInputBtn = action.payload;
+        },
+        changeDirection(state, action: PayloadAction<boolean>) {
+            if (!action.payload) {
+                state.isBookRow = !state.isBookRow;
+                state.isBookColumn = !state.isBookColumn
+            }
         }
     }
 })

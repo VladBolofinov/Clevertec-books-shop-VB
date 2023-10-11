@@ -3,21 +3,15 @@ import IconSearch from '../../assets/img/icons/IconSearch.svg';
 import IconFilter from '../../assets/img/icons/filterIcon.svg';
 import IconMenu from '../../assets/img/icons/IconMenu.svg';
 import IconView from '../../assets/img/icons/IconView.svg';
-import React, {FC} from "react";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {userSlice} from "../../providers/store/reducers/UserSlice";
 
-interface IFilterPanel {
-    btnBookRow: boolean;
-    btnBookColumn: boolean;
-    onChangeDirection: (arg?:boolean) => void;
-}
-export const  FilterPanel:FC<IFilterPanel> = ({btnBookRow,btnBookColumn,onChangeDirection}) => {
+export const  FilterPanel = () => {
     const onActiveBtnStyles = (activeBtn: boolean) => {
         return (activeBtn) ? {background: 'linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%)'} : {background: 'white'}
     }
-    const {isActiveInputBtn} = useAppSelector(state => state.userReducer);
-    const {openInputBtn} = userSlice.actions;
+    const {isActiveInputBtn, isBookColumn, isBookRow} = useAppSelector(state => state.userReducer);
+    const {openInputBtn, changeDirection} = userSlice.actions;
     const dispatch = useAppDispatch();
     return (
         (isActiveInputBtn)
@@ -41,15 +35,15 @@ export const  FilterPanel:FC<IFilterPanel> = ({btnBookRow,btnBookColumn,onChange
                         onClick={()=>dispatch(openInputBtn(!isActiveInputBtn))}><IconSearch/></button>
                     <button className={styles.btnFilterSm} ><IconFilter fill={'orange'}/></button>
                     <div className={styles.btnWrapper}>
-                        <button style={onActiveBtnStyles(btnBookRow)}
+                        <button style={onActiveBtnStyles(isBookRow)}
                             className={styles.btnIcon}
-                            onClick={() => onChangeDirection(btnBookRow)}>
-                            <IconMenu fill={(btnBookRow) ? 'white' : '#A7A7A7'}/>
+                            onClick={() => dispatch(changeDirection(isBookRow))}>
+                            <IconMenu fill={(isBookRow) ? 'white' : '#A7A7A7'}/>
                         </button>
-                        <button style={onActiveBtnStyles(btnBookColumn)}
+                        <button style={onActiveBtnStyles(isBookColumn)}
                             className={styles.btnIcon}
-                            onClick={() => onChangeDirection(btnBookColumn)}>
-                            <IconView fill={(btnBookColumn) ? 'white' : '#A7A7A7'}/>
+                            onClick={() => dispatch(changeDirection(isBookColumn))}>
+                            <IconView fill={(isBookColumn) ? 'white' : '#A7A7A7'}/>
                         </button>
                     </div>
                 </div>)
