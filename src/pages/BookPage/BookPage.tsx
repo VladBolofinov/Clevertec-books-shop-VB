@@ -7,6 +7,7 @@ import ArrowMenuTop from "../../assets/img/icons/ArrowMenuTop.svg";
 import ArrowMenuBottom from "../../assets/img/icons/ArrowMenuBottom.svg";
 import {useAppDispatch, useAppSelector} from "../../components/hooks/redux";
 import {userSlice} from "../../providers/store/reducers/UserSlice";
+import Slider from "../../shared/swiper-sliders/Slider";
 
 const BookPage = () => {
     const {isActiveDropDown} = useAppSelector(state => state.userReducer);
@@ -19,7 +20,7 @@ const BookPage = () => {
                 <div className={styles.bookLocation}>
                     Бизнес-книги / Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
                 </div>
-                <img className={styles.bookImg} src={bookPhotoBig} alt="book image"/>
+                    <Slider/>
                 <div className={styles.wrapperBookDescr}>
                     <h1 className={styles.bookHeader}>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих</h1>
                     <span className={styles.textAuthor}>Адитья Бхаргава, 2019</span>
@@ -108,7 +109,7 @@ const BookPage = () => {
                     <MyStarReview width={'168px'}/>
                     <p className={styles.reviewersDescr}></p>
                 </div>
-                <button style={{margin:'42px 0 0 0 '}} className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
+                <button className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
             </div>
         </div>
     );

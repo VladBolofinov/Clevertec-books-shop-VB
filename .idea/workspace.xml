@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="" />
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/shared/swiper-sliders/Slider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/swiper-sliders/myStylesSlider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/build/buildLoaders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/build/buildLoaders.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BookPage/BookPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +87,8 @@
       <workItem from="1696156452510" duration="13147000" />
       <workItem from="1696195197420" duration="684000" />
       <workItem from="1696957518289" duration="3030000" />
+      <workItem from="1697014822873" duration="24087000" />
+      <workItem from="1697108666951" duration="16082000" />
     </task>
     <servers />
   </component>

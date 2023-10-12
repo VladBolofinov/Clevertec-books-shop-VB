@@ -17,7 +17,9 @@
   font-weight: 400;
   font-size: 14px;
 }
-.bookImg {
+.wrapperSlider {
+  width: 445px;
+  height: 696px;
   float: left;
   margin-right: 30px;
 }
@@ -121,7 +123,7 @@
   cursor: pointer;
 }
 .reviewersPadding {
-  margin-left: 24px;
+  margin-left: 12px;
 }
 
 .reviewersDescr {
@@ -141,10 +143,6 @@
 @media screen and (max-width: 1110px) {
   .wrapper {
     width: 768px;
-  }
-  .bookImg {
-    width: 136px;
-    height: 198px;
   }
   .extraDescrWrapperFirstBlock {
     flex-wrap: nowrap;
@@ -181,13 +179,8 @@
   .wrapper {
     width: 320px;
   }
-  .bookImg {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
   .bookHeader {
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
   }
   .aboutBook {
