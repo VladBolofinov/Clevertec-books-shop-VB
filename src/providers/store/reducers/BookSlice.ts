@@ -1,19 +1,7 @@
-import {IUser} from "../stateTypes/IUser";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import IBookState from "../stateTypes/IBookState";
 
-interface UserState {
-    users: IUser[];
-    isLoading: boolean;
-    error: string;
-    isOpenModal: boolean;
-    isActiveDropDown: boolean;
-    isActiveInputBtn: boolean;
-    isBookRow: boolean;
-    isBookColumn: boolean;
-}
-
-const initialState: UserState = {
-    users: [],
+const initialState: IBookState = {
     isLoading: false,
     error: '',
     isOpenModal: false,
@@ -23,7 +11,7 @@ const initialState: UserState = {
     isBookColumn: true,
 }
 
-export const userSlice = createSlice({
+export const bookSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
@@ -45,4 +33,4 @@ export const userSlice = createSlice({
     }
 })
 
-export default userSlice.reducer;
+export default bookSlice.reducer;

@@ -3,11 +3,11 @@ import Logo from '../../assets/img/MainLogo.svg';
 import LogoName from '../../assets/img/MainLogoName.svg';
 import avatar from '../../assets/img/avatar.png';
 import {NavLink} from "react-router-dom";
-import {userSlice} from "../../providers/store/reducers/UserSlice";
+import {bookSlice} from "../../providers/store/reducers/BookSlice";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 
 export const Header = () => {
-    const {openModal} = userSlice.actions;
+    const {openModal} = bookSlice.actions;
     const dispatch = useAppDispatch();
     const {isOpenModal} = useAppSelector(state => state.userReducer);
 

@@ -1,7 +1,9 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import userReducer from './reducers/UserSlice';
+import userReducer from './reducers/BookSlice';
+import apiRequestReducer from './reducers/ApiRequestSlice';
 const rootReducer = combineReducers({
-    userReducer
+    userReducer,
+    apiRequestReducer
 })
 
 export const setupStore = () => {

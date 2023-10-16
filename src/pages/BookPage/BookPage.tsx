@@ -1,17 +1,16 @@
 import styles from './BookPage.module.scss';
-import bookPhotoBig from '../../assets/img/pictures/BookPhotoBig.png';
 import MyStarReview from "../../shared/MyStarReview/MyStarReview";
 import ReviewersAvatar from '../../assets/img/icons/reviewsAvatar.svg';
 import {Menu} from "../../components/menu/Menu";
 import ArrowMenuTop from "../../assets/img/icons/ArrowMenuTop.svg";
 import ArrowMenuBottom from "../../assets/img/icons/ArrowMenuBottom.svg";
 import {useAppDispatch, useAppSelector} from "../../components/hooks/redux";
-import {userSlice} from "../../providers/store/reducers/UserSlice";
+import {bookSlice} from "../../providers/store/reducers/BookSlice";
 import Slider from "../../shared/swiper-sliders/Slider";
 
 const BookPage = () => {
     const {isActiveDropDown} = useAppSelector(state => state.userReducer);
-    const {openDropDownList} = userSlice.actions;
+    const {openDropDownList} = bookSlice.actions;
     const dispatch = useAppDispatch();
     return (
         <div className={styles.globalWrapper}>

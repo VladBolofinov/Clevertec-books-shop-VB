@@ -4,14 +4,14 @@ import IconFilter from '../../assets/img/icons/filterIcon.svg';
 import IconMenu from '../../assets/img/icons/IconMenu.svg';
 import IconView from '../../assets/img/icons/IconView.svg';
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
-import {userSlice} from "../../providers/store/reducers/UserSlice";
+import {bookSlice} from "../../providers/store/reducers/BookSlice";
 
 export const  FilterPanel = () => {
     const onActiveBtnStyles = (activeBtn: boolean) => {
         return (activeBtn) ? {background: 'linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%)'} : {background: 'white'}
     }
     const {isActiveInputBtn, isBookColumn, isBookRow} = useAppSelector(state => state.userReducer);
-    const {openInputBtn, changeDirection} = userSlice.actions;
+    const {openInputBtn, changeDirection} = bookSlice.actions;
     const dispatch = useAppDispatch();
     return (
         (isActiveInputBtn)

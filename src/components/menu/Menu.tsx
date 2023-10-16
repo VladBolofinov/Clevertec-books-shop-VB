@@ -3,10 +3,10 @@ import { NavLink} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import ArrowMenuTop from '../../assets/img/icons/ArrowMenuTop.svg';
 import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
-import {userSlice} from "../../providers/store/reducers/UserSlice";
+import {bookSlice} from "../../providers/store/reducers/BookSlice";
 export const Menu = () => {
     const {isOpenModal,isActiveDropDown} = useAppSelector(state => state.userReducer);
-    const {openDropDownList,openModal} = userSlice.actions;
+    const {openDropDownList,openModal} = bookSlice.actions;
     const dispatch = useAppDispatch();
 
     return  (
