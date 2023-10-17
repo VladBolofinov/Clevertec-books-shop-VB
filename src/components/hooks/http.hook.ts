@@ -1,10 +1,7 @@
-import {AppDispatch} from "../store";
 import axios from "axios";
-import {apiRequestSlice} from "./ApiRequestSlice";
-
-    export const fetchToken = () => async (dispatch: AppDispatch) => {
+export const useHttp = () => {
+    const getToken = async () => {
         try {
-            dispatch(apiRequestSlice.actions.dataFetching());
             const response = await axios({
                 method: 'post',
                 url: 'https://library-cleverland-2jfze.ondigitalocean.app/api/auth/local',
@@ -13,16 +10,15 @@ import {apiRequestSlice} from "./ApiRequestSlice";
                     'password': 'qwerty123'
                 }
             })
-            dispatch(apiRequestSlice.actions.tokenFetchingSuccess(response.data.jwt));
+            //напиши проверку на успех запроса
             return response.data.jwt;
         } catch (e) {
-            dispatch(apiRequestSlice.actions.dataFetchingError(e.message));
+            throw e;
         }
     }
 
-    export const fetchBooksData = (token:string) => async (dispatch: AppDispatch) => {
+    const fetchBooksData = async (token:string) => {
         try {
-            dispatch(apiRequestSlice.actions.dataFetching());
             const response = await axios({
                 method: 'get',
                 url: 'https://library-cleverland-2jfze.ondigitalocean.app/api/books',
@@ -30,11 +26,14 @@ import {apiRequestSlice} from "./ApiRequestSlice";
                     'Authorization': `Bearer ${token}`
                 }
             })
-            dispatch(apiRequestSlice.actions.dataFetchingSuccess(response.data));
-            console.log(response.data);
+            console.log(response.data[5]);
+            return response.data;
         } catch (e) {
-            dispatch(apiRequestSlice.actions.dataFetchingError(e.message));
+            throw e;
         }
     }
-
-
+    return {
+        getToken,
+        fetchBooksData
+    }
+}

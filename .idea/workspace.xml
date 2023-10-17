@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/providers/store/reducers/ActionCreators.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/store/stateTypes/IApiRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/store/stateTypes/IBookState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/API/useApiRequests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/UserSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/reducers/BookSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/store/stateTypes/IUser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/ActionCreators.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/stateTypes/IApiRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/stateTypes/IApiRequest.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/providers/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/API/useApiRequests.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/100nout/Desktop/PROGRAMMING/Clevertec-books-shop-VB",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\100nout\\Desktop\\PROGRAMMING\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/100nout/Desktop/PROGRAMMING/Clevertec-books-shop-VB&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\100nout\\Desktop\\PROGRAMMING\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\icons" />
@@ -98,7 +92,8 @@
       <workItem from="1697014822873" duration="24087000" />
       <workItem from="1697108666951" duration="17070000" />
       <workItem from="1697214595863" duration="17000" />
-      <workItem from="1697455097477" duration="16369000" />
+      <workItem from="1697455097477" duration="16732000" />
+      <workItem from="1697544459508" duration="17059000" />
     </task>
     <servers />
   </component>
