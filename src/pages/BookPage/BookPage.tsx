@@ -7,17 +7,28 @@ import ArrowMenuBottom from "../../assets/img/icons/ArrowMenuBottom.svg";
 import {useAppDispatch, useAppSelector} from "../../components/hooks/redux";
 import {bookSlice} from "../../providers/store/reducers/BookSlice";
 import Slider from "../../shared/swiper-sliders/Slider";
+import {useParams} from "react-router-dom";
+import {useEffect} from "react";
+import {fetchBookByID} from "../../providers/store/reducers/ApiRequestSlice";
 
 const BookPage = () => {
+    const {id} = useParams();
     const {isActiveDropDown} = useAppSelector(state => state.userReducer);
+    const {data,bookData,jwt} = useAppSelector(state => state.apiRequestReducer);
     const {openDropDownList} = bookSlice.actions;
     const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        if (bookData.length === 0) {
+            dispatch(fetchBookByID({ idNum: Number(id), token: jwt }));
+        }
+    },[])
+
     return (
         <div className={styles.globalWrapper}>
             <div className={styles.wrapper}>
                 {(window.innerWidth < 1110) ? <Menu/> : null}
                 <div className={styles.bookLocation}>
-                    Бизнес-книги / Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
                 </div>
                     <Slider/>
                 <div className={styles.wrapperBookDescr}>

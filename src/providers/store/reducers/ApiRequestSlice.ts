@@ -4,6 +4,7 @@ import {useHttp} from "../../../components/hooks/http.hook";
 
 const initialState: IApiRequest = {
     data: [],
+    bookData: [],
     jwt: '',
     error: '',
     isLoading: false
@@ -21,6 +22,13 @@ export const fetchBooksData = createAsyncThunk(
     (token: string) => {
         const {fetchBooksData} = useHttp();
         return fetchBooksData(token);
+    }
+)
+export const fetchBookByID = createAsyncThunk(
+    'apiRequest/fetchBookByID',
+    ({ idNum, token }: { idNum: number; token: string }) => {
+        const {fetchBookByID} = useHttp();
+        return fetchBookByID(idNum, token);
     }
 )
 
@@ -46,6 +54,15 @@ export const apiRequestSlice = createSlice({
                    state.data = action.payload;
                })
                .addCase(fetchBooksData.rejected, (state) => {
+                   state.isLoading = false;
+               })
+               .addCase(fetchBookByID.pending, (state) => {state.isLoading = true;})
+               .addCase(fetchBookByID.fulfilled, (state,action: PayloadAction<object>) => {
+                   state.isLoading = false;
+                   state.error = '';
+                   state.bookData = action.payload;
+               })
+               .addCase(fetchBookByID.rejected, (state) => {
                    state.isLoading = false;
                })
                .addDefaultCase(() => {})

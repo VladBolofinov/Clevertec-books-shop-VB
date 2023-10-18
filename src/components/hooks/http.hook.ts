@@ -26,7 +26,22 @@ export const useHttp = () => {
                     'Authorization': `Bearer ${token}`
                 }
             })
-            console.log(response.data[5]);
+            return response.data;
+        } catch (e) {
+            throw e;
+        }
+    }
+
+    const fetchBookByID = async (idNum:number, token:string) => {
+        try {
+            const response = await axios({
+                method: 'get',
+                url: `https://library-cleverland-2jfze.ondigitalocean.app/api/books/${idNum}`,
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            console.log(response);
             return response.data;
         } catch (e) {
             throw e;
@@ -34,6 +49,7 @@ export const useHttp = () => {
     }
     return {
         getToken,
-        fetchBooksData
+        fetchBooksData,
+        fetchBookByID
     }
 }
