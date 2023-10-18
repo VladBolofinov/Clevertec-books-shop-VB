@@ -13,6 +13,9 @@ const AppRouter = () => {
                             path={path}
                             element={element}/>
                     ))}
+                    <Route>
+
+                    </Route>
                 </Routes>
             </Suspense>
         </div>

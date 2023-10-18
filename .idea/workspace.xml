@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/ActionCreators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/store/stateTypes/IApiRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/stateTypes/IApiRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/API/useApiRequests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/router/AppRouter.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +88,8 @@
       <workItem from="1697108666951" duration="17070000" />
       <workItem from="1697214595863" duration="17000" />
       <workItem from="1697455097477" duration="16732000" />
-      <workItem from="1697544459508" duration="17059000" />
+      <workItem from="1697544459508" duration="17479000" />
+      <workItem from="1697628148518" duration="9931000" />
     </task>
     <servers />
   </component>
