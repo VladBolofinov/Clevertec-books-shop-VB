@@ -6,7 +6,6 @@ import {useAppSelector} from "./components/hooks/redux";
 import {useAppDispatch} from "./components/hooks/redux";
 import {useEffect} from "react";
 import {fetchBooksData, fetchToken} from "./providers/store/reducers/ApiRequestSlice";
-
 const App = () => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {isLoading,jwt} = useAppSelector(state => state.apiRequestReducer);

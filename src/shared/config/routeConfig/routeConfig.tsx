@@ -15,7 +15,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.RULES]: '/rules',
     [AppRoutes.CONTRACT]: '/contract_offer',
-    [AppRoutes.BOOKID]: '/bookPage'
+    [AppRoutes.BOOKID]: '/bookPage/'
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -32,7 +32,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         element: <ContractOfferPage/>
     },
     [AppRoutes.BOOKID]: {
-        path: RoutePath.bookPage,
+        path: `${RoutePath.bookPage}:id`,
         element: <BookPage/>
     }
 }

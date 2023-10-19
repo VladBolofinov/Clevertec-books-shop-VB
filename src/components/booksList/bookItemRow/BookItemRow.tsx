@@ -15,7 +15,7 @@ export const BookItemRow = () => {
                         <NavLink style={() => { return {
                             color: "black",
                             textDecoration: "none"
-                        }}} to={'/bookPage'}>
+                        }}} to={`/bookPage/${item.id}`}>
                         <p className={stylesRow.bookName}>{item.title}</p>
                         </NavLink>
                         <p className={stylesRow.bookAuthor}>{item.authors[0]}, 2019</p>

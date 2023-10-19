@@ -13,7 +13,8 @@ export function buildWebpackConfig(options:BuildOptions):webpack.Configuration {
         output: {
             filename: "[name].[contenthash].js", //название главного файла в проекте
             path: paths.build,//куда собирается сборка
-            clean: true //удаляет предыдущие файлы при новой сборке каждый раз
+            clean: true, //удаляет предыдущие файлы при новой сборке каждый раз
+            publicPath: '/' //при динамических импортах при перезагрузке страницы сборка в дев режиме не правильный путь отображает
         },
         plugins: buildPlugins(options),
         module: {

@@ -3,10 +3,12 @@ import bookPhoto from '../../../assets/img/pictures/BookPhoto.png';
 import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
-import {useAppSelector} from "../../hooks/redux";
+import {useAppSelector, useAppDispatch} from "../../hooks/redux";
+import {fetchBookByID} from "../../../providers/store/reducers/ApiRequestSlice";
 
 export const BookItemColumn = () => {
-    const {data} = useAppSelector(state => state.apiRequestReducer);
+    const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
+    const dispatch = useAppDispatch();
     return (
         <>
             {data.map((item:any) => (
@@ -18,7 +20,8 @@ export const BookItemColumn = () => {
                             color: "black",
                             textDecoration: "none"
                         }}
-                        to={`/bookItemID/${item.id}`}>
+                        to={`/bookPage/${item.id}`}
+                        onClick={() => dispatch(fetchBookByID({ idNum: Number(item.id), token: jwt }))}>
                         <span className={stylesColumn.bookName}>{item.title}</span>
                     </NavLink>
                     <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>
