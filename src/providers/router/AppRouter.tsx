@@ -1,10 +1,6 @@
 import React, {Suspense} from 'react';
 import {Route, Routes} from "react-router-dom";
 import {routeConfig} from "../../shared/config/routeConfig/routeConfig";
-import MainPage from "../../pages/MainPage/MainPage";
-import RulesPage from "../../pages/RulesPage/RulesPage";
-import ContractOfferPage from "../../pages/ContractOfferPage/ContractOfferPage";
-import BookPage from "../../pages/BookPage/BookPage";
 
 const AppRouter = () => {
     return (

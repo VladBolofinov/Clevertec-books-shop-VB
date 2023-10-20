@@ -6,9 +6,16 @@ import 'swiper/scss/pagination';
 import './myStylesSlider.scss';
 
 import { Thumbs, Pagination } from 'swiper/modules';
-import bookPhotoBig from "../../assets/img/pictures/BookPhotoBig.png";
-const Slider = () => {
+import {useAppSelector} from "../../components/hooks/redux";
+export const Slider = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const {bookData} = useAppSelector(state => state.apiRequestReducer);
+    const setImgParams = (classname:string) => {
+        return <img className={classname}
+                    src={(bookData.images) ? bookData.images[0].url : null}
+                    alt="book image"/>
+    }
+
     return (
             <div className='wrapper-slider'>
                 <Swiper
@@ -28,19 +35,19 @@ const Slider = () => {
                                 pagination: {enabled:true}
                             }}}>
                     <SwiperSlide>
-                        <img className='img-main-slider' src={bookPhotoBig} alt="book image"/>
+                        {setImgParams('img-main-slider')}
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='img-main-slider' src={bookPhotoBig} alt="book image"/>
+                        {setImgParams('img-main-slider')}
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='img-main-slider' src={bookPhotoBig} alt="book image"/>
+                        {setImgParams('img-main-slider')}
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='img-main-slider' src={bookPhotoBig} alt="book image"/>
+                        {setImgParams('img-main-slider')}
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='img-main-slider' src={bookPhotoBig} alt="book image"/>
+                        {setImgParams('img-main-slider')}
                     </SwiperSlide>
                 </Swiper>
                 <div className='horizontal-slider-wrapper'>
@@ -50,20 +57,19 @@ const Slider = () => {
                         slidesPerView={4}
                         modules={[Thumbs]}>
                         <SwiperSlide>
-                            <img className='img-horizontal-slider' src={bookPhotoBig} alt="book image"/>
+                            {setImgParams('img-horizontal-slider')}
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className='img-horizontal-slider' src={bookPhotoBig} alt="book image"/>
+                           {setImgParams('img-horizontal-slider')}
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className='img-horizontal-slider' src={bookPhotoBig} alt="book image"/>
+                            {setImgParams('img-horizontal-slider')}
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className='img-horizontal-slider' src={bookPhotoBig} alt="book image"/>
+                            {setImgParams('img-horizontal-slider')}
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </div>
     );
 }
-export default Slider;

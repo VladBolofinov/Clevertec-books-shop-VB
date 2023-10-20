@@ -10,16 +10,6 @@ export const BooksList = () => {
         <div className={styles.wrapper}>
             <FilterPanel/>
             {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
-            {(isBookRow) ? <BookItemRow/> : <BookItemColumn/>}
         </div>
     )
 }

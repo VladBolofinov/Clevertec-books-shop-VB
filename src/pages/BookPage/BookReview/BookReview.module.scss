@@ -1,0 +1,62 @@
+.reviewersWrapper {
+  display: flex;
+  align-items: center;
+  color: #727272;
+  margin: 16px 0;
+}
+.reviewersWrapperHide {
+  display: none;
+}
+.grayLine {
+  display: block;
+  width: 350px;
+  background-color: #EBEBEB;
+  height: 1px;
+  margin: 16px 0;
+}
+.arrowMenu {
+  width: 14px;
+  height: 8px;
+  position: relative;
+  top: -1.5%;
+  left: 10%;
+  cursor: pointer;
+}
+.reviewersPadding {
+  margin-left: 12px;
+}
+
+.reviewersDescr {
+  margin-top: 16px;
+  width: 730px;
+}
+.btnStyles {
+  width:350px;
+  height:52px;
+  background:linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+  font-size:16px;
+  font-weight:600;
+  color:white;
+  margin:32px 0 62px 0;
+}
+.extraDescrHeader {
+  margin-top: 62px;
+}
+
+@media screen and (max-width: 1110px) {
+  .arrowMenu {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reviewersDescr {
+    width: 320px;
+    font-size: 14px;
+  }
+  .arrowMenu {
+    left: 35%;
+  }
+  .btnStyles {
+    width: 250px;
+  }
+}
