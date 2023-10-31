@@ -4,14 +4,15 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'post',
-                url: 'https://library-cleverland-2jfze.ondigitalocean.app/api/auth/local',
+                url: 'http://localhost:8000/login',
                 data: {
-                    'identifier': 'vladbolofinov',
-                    'password': 'qwerty123'
+                    "username": "admin",
+                    "password": "123"
                 }
             })
             //напиши проверку на успех запроса
-            return response.data.jwt;
+            console.log(response.data.token);
+            return response.data.token;
         } catch (e) {
             throw e;
         }
@@ -21,11 +22,12 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: 'https://library-cleverland-2jfze.ondigitalocean.app/api/books',
+                url: 'http://localhost:8000/books',
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             })
+            console.log(response.data);
             return response.data;
         } catch (e) {
             throw e;
@@ -36,9 +38,9 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: `https://library-cleverland-2jfze.ondigitalocean.app/api/books/${idNum}`,
+                url: `http://localhost:8000/books/${idNum}`,
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `${token}`
                 }
             })
             console.log(response);
@@ -47,7 +49,6 @@ export const useHttp = () => {
             throw e;
         }
     }
-
 
     return {
         getToken,
