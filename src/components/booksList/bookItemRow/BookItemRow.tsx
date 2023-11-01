@@ -1,12 +1,24 @@
 import stylesRow from './BookItemRow.module.scss';
 import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
 import { NavLink } from 'react-router-dom';
-import {useAppSelector} from "../../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import bookNotFound from "../../../assets/img/pictures/bookNotFound.png";
+import {useEffect} from "react";
+import {fetchBooksData, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
 
 export const BookItemRow = () => {
-    const {data} = useAppSelector(state => state.apiRequestReducer);
+    const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
+    const dispatch = useAppDispatch();
     const slicedData = data.slice(0, 10);
+
+    useEffect(() => {
+        if (jwt && data.length == 0) {
+            dispatch(fetchBooksData(jwt));
+        } else if (!jwt) {
+            dispatch(fetchToken());
+        }
+    }, [jwt]);
+
     return (
         <>
             {slicedData.map((item:any,i:number) => {

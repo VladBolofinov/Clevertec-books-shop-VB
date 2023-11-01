@@ -10,9 +10,9 @@ export const Header = () => {
     const {openModal} = bookSlice.actions;
     const dispatch = useAppDispatch();
     const {isOpenModal} = useAppSelector(state => state.userReducer);
-
+    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
     return (
-        <div className={styles.header}>
+        <div className={(isLoading) ? styles.headerLoading : styles.header}>
             <div className={styles.logoWrapper}>
                 <NavLink to="/">
                 <div className={styles.logo}>

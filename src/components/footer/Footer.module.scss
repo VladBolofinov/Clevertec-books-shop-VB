@@ -1,4 +1,4 @@
-.footer {
+.baseFooter {
   width: 1110px;
   height: 56px;
   margin: 38px auto 0;
@@ -6,6 +6,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer {
+  composes: baseFooter;
+  filter: blur(0px);
+}
+
+.footerLoading {
+  composes: baseFooter;
+  filter: blur(4px);
 }
 .socialWrapper {
   display: flex;

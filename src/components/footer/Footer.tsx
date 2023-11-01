@@ -3,9 +3,11 @@ import InstagramLogo from '../../assets/img/logo/InstagramLogo.svg';
 import VkLogo from '../../assets/img/logo/VkLogo.svg';
 import FacebookLogo from '../../assets/img/logo/FacebookLogo.svg';
 import LinkedinLogo from '../../assets/img/logo/LinkedinLogo.svg';
+import {useAppSelector} from "../hooks/redux";
 export const Footer = () => {
+    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
     return (
-        <div className={styles.footer}>
+        <div className={(isLoading) ? styles.footerLoading : styles.footer}>
             <p className={styles.trademark}>© 2020-2023 Cleverland. Все права защищены.</p>
             <div className={styles.socialWrapper}>
                 <a href="https://www.facebook.com/" target='_blank'><FacebookLogo/></a>

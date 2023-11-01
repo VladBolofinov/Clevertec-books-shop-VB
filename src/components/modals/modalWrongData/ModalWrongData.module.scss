@@ -1,0 +1,20 @@
+.modalWrapper {
+  width: 1110px;
+  height: 80px;
+  border: 2px solid #F42C4F;
+  border-radius: 5px;
+  background-color: #FEEBEA;
+  padding: 24px 32px;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 25px;
+  left: 150px;
+}
+.modalHide {
+  display: none;
+}

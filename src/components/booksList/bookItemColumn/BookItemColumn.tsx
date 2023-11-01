@@ -3,12 +3,20 @@ import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
 import {useAppSelector, useAppDispatch} from "../../hooks/redux";
-import {fetchBookByID} from "../../../providers/store/reducers/ApiRequestSlice";
+import {fetchBooksData, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
+import {useEffect} from "react";
 
 export const BookItemColumn = () => {
     const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
     const slicedData = data.slice(0, 12);
+    useEffect(() => {
+        if (jwt && data.length == 0) {
+            dispatch(fetchBooksData(jwt));
+        } else if (!jwt) {
+            dispatch(fetchToken());
+        }
+    }, [jwt]);
     return (
         <>
             {slicedData.map((item:any) => (
@@ -20,8 +28,7 @@ export const BookItemColumn = () => {
                             color: "black",
                             textDecoration: "none"
                         }}
-                        to={`/bookPage/${item.id}`}
-                        onClick={() => dispatch(fetchBookByID({ idNum: Number(item.id), token: jwt }))}>
+                        to={`/bookPage/${item.id}`}>
                         <span className={stylesColumn.bookName}>{item.title}</span>
                     </NavLink>
                     <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>

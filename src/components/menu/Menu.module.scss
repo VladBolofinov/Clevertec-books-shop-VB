@@ -1,4 +1,4 @@
-.menu {
+.baseMenu {
   width: 279px;
   margin-top: 62px;
   display: flex;
@@ -16,6 +16,16 @@
     cursor: pointer;
   }
 }
+.menu {
+  composes: baseMenu;
+  filter: blur(0px);
+}
+
+.menuLoading {
+  composes: baseMenu;
+  filter: blur(4px);
+}
+
 .allBooksHeader {
   padding: 16px 0 0 20px;
 }

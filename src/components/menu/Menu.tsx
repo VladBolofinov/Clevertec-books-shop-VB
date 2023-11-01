@@ -6,12 +6,13 @@ import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
 import {bookSlice} from "../../providers/store/reducers/BookSlice";
 export const Menu = () => {
     const {isOpenModal,isActiveDropDown} = useAppSelector(state => state.userReducer);
+    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
     const {openDropDownList,openModal} = bookSlice.actions;
     const dispatch = useAppDispatch();
 
     return  (
         <div>
-            <div className={styles.menu} style={(isOpenModal) ? {transform: 'translateX(-5%)', transition: '0.4s'} : null}>
+            <div className={(isLoading) ? styles.menuLoading : styles.menu} style={(isOpenModal) ? {transform: 'translateX(-5%)', transition: '0.4s'} : null}>
                 <div className={styles.arrowMenu}
                      onClick={() => dispatch(openDropDownList(!isActiveDropDown))}>
                     {(isActiveDropDown) ? <ArrowMenuTop fill={'#F83600'}/> : <ArrowMenuBottom fill={'#F83600'}/>}
