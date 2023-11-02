@@ -51,7 +51,7 @@
 }
 
 @media screen and (max-width: 1110px)  {
-  .menu {
+  .baseMenu {
     position: absolute;
     z-index: 3;
     width: 502px;
@@ -84,7 +84,7 @@
   }
 }
 @media screen and (max-width: 768px)  {
-  .menu {
+  .baseMenu {
     width: 288px;
     .arrowMenu {
       left: 80%;

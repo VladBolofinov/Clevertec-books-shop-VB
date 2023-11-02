@@ -4,14 +4,13 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'post',
-                url: 'https://bookdatabasevb.onrender.com/login',
+                url: 'https://bookdatabasevb.onrender.com/login',   //http://localhost:8000
                 data: {
                     "username": "admin",
                     "password": "123"
                 }
             })
             //напиши проверку на успех запроса
-            console.log(response.data.token);
             return response.data.token;
         } catch (e) {
             throw e;
@@ -22,12 +21,11 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: 'https://bookdatabasevb.onrender.com/books',
+                url: 'https://bookdatabasevb.onrender.com/books',  //http://localhost:8000
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             })
-            console.log(response.data);
             return response.data;
         } catch (e) {
             throw e;
@@ -38,12 +36,11 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: `https://bookdatabasevb.onrender.com/books/${idNum}`,
+                url: `https://bookdatabasevb.onrender.com/books/${idNum}`,  //http://localhost:8000
                 headers: {
                     'Authorization': `${token}`
                 }
             })
-            console.log(response);
             return response.data;
         } catch (e) {
             throw e;

@@ -8,7 +8,7 @@ import {ModalWrongData} from "./components/modals/modalWrongData/ModalWrongData"
 
 const App = () => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
-    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
+    const {error} = useAppSelector(state => state.apiRequestReducer);
 
     useEffect(() => {
         (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
@@ -17,7 +17,7 @@ const App = () => {
     return (
         <div className='app'>
             <>
-                <ModalWrongData/>
+                {(error) ? <ModalWrongData/> : null}
                 <Header/>
                 <AppRouter/>
                 <Footer/>

@@ -4,12 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor api requests and created modalWrongData">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="little refactor">
+      <change afterPath="$PROJECT_DIR$/src/providers/store/reducers/ModalSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/store/stateTypes/IModalState.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/json-server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/json-server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modals/modalWrongData/ModalWrongData.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modals/modalWrongData/ModalWrongData.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modals/modalWrongData/ModalWrongData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modals/modalWrongData/ModalWrongData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BookPage/BookPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BookPage/BookPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/reducers/ApiRequestSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/reducers/BookSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/reducers/BookSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +112,7 @@
       <workItem from="1698161868416" duration="307000" />
       <workItem from="1698753878179" duration="16487000" />
       <workItem from="1698837326294" duration="15975000" />
-      <workItem from="1698913677373" duration="7680000" />
+      <workItem from="1698913677373" duration="18072000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -108,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698863249884</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="little refactor">
+      <created>1698926129346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698926129346</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor api requests and created modalWrongData" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor api requests and created modalWrongData" />
+    <MESSAGE value="little refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="little refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

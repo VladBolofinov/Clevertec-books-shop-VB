@@ -20,23 +20,28 @@ const BookPage = () => {
 
     return (
         <div className={styles.globalWrapper}>
-            {(isLoading)
-                ? <MyLoader/>
-                : <div className={styles.wrapper}>
+            <div className={styles.wrapper}>
                     {(window.innerWidth < 1110) ? <Menu/> : null}
-                    <div className={styles.bookLocation}>
-                    </div>
-                    <Slider/>
-                    <div className={styles.wrapperBookDescr}>
-                        <h1 className={styles.bookHeader}>{bookData.title}</h1>
-                        <span className={styles.textAuthor}>{(bookData.authors) ? bookData.authors[0] : null}</span>
-                        <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
-                        <h3>О книге</h3>
-                        <p className={styles.aboutBook}>{bookData.description}</p>
-                    </div>
-                    <BookParams/>
-                    <BookReview/>
-                </div>}
+                    {
+                        (isLoading)
+                            ? <MyLoader/>
+                            :
+                            <>
+                                <div className={styles.bookLocation}></div>
+                                    <Slider/>
+                                    <div className={styles.wrapperBookDescr}>
+                                    <h1 className={styles.bookHeader}>{bookData.title}</h1>
+                                    <span className={styles.textAuthor}>{(bookData.authors) ? bookData.authors[0] : null}</span>
+                                    <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
+                                    <h3>О книге</h3>
+                                    <p className={styles.aboutBook}>{bookData.description}</p>
+                                    </div>
+                                    <BookParams/>
+                                    <BookReview/>
+                                </>
+                    }
+
+                </div>
         </div>
     );
 };

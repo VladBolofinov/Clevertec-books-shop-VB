@@ -17,6 +17,11 @@ export const BookItemColumn = () => {
             dispatch(fetchToken());
         }
     }, [jwt]);
+
+    const truncateString = (text:string, maxLength = 55) => {
+        return (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
+    }
+
     return (
         <>
             {slicedData.map((item:any) => (
@@ -29,7 +34,7 @@ export const BookItemColumn = () => {
                             textDecoration: "none"
                         }}
                         to={`/bookPage/${item.id}`}>
-                        <span className={stylesColumn.bookName}>{item.title}</span>
+                        <span className={stylesColumn.bookName}>{truncateString(item.title)}</span>
                     </NavLink>
                     <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>
                     <button className={stylesColumn.btnStyles}>ЗАБРОНИРОВАТЬ</button>

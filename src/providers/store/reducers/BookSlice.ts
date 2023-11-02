@@ -12,7 +12,7 @@ const initialState: IBookState = {
 }
 
 export const bookSlice = createSlice({
-    name: 'user',
+    name: 'book',
     initialState,
     reducers: {
         openModal(state, action: PayloadAction<boolean>) {

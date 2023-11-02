@@ -12,9 +12,33 @@
   align-items: center;
   position: absolute;
   z-index: 3;
-  top: 25px;
-  left: 150px;
+  top:10%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  p {
+    margin: 0 10px;
+  }
 }
+
+.iconClose {
+  cursor: pointer;
+}
+
 .modalHide {
   display: none;
+}
+
+@media screen and (max-width: 1110px) {
+  .modalWrapper {
+    width: 640px;
+    padding: 24px 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modalWrapper {
+    width: 300px;
+    font-size: 11px;
+    line-height: 16px;
+    padding: 12px 16px;
+  }
 }

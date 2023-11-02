@@ -18,19 +18,22 @@ export const BookItemRow = () => {
             dispatch(fetchToken());
         }
     }, [jwt]);
-
+    //вынеси куда-нибудь функцию отдельно чтобы не дублировать ее
+    const truncateString = (text:string, maxLength = 55) => {
+        return (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
+    }
     return (
         <>
             {slicedData.map((item:any,i:number) => {
                 return(
                 <div key={item.id} className={stylesRow.bookCard}>
-                    <img className={stylesRow.bookImg} src={(item.image) ? item.image.url : bookNotFound} alt="book image"/>
+                    <img className={stylesRow.bookImg} src={(item.image == 'not found') ? bookNotFound : item.image.url} alt="book image"/>
                     <div className={stylesRow.wrapperElemsImg}>
                         <NavLink style={() => { return {
                             color: "black",
                             textDecoration: "none"
                         }}} to={`/bookPage/${item.id}`}>
-                        <p className={stylesRow.bookName}>{item.title}</p>
+                        <p className={stylesRow.bookName}>{truncateString(item.title)}</p>
                         </NavLink>
                         <p className={stylesRow.bookAuthor}>{item.authors[0]}, {item.issueYear}</p>
                         <div className={stylesRow.wrapperBtnStars}>

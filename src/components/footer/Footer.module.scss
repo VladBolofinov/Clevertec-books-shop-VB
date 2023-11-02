@@ -23,13 +23,13 @@
 }
 
 @media screen and (max-width: 1110px) {
-  .footer {
+  .baseFooter {
     width: 640px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .footer {
+  .baseFooter {
     width: 320px;
     height: 104px;
     flex-direction: column;

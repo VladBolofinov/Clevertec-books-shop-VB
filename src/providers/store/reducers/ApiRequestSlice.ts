@@ -46,6 +46,7 @@ export const apiRequestSlice = createSlice({
                })
                .addCase(fetchToken.rejected, (state) => {
                    state.isLoading = false;
+                   state.error = 'something was wrong!';
                })
                .addCase(fetchBooksData.pending, (state) => {state.isLoading = true;})
                .addCase(fetchBooksData.fulfilled, (state,action: PayloadAction<any>) => {//поменяй тип(типизировать приходящие объекты с апишки)
@@ -55,6 +56,7 @@ export const apiRequestSlice = createSlice({
                })
                .addCase(fetchBooksData.rejected, (state) => {
                    state.isLoading = false;
+                   state.error = 'something was wrong!';
                })
                .addCase(fetchBookByID.pending, (state) => {state.isLoading = true;})
                .addCase(fetchBookByID.fulfilled, (state,action: PayloadAction<object>) => {
@@ -64,6 +66,7 @@ export const apiRequestSlice = createSlice({
                })
                .addCase(fetchBookByID.rejected, (state) => {
                    state.isLoading = false;
+                   state.error = 'something was wrong!';
                })
                .addDefaultCase(() => {})
     }

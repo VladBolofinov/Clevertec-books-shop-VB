@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import userReducer from './reducers/BookSlice';
+import modalReducer from './reducers/ModalSlice';
 import apiRequestReducer from './reducers/ApiRequestSlice';
 
 const rootReducer = combineReducers({
     userReducer,
-    apiRequestReducer
+    apiRequestReducer,
+    modalReducer
 })
 
 export const setupStore = () => {
