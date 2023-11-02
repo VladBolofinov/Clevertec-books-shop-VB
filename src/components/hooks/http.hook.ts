@@ -4,7 +4,7 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'post',
-                url: 'http://localhost:8000/login',
+                url: 'https://bookdatabasevb.onrender.com/login',
                 data: {
                     "username": "admin",
                     "password": "123"
@@ -22,7 +22,7 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: 'http://localhost:8000/books',
+                url: 'https://bookdatabasevb.onrender.com/books',
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -38,7 +38,7 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: `http://localhost:8000/books/${idNum}`,
+                url: `https://bookdatabasevb.onrender.com/books/${idNum}`,
                 headers: {
                     'Authorization': `${token}`
                 }

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="" />
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor api requests and created modalWrongData">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/json-server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,26 +27,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/100nout/Desktop/PROGRAMMING/Clevertec-books-shop-VB",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\100nout\\Desktop\\PROGRAMMING\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/100nout/Desktop/PROGRAMMING/Clevertec-books-shop-VB/src/assets/img/icons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\100nout\\Desktop\\PROGRAMMING\\Clevertec-books-shop-VB\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\icons" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\json-server" />
-      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\icons" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\pictures" />
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\pages\ContractOfferPage" />
     </key>
@@ -92,11 +98,25 @@
       <workItem from="1698148600021" duration="915000" />
       <workItem from="1698161868416" duration="307000" />
       <workItem from="1698753878179" duration="16487000" />
+      <workItem from="1698837326294" duration="15975000" />
+      <workItem from="1698913677373" duration="7680000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
+      <created>1698863249883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698863249884</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor api requests and created modalWrongData" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor api requests and created modalWrongData" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
