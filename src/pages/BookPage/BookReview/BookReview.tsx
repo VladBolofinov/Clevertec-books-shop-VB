@@ -26,7 +26,7 @@ export const BookReview = () => {
                         <div className={styles.reviewersWrapper}>
                             <ReviewersAvatar/>
                             <p className={styles.reviewersPadding}>{item.user.firstName} {item.user.lastName}</p>
-                            <p className={styles.reviewersPadding}>{item.createdAt}</p>
+                            <p className={styles.reviewersPadding}>{item.createdAt.slice(0, 10)}</p>
                         </div>
                         <MyStarReview width={'168px'} score={item.rating}/>
                         <p className={styles.reviewersDescr}>{item.text}</p>

@@ -6,10 +6,14 @@
   overflow: hidden;
   p {
     padding: 16px 0 0 20px;
+    cursor: pointer;
+  }
+  span {
+    color: #A7A7A7;
   }
   .arrowMenu {
     width: 14px;
-    height: 8px;
+    height: 0px;
     position: relative;
     top: 1%;
     left: 80%;

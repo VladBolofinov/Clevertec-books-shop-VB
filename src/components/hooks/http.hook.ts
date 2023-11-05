@@ -23,7 +23,7 @@ export const useHttp = () => {
                 method: 'get',
                 url: 'https://bookdatabasevb.onrender.com/books',  //http://localhost:8000
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `${token}`
                 }
             })
             return response.data;
@@ -47,9 +47,25 @@ export const useHttp = () => {
         }
     }
 
+    const fetchCategories = async (token:string) => {
+        try {
+            const response = await axios({
+                method: 'get',
+                url: `https://bookdatabasevb.onrender.com/categories`,
+                headers: {
+                    'Authorization': `${token}`
+                }
+            })
+            return response.data;
+        } catch (e) {
+            throw e;
+        }
+    }
+
     return {
         getToken,
         fetchBooksData,
-        fetchBookByID
+        fetchBookByID,
+        fetchCategories
     }
 }

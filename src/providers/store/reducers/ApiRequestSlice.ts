@@ -7,7 +7,8 @@ const initialState: IApiRequest = {
     bookData: [],
     jwt: '',
     error: '',
-    isLoading: false
+    isLoading: false,
+    categories: []
 }
 
 export const fetchToken = createAsyncThunk(
@@ -29,6 +30,14 @@ export const fetchBookByID = createAsyncThunk(
     ({ idNum, token }: { idNum: number; token: string }) => {
         const {fetchBookByID} = useHttp();
         return fetchBookByID(idNum, token);
+    }
+)
+
+export const fetchCategories = createAsyncThunk(
+    'apiRequest/fetchCategories',
+    (token:string) => {
+        const {fetchCategories} = useHttp();
+        return fetchCategories(token);
     }
 )
 
@@ -68,6 +77,16 @@ export const apiRequestSlice = createSlice({
                    state.isLoading = false;
                    state.error = 'something was wrong!';
                })
+                .addCase(fetchCategories.pending, (state) => {state.isLoading = true;})
+                .addCase(fetchCategories.fulfilled, (state,action: PayloadAction<object>) => {
+                    state.isLoading = false;
+                    state.error = '';
+                    state.categories = action.payload;
+                })
+                .addCase(fetchCategories.rejected, (state) => {
+                    state.isLoading = false;
+                    state.error = 'something was wrong!';
+                })
                .addDefaultCase(() => {})
     }
 })

@@ -3,7 +3,7 @@ import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
 import {useAppSelector, useAppDispatch} from "../../hooks/redux";
-import {fetchBooksData, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
+import {fetchBooksData, fetchCategories, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
 import {useEffect} from "react";
 
 export const BookItemColumn = () => {
@@ -13,6 +13,7 @@ export const BookItemColumn = () => {
     useEffect(() => {
         if (jwt && data.length == 0) {
             dispatch(fetchBooksData(jwt));
+            dispatch(fetchCategories(jwt));
         } else if (!jwt) {
             dispatch(fetchToken());
         }

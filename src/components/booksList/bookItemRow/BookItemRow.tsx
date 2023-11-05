@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import bookNotFound from "../../../assets/img/pictures/bookNotFound.png";
 import {useEffect} from "react";
-import {fetchBooksData, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
+import {fetchBooksData, fetchCategories, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
 
 export const BookItemRow = () => {
     const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
@@ -14,6 +14,7 @@ export const BookItemRow = () => {
     useEffect(() => {
         if (jwt && data.length == 0) {
             dispatch(fetchBooksData(jwt));
+            dispatch(fetchCategories(jwt));
         } else if (!jwt) {
             dispatch(fetchToken());
         }
@@ -24,7 +25,7 @@ export const BookItemRow = () => {
     }
     return (
         <>
-            {slicedData.map((item:any,i:number) => {
+            {slicedData.map((item:any) => {
                 return(
                 <div key={item.id} className={stylesRow.bookCard}>
                     <img className={stylesRow.bookImg} src={(item.image == 'not found') ? bookNotFound : item.image.url} alt="book image"/>

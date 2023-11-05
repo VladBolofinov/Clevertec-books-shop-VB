@@ -4,4 +4,7 @@ export default interface IApiRequest {
     jwt: string;
     error: string;
     isLoading: boolean;
+    categories: any;
 }
+
+// поменяй все типы any на так как должно быть

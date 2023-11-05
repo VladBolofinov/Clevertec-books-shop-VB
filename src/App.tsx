@@ -3,8 +3,14 @@ import {Header} from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
 import AppRouter from "./providers/router/AppRouter";
 import {useAppSelector} from "./components/hooks/redux";
-import {useEffect} from "react";
+import React, {Suspense, useEffect} from "react";
 import {ModalWrongData} from "./components/modals/modalWrongData/ModalWrongData";
+import {NavLink, Outlet, Route, Routes} from "react-router-dom";
+import {Menu} from "./components/menu/Menu";
+import MainPage from "./pages/MainPage/MainPage";
+import RulesPage from "./pages/RulesPage/RulesPage";
+import ContractOfferPage from "./pages/ContractOfferPage/ContractOfferPage";
+import BookPage from "./pages/BookPage/BookPage";
 
 const App = () => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
@@ -26,3 +32,4 @@ const App = () => {
     )
 }
 export default App;
+
