@@ -4,7 +4,6 @@ import styles from "../RulesPage/RulesPage.module.scss";
 const RulesPage = () => {
     return (
         <div className={styles.wrapperMiddleSection}>
-            <Menu/>
             <div className={styles.textWrapper}>
                 <h2>Правила пользования</h2>
                     <h4>1. Идейные соображения высшего порядка, а также высокое качество позиционных исследований

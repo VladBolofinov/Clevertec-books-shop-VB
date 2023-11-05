@@ -3,19 +3,15 @@ import {Header} from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
 import AppRouter from "./providers/router/AppRouter";
 import {useAppSelector} from "./components/hooks/redux";
-import React, {Suspense, useEffect} from "react";
+import React, {useEffect} from "react";
 import {ModalWrongData} from "./components/modals/modalWrongData/ModalWrongData";
-import {NavLink, Outlet, Route, Routes} from "react-router-dom";
 import {Menu} from "./components/menu/Menu";
-import MainPage from "./pages/MainPage/MainPage";
-import RulesPage from "./pages/RulesPage/RulesPage";
-import ContractOfferPage from "./pages/ContractOfferPage/ContractOfferPage";
-import BookPage from "./pages/BookPage/BookPage";
-
+import {useLocation} from "react-router-dom";
 const App = () => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {error} = useAppSelector(state => state.apiRequestReducer);
 
+    console.log(useLocation().pathname);
     useEffect(() => {
         (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
     }, [isOpenModal]);
@@ -25,11 +21,13 @@ const App = () => {
             <>
                 {(error) ? <ModalWrongData/> : null}
                 <Header/>
-                <AppRouter/>
+                <div className='wrapperMiddleSection'>
+                    {(useLocation().pathname === '/') ? <Menu/> : null}
+                    <AppRouter/>
+                </div>
                 <Footer/>
             </>
         </div>
     )
 }
 export default App;
-
