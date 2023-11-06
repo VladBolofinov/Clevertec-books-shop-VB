@@ -1,10 +1,10 @@
 import stylesRow from './BookItemRow.module.scss';
-import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
+import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
 import { NavLink } from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import bookNotFound from "../../../assets/img/pictures/bookNotFound.png";
 import {useEffect} from "react";
-import {fetchBooksData, fetchCategories, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
+import {fetchBooksData, fetchCategories, fetchToken} from "../../../store/reducers/ApiRequestSlice";
 
 export const BookItemRow = () => {
     const {data,jwt} = useAppSelector(state => state.apiRequestReducer);

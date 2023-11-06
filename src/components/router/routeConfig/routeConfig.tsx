@@ -1,8 +1,8 @@
 import {RouteProps} from "react-router-dom";
 //import MainPage from "../../../pages/MainPage/MainPage";
-import RulesPage from "../../../pages/RulesPage/RulesPage";
-import ContractOfferPage from "../../../pages/ContractOfferPage/ContractOfferPage";
-import BookPage from "../../../pages/BookPage/BookPage";
+import RulesPage from "../../pages/rulesPage/RulesPage";
+import ContractOfferPage from "../../pages/contractOfferPage/ContractOfferPage";
+import BookPage from "../../pages/bookPage/BookPage";
 
 export enum AppRoutes {
     //MAIN ='main',

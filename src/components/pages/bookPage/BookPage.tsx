@@ -1,13 +1,13 @@
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import styles from './BookPage.module.scss';
-import {Menu} from "../../components/menu/Menu";
+import {Menu} from "../../menu/Menu";
 import {BookParams} from "./BookParams/BookParams";
 import {BookReview} from "./BookReview/BookReview";
-import {Slider} from "../../shared/swiper-sliders/Slider";
-import {useAppDispatch, useAppSelector} from "../../components/hooks/redux";
-import {fetchBookByID, fetchToken} from "../../providers/store/reducers/ApiRequestSlice";
-import {MyLoader} from "../../shared/MyLoader/MyLoader";
+import {Slider} from "../../sharedComponents/swiper-sliders/Slider";
+import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import {fetchBookByID, fetchToken} from "../../../store/reducers/ApiRequestSlice";
+import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 const BookPage = () => {
     const {id} = useParams();
     const {bookData,jwt, isLoading} = useAppSelector(state => state.apiRequestReducer);

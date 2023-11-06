@@ -2,7 +2,7 @@ import styles from './ModalWrongData.module.scss';
 import iconAttention from '../../../assets/img/icons/iconAttention.png';
 import iconClose from '../../../assets/img/icons/iconClose.png';
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {modalSlice} from "../../../providers/store/reducers/ModalSlice";
+import {modalSlice} from "../../../store/reducers/ModalSlice";
 export const ModalWrongData = () => {
     const {isOpenModalWrongData} = useAppSelector(state => state.modalReducer);
     const {openModalWrongData} = modalSlice.actions;

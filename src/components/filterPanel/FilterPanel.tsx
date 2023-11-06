@@ -4,7 +4,7 @@ import IconFilter from '../../assets/img/icons/filterIcon.svg';
 import IconMenu from '../../assets/img/icons/IconMenu.svg';
 import IconView from '../../assets/img/icons/IconView.svg';
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
-import {bookSlice} from "../../providers/store/reducers/BookSlice";
+import {bookSlice} from "../../store/reducers/BookSlice";
 
 export const  FilterPanel = () => {
     const onActiveBtnStyles = (activeBtn: boolean) => {

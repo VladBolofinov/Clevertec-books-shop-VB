@@ -1,6 +1,6 @@
 import {createSlice, createAsyncThunk, PayloadAction} from "@reduxjs/toolkit";
 import IApiRequest from "../stateTypes/IApiRequest";
-import {useHttp} from "../../../components/hooks/http.hook";
+import {useHttp} from "../../components/hooks/http.hook";
 
 const initialState: IApiRequest = {
     data: [],

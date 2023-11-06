@@ -6,7 +6,7 @@ import 'swiper/scss/pagination';
 import './myStylesSlider.scss';
 
 import { Thumbs, Pagination } from 'swiper/modules';
-import {useAppSelector} from "../../components/hooks/redux";
+import {useAppSelector} from "../../hooks/redux";
 export const Slider = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const {bookData} = useAppSelector(state => state.apiRequestReducer);

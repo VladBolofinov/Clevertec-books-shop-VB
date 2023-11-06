@@ -1,5 +1,4 @@
-import {Menu} from "../../components/menu/Menu";
-import styles from "../RulesPage/RulesPage.module.scss";
+import styles from "./RulesPage.module.scss";
 
 const RulesPage = () => {
     return (

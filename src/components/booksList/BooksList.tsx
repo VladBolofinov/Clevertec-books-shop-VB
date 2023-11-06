@@ -3,7 +3,7 @@ import {FilterPanel} from "../filterPanel/FilterPanel";
 import {BookItemColumn} from "./bookItemColumn/BookItemColumn";
 import {BookItemRow} from "./bookItemRow/BookItemRow";
 import {useAppSelector} from "../hooks/redux";
-import {MyLoader} from "../../shared/MyLoader/MyLoader";
+import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
 
 const BooksList = () => {
     const {isBookRow} = useAppSelector(state => state.userReducer);

@@ -20,7 +20,8 @@
 }
 .wrapperMiddleSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  min-height: 500px;
 }
 
 @media screen and (max-width: 768px) {

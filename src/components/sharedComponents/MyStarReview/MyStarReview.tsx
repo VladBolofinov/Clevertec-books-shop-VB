@@ -1,5 +1,5 @@
 import React from 'react';
-import IconStar from "../../assets/img/icons/IconStar.svg";
+import IconStar from "../../../assets/img/icons/IconStar.svg";
 import styles from './MyStarReview.module.scss';
 
 interface StarsProps {

@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./BookReview.module.scss";
-import ArrowMenuTop from "../../../assets/img/icons/ArrowMenuTop.svg";
-import ArrowMenuBottom from "../../../assets/img/icons/ArrowMenuBottom.svg";
-import ReviewersAvatar from "../../../assets/img/icons/reviewsAvatar.svg";
-import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
-import {useAppDispatch, useAppSelector} from "../../../components/hooks/redux";
-import {bookSlice} from "../../../providers/store/reducers/BookSlice";
+import ArrowMenuTop from "../../../../assets/img/icons/ArrowMenuTop.svg";
+import ArrowMenuBottom from "../../../../assets/img/icons/ArrowMenuBottom.svg";
+import ReviewersAvatar from "../../../../assets/img/icons/reviewsAvatar.svg";
+import MyStarReview from "../../../sharedComponents/MyStarReview/MyStarReview";
+import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
+import {bookSlice} from "../../../../store/reducers/BookSlice";
 
 export const BookReview = () => {
     const {isActiveDropDown} = useAppSelector(state => state.userReducer);

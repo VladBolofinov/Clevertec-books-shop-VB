@@ -1,9 +1,7 @@
 import styles from './ContractOfferPage.module.scss';
-import {Menu} from "../../components/menu/Menu";
 const ContractOfferPage = () => {
     return (
         <div className={styles.wrapperMiddleSection}>
-            <Menu/>
             <div className={styles.textWrapper}>
                 <h2>Договор Оферты</h2>
                 <h4>1. Общие положения</h4>

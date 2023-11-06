@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./BookParams.module.scss"
-import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
-import {useAppSelector} from "../../../components/hooks/redux";
+import MyStarReview from "../../../sharedComponents/MyStarReview/MyStarReview";
+import {useAppSelector} from "../../../hooks/redux";
 
 export const BookParams = () => {
     const {bookData} = useAppSelector(state => state.apiRequestReducer);

@@ -1,15 +1,16 @@
 import stylesColumn from './BookItemColumn.module.scss';
 import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
-import MyStarReview from "../../../shared/MyStarReview/MyStarReview";
+import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
 import {useAppSelector, useAppDispatch} from "../../hooks/redux";
-import {fetchBooksData, fetchCategories, fetchToken} from "../../../providers/store/reducers/ApiRequestSlice";
+import {fetchBooksData, fetchCategories, fetchToken} from "../../../store/reducers/ApiRequestSlice";
 import {useEffect} from "react";
 
 export const BookItemColumn = () => {
     const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
     const slicedData = data.slice(0, 12);
+
     useEffect(() => {
         if (jwt && data.length == 0) {
             dispatch(fetchBooksData(jwt));
