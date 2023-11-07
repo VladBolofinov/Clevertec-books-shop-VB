@@ -1,30 +1,31 @@
-import './styles/index.scss';
-import {Header} from "./components/header/Header";
-import {Footer} from "./components/footer/Footer";
-import AppRouter from "./components/router/AppRouter";
-import {useAppSelector} from "./components/hooks/redux";
-import React, {useEffect} from "react";
-import {ModalWrongData} from "./components/modals/modalWrongData/ModalWrongData";
-import {Menu} from "./components/menu/Menu";
-import {useLocation} from "react-router-dom";
-const App = () => {
-    const {isOpenModal} = useAppSelector(state => state.userReducer);
-    const {error} = useAppSelector(state => state.apiRequestReducer);
-    const routes = ['/', '/rules', '/contract_offer'];
-    useEffect(() => {
-        (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
-    }, [isOpenModal]);
 
+
+import React, {Suspense} from 'react';
+import {Route, Routes} from "react-router-dom";
+//import {routeConfig} from "../../shared/config/routeConfig/routeConfig";
+import RulesPage from "./components/pages/rulesPage/RulesPage";
+import ContractOfferPage from "./components/pages/contractOfferPage/ContractOfferPage";
+import BookPage from "./components/pages/bookPage/BookPage";
+import {BooksListAsync} from "./components/booksList/BooksList.async";
+import {MyLoader} from "./components/sharedComponents/MyLoader/MyLoader";
+import AppRouter from "./components/router/AppRouter";
+
+const App = () => {
     return (
-        <div className='app'>
-                {(error) ? <ModalWrongData/> : null}
-                <Header/>
-                <div className='wrapperMiddleSection'>
-                    {(routes.includes(useLocation().pathname)) ? <Menu/> : null}
-                    <AppRouter/>
-                </div>
-                <Footer/>
-        </div>
-    )
-}
+        <>
+            <Suspense fallback={<MyLoader/>}>
+                <Routes>
+                    <Route path={'/'} element={<AppRouter/>}>
+                        <Route key={1} index element={<BooksListAsync/>}/>
+                        <Route key={2} path={'rules'} element={<RulesPage/>}/>
+                        <Route key={3} path={'contract_offer'} element={<ContractOfferPage/>}/>
+                        <Route key={4} path={'bookPage/:id'} element={<BookPage/>}/>
+                    </Route>
+                    {/*{Object.values(routeConfig).map(({element,path}) => (<Route key={path} path={path} element={element}/>))}*/}
+                </Routes>
+            </Suspense>
+        </>
+    );
+};
+
 export default App;

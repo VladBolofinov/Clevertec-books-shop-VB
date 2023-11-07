@@ -29,6 +29,7 @@
 .menuLoading {
   composes: baseMenu;
   filter: blur(4px);
+  pointer-events: none;
 }
 
 .allBooksHeader {

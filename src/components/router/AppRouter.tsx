@@ -1,26 +1,29 @@
-import React, {Suspense} from 'react';
-import {Route, Routes} from "react-router-dom";
-//import {routeConfig} from "../../shared/config/routeConfig/routeConfig";
-import RulesPage from "../pages/rulesPage/RulesPage";
-import ContractOfferPage from "../pages/contractOfferPage/ContractOfferPage";
-import BookPage from "../pages/bookPage/BookPage";
-import {BooksListAsync} from "../booksList/BooksList.async";
-import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
-
+import '../../styles/index.scss';
+import {Header} from "../header/Header";
+import {Footer} from "../footer/Footer";
+import {useAppSelector} from "../hooks/redux";
+import React, {useEffect} from "react";
+import {ModalWrongData} from "../modals/modalWrongData/ModalWrongData";
+import {Menu} from "../menu/Menu";
+import {Outlet, useLocation} from "react-router-dom";
 const AppRouter = () => {
-    return (
-        <>
-            <Suspense fallback={<MyLoader/>}>
-                <Routes>
-                    <Route key={1} path={'/'} element={<BooksListAsync/>}/>
-                    <Route key={2} path={'/rules'} element={<RulesPage/>}/>
-                    <Route key={3} path={'/contract_offer'} element={<ContractOfferPage/>}/>
-                    <Route key={4} path={'/bookPage/:id'} element={<BookPage/>}/>
-                    {/*{Object.values(routeConfig).map(({element,path}) => (<Route key={path} path={path} element={element}/>))}*/}
-                </Routes>
-            </Suspense>
-        </>
-    );
-};
+    const {isOpenModal} = useAppSelector(state => state.userReducer);
+    const {error} = useAppSelector(state => state.apiRequestReducer);
+    const routes = ['/', '/rules', '/contract_offer'];
+    useEffect(() => {
+        (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
+    }, [isOpenModal]);
 
+    return (
+        <div className='app'>
+            {(error) ? <ModalWrongData/> : null}
+            <Header/>
+            <div className='wrapperMiddleSection'>
+                {(routes.includes(useLocation().pathname)) ? <Menu/> : null}
+                <Outlet/>
+            </div>
+            <Footer/>
+        </div>
+    )
+}
 export default AppRouter;

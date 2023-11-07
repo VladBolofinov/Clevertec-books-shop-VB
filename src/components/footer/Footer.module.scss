@@ -15,6 +15,7 @@
 .footerLoading {
   composes: baseFooter;
   filter: blur(4px);
+  pointer-events: none;
 }
 .socialWrapper {
   display: flex;
