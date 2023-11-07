@@ -14,7 +14,7 @@ export const Menu = () => {
     const renderCategories = categories.map((item:any) => {
         return (
             <>
-                <NavLink to={`/${item.path}`} style={({ isActive }) => {
+                <NavLink to={`${item.path}`} style={({ isActive }) => {
                     return {
                         color: isActive ? "#F83600" : "black",
                         textDecoration: "none"
@@ -37,7 +37,7 @@ export const Menu = () => {
                     {(isActiveDropDown) ? <ArrowMenuTop fill={'#F83600'}/> : <ArrowMenuBottom fill={'#F83600'}/>}
                 </div>
                 <NavLink
-                    to="/"
+                    to="/main"
                     style={({ isActive }) => {
                         return {
                             color: isActive ? "#F83600" : "black",
@@ -55,7 +55,7 @@ export const Menu = () => {
             dispatch(openModal(false));
         }}}>
                     <NavLink
-                        to="/rules" style={({ isActive }) => {
+                        to="/main/rules" style={({ isActive }) => {
                             return {
                                 color: isActive ? "#F83600" : "black",
                                 textDecoration: "none"
@@ -65,7 +65,7 @@ export const Menu = () => {
                 <h3 className={styles.extraInformation} onClick={() => { if (isOpenModal) {
             dispatch(openModal(false));
         }}}><NavLink
-                    to="/contract_offer"
+                    to="/main/contract_offer"
                     style={({ isActive }) => {
                         return {
                             color: isActive ? "#F83600" : "black",

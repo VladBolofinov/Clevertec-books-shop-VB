@@ -9,17 +9,17 @@ import {Outlet, useLocation} from "react-router-dom";
 const AppRouter = () => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {error} = useAppSelector(state => state.apiRequestReducer);
-    const routes = ['/', '/rules', '/contract_offer'];
     useEffect(() => {
         (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
     }, [isOpenModal]);
 
+    console.log(useLocation());
     return (
         <div className='app'>
             {(error) ? <ModalWrongData/> : null}
             <Header/>
             <div className='wrapperMiddleSection'>
-                {(routes.includes(useLocation().pathname)) ? <Menu/> : null}
+                {(useLocation().pathname.includes('/book/')) ? null : <Menu/>}
                 <Outlet/>
             </div>
             <Footer/>

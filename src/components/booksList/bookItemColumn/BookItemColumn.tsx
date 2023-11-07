@@ -35,7 +35,7 @@ export const BookItemColumn = () => {
                             color: "black",
                             textDecoration: "none"
                         }}
-                        to={`/bookPage/${item.id}`}>
+                        to={`/main/book/${item.id}`}>
                         <span className={stylesColumn.bookName}>{truncateString(item.title)}</span>
                     </NavLink>
                     <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>

@@ -14,7 +14,7 @@ export const Header = () => {
     return (
         <div className={(isLoading) ? styles.headerLoading : styles.header}>
             <div className={styles.logoWrapper}>
-                <NavLink to="/">
+                <NavLink to="/main">
                 <div className={styles.logo}>
                         <Logo/>
                         <LogoName style={{marginLeft:'8px'}}/>

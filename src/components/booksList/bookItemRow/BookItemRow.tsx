@@ -33,7 +33,7 @@ export const BookItemRow = () => {
                         <NavLink style={() => { return {
                             color: "black",
                             textDecoration: "none"
-                        }}} to={`/bookPage/${item.id}`}>
+                        }}} to={`/main/book/${item.id}`}>
                         <p className={stylesRow.bookName}>{truncateString(item.title)}</p>
                         </NavLink>
                         <p className={stylesRow.bookAuthor}>{item.authors[0]}, {item.issueYear}</p>
