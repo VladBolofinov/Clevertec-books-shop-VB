@@ -15,6 +15,9 @@ const BooksList = () => {
     const {filterByCategory} = apiRequestSlice.actions;
     const pathname: string = useLocation().pathname;
     let slicedData:any = (pathname === '/main') ? allData.slice(0, 12) : filteredData.slice(0, 12);
+    const truncateStr = (text:string, maxLength = 55):string => {
+        return (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
+    }
     const findPath = (res: any) => {
        return res.filter((category:any) => {
             return  category.path === pathname.slice(6);
@@ -43,7 +46,9 @@ const BooksList = () => {
                 ? <MyLoader/>
                 : <>
                     <FilterPanel/>
-                    {(isBookRow) ? <BookItemRow slicedData={slicedData}/> : <BookItemColumn slicedData={slicedData}/>}
+                    {(isBookRow)
+                        ? <BookItemRow slicedData={slicedData} truncateStr={truncateStr}/>
+                        : <BookItemColumn slicedData={slicedData} truncateStr={truncateStr}/>}
                 </>}
         </div>
     )

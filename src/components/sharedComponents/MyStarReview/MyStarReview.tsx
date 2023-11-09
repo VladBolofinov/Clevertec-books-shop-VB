@@ -1,13 +1,12 @@
-import React from 'react';
 import IconStar from "../../../assets/img/icons/IconStar.svg";
 import styles from './MyStarReview.module.scss';
 
-interface StarsProps {
+interface IStarsProps {
     score?: number,
     width?: string,
 }
 //потом перепиши логику рендера заливки в звездах чтобы более кратко было
-const MyStarReview = ({score,width}:StarsProps) => {
+const MyStarReview = ({score,width}:IStarsProps) => {
     return (
         <div style={{width}} className={styles.myStarWrapper}>
             <IconStar fill={(score >= 1) ? '#FFBC1F' : 'white'}/>

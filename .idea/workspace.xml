@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor routes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookParams/BookParams.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookParams/BookParams.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/swiper-sliders/Slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/swiper-sliders/Slider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IApiRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IApiRequest.ts" afterDir="false" />
-    </list>
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="implement filter by categories and made little refactor in books components" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +100,7 @@
       <workItem from="1699278002743" duration="8091000" />
       <workItem from="1699363264197" duration="8680000" />
       <workItem from="1699444633205" duration="8459000" />
+      <workItem from="1699529603887" duration="8347000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -185,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699373616957</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implement filter by categories and made little refactor in books components">
+      <created>1699537812165</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699537812165</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +192,8 @@
     <MESSAGE value="refactor code" />
     <MESSAGE value="change routes" />
     <MESSAGE value="refactor routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor routes" />
+    <MESSAGE value="implement filter by categories and made little refactor in books components" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement filter by categories and made little refactor in books components" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
