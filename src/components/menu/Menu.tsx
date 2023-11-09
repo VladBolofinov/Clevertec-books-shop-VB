@@ -4,11 +4,13 @@ import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import ArrowMenuTop from '../../assets/img/icons/ArrowMenuTop.svg';
 import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
 import {bookSlice} from "../../store/reducers/BookSlice";
+import {apiRequestSlice} from "../../store/reducers/ApiRequestSlice";
 
 export const Menu = () => {
     const {isOpenModal,isActiveDropDown} = useAppSelector(state => state.userReducer);
     const {isLoading,categories} = useAppSelector(state => state.apiRequestReducer);
     const {openDropDownList,openModal} = bookSlice.actions;
+    const {filterByCategory} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
 
     const renderCategories = categories.map((item:any) => {
@@ -19,9 +21,12 @@ export const Menu = () => {
                         color: isActive ? "#F83600" : "black",
                         textDecoration: "none"
                     }}}>
-                    <p key={item.id} onClick={() => { if (isOpenModal) {
-                        dispatch(openModal(false));
-                    }}}>{item.name}
+                    <p key={item.id} onClick={() => {
+                        if (isOpenModal) {
+                            dispatch(openModal(false));
+                        }
+                        dispatch(filterByCategory(item.name));
+                    }}>{item.name}
                     <span>  {item.booksCount}</span>
                     </p>
                 </NavLink>

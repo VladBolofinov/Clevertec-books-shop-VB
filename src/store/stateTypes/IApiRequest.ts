@@ -1,6 +1,7 @@
 export default interface IApiRequest {
-    data: any;
-    bookData: any;
+    allData: any;
+    filteredData: any;
+    currentBookData: any;
     jwt: string;
     error: string;
     isLoading: boolean;

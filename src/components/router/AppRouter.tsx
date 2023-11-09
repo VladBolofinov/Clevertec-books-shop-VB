@@ -13,7 +13,6 @@ const AppRouter = () => {
         (isOpenModal) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
     }, [isOpenModal]);
 
-    console.log(useLocation());
     return (
         <div className='app'>
             {(error) ? <ModalWrongData/> : null}

@@ -1,7 +1,5 @@
-
-
 import React, {Suspense} from 'react';
-import {Route, Routes, useLocation} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 //import {routeConfig} from "../../shared/config/routeConfig/routeConfig";
 import RulesPage from "./components/pages/rulesPage/RulesPage";
 import ContractOfferPage from "./components/pages/contractOfferPage/ContractOfferPage";
@@ -11,7 +9,6 @@ import {MyLoader} from "./components/sharedComponents/MyLoader/MyLoader";
 import AppRouter from "./components/router/AppRouter";
 
 const App = () => {
-    console.log(useLocation().pathname);
     return (
         <>
             <Suspense fallback={<MyLoader/>}>

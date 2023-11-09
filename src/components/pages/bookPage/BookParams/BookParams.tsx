@@ -4,14 +4,14 @@ import MyStarReview from "../../../sharedComponents/MyStarReview/MyStarReview";
 import {useAppSelector} from "../../../hooks/redux";
 
 export const BookParams = () => {
-    const {bookData} = useAppSelector(state => state.apiRequestReducer);
+    const {currentBookData} = useAppSelector(state => state.apiRequestReducer);
     return (
         <>
             <h3 className={styles.rank}>Рейтинг</h3>
             <span className={styles.grayLine}></span>
             <div className={styles.starWrapper}>
-                <MyStarReview width={'168px'} score={bookData.rating}/>
-                <span>{bookData.rating}</span>
+                <MyStarReview width={'168px'} score={currentBookData.rating}/>
+                <span>{currentBookData.rating}</span>
             </div>
             <h3 className={styles.extraDescrHeader}>Подробная информация</h3>
             <span className={styles.grayLine}></span>
@@ -25,11 +25,11 @@ export const BookParams = () => {
                         <p>Формат </p>
                     </div>
                     <div className={styles.spanBlock}>
-                        <span>{bookData.publish}</span>
-                        <span>{bookData.issueYear}</span>
-                        <span>{bookData.pages}</span>
-                        <span>{bookData.cover}</span>
-                        <span>{bookData.format}</span>
+                        <span>{currentBookData.publish}</span>
+                        <span>{currentBookData.issueYear}</span>
+                        <span>{currentBookData.pages}</span>
+                        <span>{currentBookData.cover}</span>
+                        <span>{currentBookData.format}</span>
                     </div>
                 </div>
                 <div className={styles.extraDescrWrapperSecondBlock}>
@@ -40,10 +40,10 @@ export const BookParams = () => {
                         <p>Изготовитель</p>
                     </div>
                     <div className={styles.spanBlock}>
-                        <span>{(bookData.categories) ? bookData.categories[0] : null}</span>
-                        <span>{bookData.weight}</span>
-                        <span>{bookData.ISBN}</span>
-                        <span>{bookData.producer}</span>
+                        <span>{(currentBookData.categories) ? currentBookData.categories[0] : null}</span>
+                        <span>{currentBookData.weight}</span>
+                        <span>{currentBookData.ISBN}</span>
+                        <span>{currentBookData.producer}</span>
                     </div>
                 </div>
             </div>

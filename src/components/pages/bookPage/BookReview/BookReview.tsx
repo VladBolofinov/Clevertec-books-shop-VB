@@ -9,7 +9,7 @@ import {bookSlice} from "../../../../store/reducers/BookSlice";
 
 export const BookReview = () => {
     const {isActiveDropDown} = useAppSelector(state => state.userReducer);
-    const {bookData} = useAppSelector(state => state.apiRequestReducer);
+    const {currentBookData} = useAppSelector(state => state.apiRequestReducer);
     const {openDropDownList} = bookSlice.actions;
     const dispatch = useAppDispatch();
     return (
@@ -21,7 +21,7 @@ export const BookReview = () => {
             </div>
             <span className={styles.grayLine}></span>
             <div className={(!isActiveDropDown) ? styles.reviewersWrapperHide : null}>
-                {(bookData.comments) ? bookData.comments.map((item:any) => (
+                {(currentBookData.comments) ? currentBookData.comments.map((item:any) => (
                     <div key={(item.comments) ? item.comments.id : null}>
                         <div className={styles.reviewersWrapper}>
                             <ReviewersAvatar/>

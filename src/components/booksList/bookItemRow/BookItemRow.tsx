@@ -1,25 +1,9 @@
 import stylesRow from './BookItemRow.module.scss';
 import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
-import { NavLink } from 'react-router-dom';
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import {NavLink} from 'react-router-dom';
 import bookNotFound from "../../../assets/img/pictures/bookNotFound.png";
-import {useEffect} from "react";
-import {fetchBooksData, fetchCategories, fetchToken} from "../../../store/reducers/ApiRequestSlice";
 
-export const BookItemRow = () => {
-    const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
-    const dispatch = useAppDispatch();
-    const slicedData = data.slice(0, 10);
-
-    useEffect(() => {
-        if (jwt && data.length == 0) {
-            dispatch(fetchBooksData(jwt));
-            dispatch(fetchCategories(jwt));
-        } else if (!jwt) {
-            dispatch(fetchToken());
-        }
-    }, [jwt]);
-    //вынеси куда-нибудь функцию отдельно чтобы не дублировать ее
+export const BookItemRow = ({slicedData}:any) => {
     const truncateString = (text:string, maxLength = 55) => {
         return (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
     }

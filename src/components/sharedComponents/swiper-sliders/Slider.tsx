@@ -9,10 +9,10 @@ import { Thumbs, Pagination } from 'swiper/modules';
 import {useAppSelector} from "../../hooks/redux";
 export const Slider = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const {bookData} = useAppSelector(state => state.apiRequestReducer);
+    const {currentBookData} = useAppSelector(state => state.apiRequestReducer);
     const setImgParams = (classname:string) => {
         return <img className={classname}
-                    src={(bookData.images) ? bookData.images[0].url : null}
+                    src={(currentBookData.images) ? currentBookData.images[0].url : null}
                     alt="book image"/>
     }
 

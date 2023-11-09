@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor code" />
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor routes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookParams/BookParams.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookParams/BookParams.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/swiper-sliders/Slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/swiper-sliders/Slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IApiRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IApiRequest.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +112,8 @@
       <workItem from="1699208713747" duration="196000" />
       <workItem from="1699209177274" duration="295000" />
       <workItem from="1699278002743" duration="8091000" />
+      <workItem from="1699363264197" duration="8680000" />
+      <workItem from="1699444633205" duration="8459000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -148,7 +164,28 @@
       <option name="project" value="LOCAL" />
       <updated>1699285761246</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="change routes">
+      <created>1699364892490</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699364892490</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor routes">
+      <created>1699373585049</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699373585049</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor routes">
+      <created>1699373616957</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699373616957</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +196,9 @@
     <MESSAGE value="little refactor" />
     <MESSAGE value="refactor styles and added feature short book title" />
     <MESSAGE value="refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
+    <MESSAGE value="change routes" />
+    <MESSAGE value="refactor routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor routes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -181,8 +220,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/menu/Menu.tsx</url>
-          <line>36</line>
-          <properties lambdaOrdinal="-1" />
+          <line>41</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

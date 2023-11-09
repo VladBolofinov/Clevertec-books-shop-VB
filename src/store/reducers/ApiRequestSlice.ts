@@ -3,8 +3,9 @@ import IApiRequest from "../stateTypes/IApiRequest";
 import {useHttp} from "../../components/hooks/http.hook";
 
 const initialState: IApiRequest = {
-    data: [],
-    bookData: [],
+    allData: [],
+    filteredData: [],
+    currentBookData: [],
     jwt: '',
     error: '',
     isLoading: false,
@@ -44,7 +45,13 @@ export const fetchCategories = createAsyncThunk(
 export const apiRequestSlice = createSlice({
     name: 'apiRequest',
     initialState,
-    reducers: {},
+    reducers: {
+        filterByCategory(state, action: PayloadAction<string>) {
+            state.filteredData = state.allData.filter((book:any) => {
+                    return book.categories[0] === action.payload;
+                });
+        }
+    },
     extraReducers:
         (builder) => {
         builder.addCase(fetchToken.pending, (state) => {state.isLoading = true;})
@@ -61,7 +68,7 @@ export const apiRequestSlice = createSlice({
                .addCase(fetchBooksData.fulfilled, (state,action: PayloadAction<any>) => {//поменяй тип(типизировать приходящие объекты с апишки)
                    state.isLoading = false;
                    state.error = '';
-                   state.data = action.payload;
+                   state.allData = action.payload;
                })
                .addCase(fetchBooksData.rejected, (state) => {
                    state.isLoading = false;
@@ -71,7 +78,7 @@ export const apiRequestSlice = createSlice({
                .addCase(fetchBookByID.fulfilled, (state,action: PayloadAction<object>) => {
                    state.isLoading = false;
                    state.error = '';
-                   state.bookData = action.payload;
+                   state.currentBookData = action.payload;
                })
                .addCase(fetchBookByID.rejected, (state) => {
                    state.isLoading = false;

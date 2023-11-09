@@ -2,24 +2,11 @@ import stylesColumn from './BookItemColumn.module.scss';
 import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
-import {useAppSelector, useAppDispatch} from "../../hooks/redux";
-import {fetchBooksData, fetchCategories, fetchToken} from "../../../store/reducers/ApiRequestSlice";
-import {useEffect} from "react";
 
-export const BookItemColumn = () => {
-    const {data,jwt} = useAppSelector(state => state.apiRequestReducer);
-    const dispatch = useAppDispatch();
-    const slicedData = data.slice(0, 12);
-
-    useEffect(() => {
-        if (jwt && data.length == 0) {
-            dispatch(fetchBooksData(jwt));
-            dispatch(fetchCategories(jwt));
-        } else if (!jwt) {
-            dispatch(fetchToken());
-        }
-    }, [jwt]);
-
+export const BookItemColumn = ({slicedData}:any) => {
+    //react-dom.development.js:11340 Uncaught TypeError: Cannot read properties of null (reading 'url')   Разберись с этой ошибкой
+    // рандомно появляется при клике по категориям, возможно добавь проверку
+    //добавь в категорию другое какую-нибудь 1 книгу чтобы не писать логику для проверки если оно не будет работать
     const truncateString = (text:string, maxLength = 55) => {
         return (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
     }

@@ -10,7 +10,7 @@ import {fetchBookByID, fetchToken} from "../../../store/reducers/ApiRequestSlice
 import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 const BookPage = () => {
     const {id} = useParams();
-    const {bookData,jwt, isLoading} = useAppSelector(state => state.apiRequestReducer);
+    const {currentBookData,jwt, isLoading} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -29,11 +29,11 @@ const BookPage = () => {
                                 <div className={styles.bookLocation}></div>
                                 <Slider/>
                                 <div className={styles.wrapperBookDescr}>
-                                    <h1 className={styles.bookHeader}>{bookData.title}</h1>
-                                    <span className={styles.textAuthor}>{(bookData.authors) ? bookData.authors[0] : null}</span>
+                                    <h1 className={styles.bookHeader}>{currentBookData.title}</h1>
+                                    <span className={styles.textAuthor}>{(currentBookData.authors) ? currentBookData.authors[0] : null}</span>
                                     <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
                                     <h3>О книге</h3>
-                                    <p className={styles.aboutBook}>{bookData.description}</p>
+                                    <p className={styles.aboutBook}>{currentBookData.description}</p>
                                 </div>
                                 <BookParams/>
                                 <BookReview/>
