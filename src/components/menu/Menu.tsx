@@ -4,11 +4,12 @@ import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import ArrowMenuTop from '../../assets/img/icons/ArrowMenuTop.svg';
 import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
 import {bookSlice} from "../../store/reducers/BookSlice";
-import {apiRequestSlice} from "../../store/reducers/ApiRequestSlice";
+import {apiRequestSlice, fetchCategories, fetchToken} from "../../store/reducers/ApiRequestSlice";
+import {useEffect} from "react";
 
 export const Menu = () => {
     const {isOpenModal,isActiveDropDown} = useAppSelector(state => state.userReducer);
-    const {isLoading,categories} = useAppSelector(state => state.apiRequestReducer);
+    const {isLoading,categories,jwt} = useAppSelector(state => state.apiRequestReducer);
     const {openDropDownList,openModal} = bookSlice.actions;
     const {filterByCategory} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
@@ -16,7 +17,7 @@ export const Menu = () => {
     const renderCategories = categories.map((item:any) => {
         return (
             <>
-                <NavLink to={`${item.path}`} style={({ isActive }) => {
+                <NavLink to={`/main/${item.path}`} style={({ isActive }) => {
                     return {
                         color: isActive ? "#F83600" : "black",
                         textDecoration: "none"
@@ -33,6 +34,14 @@ export const Menu = () => {
             </>
         )
     })
+
+    useEffect(() => {
+        if (jwt && !categories.length) {
+            dispatch(fetchCategories(jwt));
+        } else {
+            dispatch(fetchToken())
+        }
+    },[jwt])
 
     return  (
         <div>

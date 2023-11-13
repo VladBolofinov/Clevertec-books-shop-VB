@@ -9,7 +9,7 @@ export const BookItemColumn = ({slicedData, truncateStr}:IBookItemProps) => {
             {slicedData.map((item:any) => (
                 <div key={item.id} className={stylesColumn.bookCard}>
                     <img src={(item.image) ? item.image.url : bookNotFound} alt="book image" />
-                    <MyStarReview score={3} width={'144px'} />
+                    <MyStarReview score={item.rating} width={'144px'} />
                     <NavLink
                         style={{
                             color: "black",

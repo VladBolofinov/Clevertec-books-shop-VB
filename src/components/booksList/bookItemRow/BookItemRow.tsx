@@ -21,7 +21,7 @@ export const BookItemRow = ({slicedData,truncateStr}:IBookItemProps) => {
                         </NavLink>
                         <p className={stylesRow.bookAuthor}>{item.authors[0]}, {item.issueYear}</p>
                         <div className={stylesRow.wrapperBtnStars}>
-                            <MyStarReview score={3}/>
+                            <MyStarReview score={item.rating}/>
                             <button className={stylesRow.btnStyles}>ЗАБРОНИРОВАТЬ</button>
                         </div>
                     </div>

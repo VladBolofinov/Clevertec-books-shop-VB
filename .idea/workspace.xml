@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="implement filter by categories and made little refactor in books components" />
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor error and created propTypes in component">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,6 +107,8 @@
       <workItem from="1699363264197" duration="8680000" />
       <workItem from="1699444633205" duration="8459000" />
       <workItem from="1699529603887" duration="8347000" />
+      <workItem from="1699546275572" duration="2855000" />
+      <workItem from="1699883380581" duration="3855000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -179,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699537812165</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor error and created propTypes in component">
+      <created>1699549154803</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699549154803</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +208,8 @@
     <MESSAGE value="change routes" />
     <MESSAGE value="refactor routes" />
     <MESSAGE value="implement filter by categories and made little refactor in books components" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement filter by categories and made little refactor in books components" />
+    <MESSAGE value="refactor error and created propTypes in component" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor error and created propTypes in component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -215,7 +231,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/menu/Menu.tsx</url>
-          <line>41</line>
+          <line>50</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

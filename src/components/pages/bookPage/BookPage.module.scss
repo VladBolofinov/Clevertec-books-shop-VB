@@ -50,6 +50,7 @@
 @media screen and (max-width: 1110px) {
   .wrapper {
     width: 768px;
+    margin-left: 130px;
   }
   .aboutBook {
     height: initial;
@@ -73,6 +74,7 @@
     font-size: 14px;
   }
   .wrapper {
+    margin-left: 0;
     width: 320px;
   }
   .bookHeader {
