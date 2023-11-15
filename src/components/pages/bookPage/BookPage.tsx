@@ -6,7 +6,7 @@ import {BookParams} from "./BookParams/BookParams";
 import {BookReview} from "./BookReview/BookReview";
 import {Slider} from "../../sharedComponents/swiper-sliders/Slider";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {fetchBookByID, fetchToken} from "../../../store/reducers/ApiRequestSlice";
+import {fetchBookByID} from "../../../store/reducers/ApiRequestSlice";
 import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 const BookPage = () => {
     const {id} = useParams();
@@ -18,10 +18,11 @@ const BookPage = () => {
             dispatch(fetchBookByID({ idNum: Number(id), token: jwt }));
         }
     },[jwt])
-
+//сделай чтобы условие по стилям было
     return (
         <div className={styles.globalWrapper}>
             <div className={styles.wrapper}>
+
                     {(window.innerWidth < 1110) ? <Menu/> : null}
                     {
                         (isLoading)

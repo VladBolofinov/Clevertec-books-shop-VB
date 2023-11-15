@@ -5,12 +5,12 @@ import {BookItemRow} from "./bookItemRow/BookItemRow";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
 import {useEffect, useMemo} from "react";
-import {apiRequestSlice, fetchBooksData, fetchCategories, fetchToken} from "../../store/reducers/ApiRequestSlice";
+import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSlice";
 import {useLocation} from "react-router-dom";
 
 const BooksList = () => {
     const {isBookRow} = useAppSelector(state => state.userReducer);
-    const {isLoading, allData, jwt, filteredData} = useAppSelector(state => state.apiRequestReducer);
+    const {isLoading, allData, jwt, filteredData, categories} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
     const {filterByCategory} = apiRequestSlice.actions;
     const pathname: string = useLocation().pathname;
@@ -26,20 +26,13 @@ const BooksList = () => {
     }
 
     useEffect(() => {
-        if (jwt && allData.length == 0) {
-            dispatch(fetchCategories(jwt))
-                .then(res => findPath(res.payload))
-                .then(res => {
-                    if (res.length === 0) {
-                    dispatch(fetchBooksData(jwt));
-                } else {
-                        dispatch(fetchBooksData(jwt)).then(() =>
-                            dispatch(filterByCategory(res[0].name)));
-            }});
-        } else if (!jwt) {
-            dispatch(fetchToken());
+        if (jwt && allData.length == 0 && categories.length > 0) {
+            const res = findPath(categories);
+            (res.length === 0)
+                ? dispatch(fetchBooksData(jwt))
+                : dispatch(fetchBooksData(jwt)).then(() => dispatch(filterByCategory(res[0].name)));
         }
-    }, [jwt]);
+    }, [categories]);
 
     return (
         <div className={styles.wrapper}>

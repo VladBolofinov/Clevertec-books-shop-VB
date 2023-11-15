@@ -14,16 +14,7 @@ export const Menu = () => {
     const {filterByCategory} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        if (jwt && !categories.length) {
-            dispatch(fetchCategories(jwt));
-        } else {
-            dispatch(fetchToken())
-        }
-    },[jwt])
-
     const renderCategories = useMemo(() => {
-        console.log('Сработало в функции рендеркатегориез');
         return categories.map((item:any) => (
             <>
                 <NavLink to={`/main/${item.path}`} style={({ isActive }) => ({

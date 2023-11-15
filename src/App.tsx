@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 //import {routeConfig} from "../../shared/config/routeConfig/routeConfig";
 import RulesPage from "./components/pages/rulesPage/RulesPage";
@@ -7,8 +7,21 @@ import BookPage from "./components/pages/bookPage/BookPage";
 import {BooksListAsync} from "./components/booksList/BooksList.async";
 import {MyLoader} from "./components/sharedComponents/MyLoader/MyLoader";
 import AppRouter from "./components/router/AppRouter";
+import {fetchCategories, fetchToken} from "./store/reducers/ApiRequestSlice";
+import {useAppDispatch, useAppSelector} from "./components/hooks/redux";
 
 const App = () => {
+    const {categories,jwt} = useAppSelector(state => state.apiRequestReducer);
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+            if (jwt && !categories.length) {
+                dispatch(fetchCategories(jwt));
+            } else {
+                dispatch(fetchToken())
+            }
+    },[jwt])
+
     return (
         <>
             <Suspense fallback={<MyLoader/>}>

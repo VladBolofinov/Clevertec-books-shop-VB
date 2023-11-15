@@ -58,7 +58,6 @@ export const apiRequestSlice = createSlice({
                .addCase(fetchToken.fulfilled, (state,action:PayloadAction<string>) => {
                    state.isLoading = false;
                    state.error = '';
-                   //localStorage.setItem('myToken', JSON.stringify(action.payload));
                    state.jwt = action.payload;
                })
                .addCase(fetchToken.rejected, (state) => {
