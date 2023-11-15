@@ -5,7 +5,7 @@ import ArrowMenuTop from '../../assets/img/icons/ArrowMenuTop.svg';
 import ArrowMenuBottom from '../../assets/img/icons/ArrowMenuBottom.svg';
 import {bookSlice} from "../../store/reducers/BookSlice";
 import {apiRequestSlice, fetchCategories, fetchToken} from "../../store/reducers/ApiRequestSlice";
-import {useEffect} from "react";
+import {useEffect, useMemo} from "react";
 
 export const Menu = () => {
     const {isOpenModal,isActiveDropDown} = useAppSelector(state => state.userReducer);
@@ -14,27 +14,6 @@ export const Menu = () => {
     const {filterByCategory} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
 
-    const renderCategories = categories.map((item:any) => {
-        return (
-            <>
-                <NavLink to={`/main/${item.path}`} style={({ isActive }) => {
-                    return {
-                        color: isActive ? "#F83600" : "black",
-                        textDecoration: "none"
-                    }}}>
-                    <p key={item.id} onClick={() => {
-                        if (isOpenModal) {
-                            dispatch(openModal(false));
-                        }
-                        dispatch(filterByCategory(item.name));
-                    }}>{item.name}
-                    <span>  {item.booksCount}</span>
-                    </p>
-                </NavLink>
-            </>
-        )
-    })
-
     useEffect(() => {
         if (jwt && !categories.length) {
             dispatch(fetchCategories(jwt));
@@ -42,6 +21,27 @@ export const Menu = () => {
             dispatch(fetchToken())
         }
     },[jwt])
+
+    const renderCategories = useMemo(() => {
+        console.log('Сработало в функции рендеркатегориез');
+        return categories.map((item:any) => (
+            <>
+                <NavLink to={`/main/${item.path}`} style={({ isActive }) => ({
+                    color: isActive ? "#F83600" : "black",
+                    textDecoration: "none"
+                })}>
+                    <p onClick={() => {
+                        if (isOpenModal) {
+                            dispatch(openModal(false));
+                        }
+                        dispatch(filterByCategory(item.name));
+                    }}>
+                        {item.name} <span>{item.booksCount}</span>
+                    </p>
+                </NavLink>
+            </>
+        ));
+    }, [categories]);
 
     return  (
         <div>

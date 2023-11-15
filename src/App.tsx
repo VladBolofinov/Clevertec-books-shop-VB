@@ -18,7 +18,7 @@ const App = () => {
                         <Route key={2} path={'rules'} element={<RulesPage/>}/>
                         <Route key={3} path={'contract_offer'} element={<ContractOfferPage/>}/>
                         <Route key={4} path={'book/:id'} element={<BookPage/>}/>
-                        <Route key={4} path={':category'} element={<BooksListAsync/>}/>
+                        <Route key={5} path={':category'} element={<BooksListAsync/>}/>
                     </Route>
                     {/*{Object.values(routeConfig).map(({element,path}) => (<Route key={path} path={path} element={element}/>))}*/}
                 </Routes>

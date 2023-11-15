@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor error and created propTypes in component">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +111,8 @@
       <workItem from="1699444633205" duration="8459000" />
       <workItem from="1699529603887" duration="8347000" />
       <workItem from="1699546275572" duration="2855000" />
-      <workItem from="1699883380581" duration="3855000" />
+      <workItem from="1699883380581" duration="4684000" />
+      <workItem from="1700042839718" duration="5091000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -194,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699549154803</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor styles">
+      <created>1699899327182</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699899327182</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +220,8 @@
     <MESSAGE value="refactor routes" />
     <MESSAGE value="implement filter by categories and made little refactor in books components" />
     <MESSAGE value="refactor error and created propTypes in component" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor error and created propTypes in component" />
+    <MESSAGE value="refactor styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

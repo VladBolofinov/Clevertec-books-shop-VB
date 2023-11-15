@@ -14,7 +14,9 @@ const BookPage = () => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        (jwt) ? dispatch(fetchBookByID({ idNum: Number(id), token: jwt })) : dispatch(fetchToken());
+        if (jwt) {
+            dispatch(fetchBookByID({ idNum: Number(id), token: jwt }));
+        }
     },[jwt])
 
     return (
