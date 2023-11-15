@@ -18,12 +18,9 @@ const BookPage = () => {
             dispatch(fetchBookByID({ idNum: Number(id), token: jwt }));
         }
     },[jwt])
-//сделай чтобы условие по стилям было
     return (
         <div className={styles.globalWrapper}>
             <div className={styles.wrapper}>
-
-                    {(window.innerWidth < 1110) ? <Menu/> : null}
                     {
                         (isLoading)
                             ? <MyLoader/>

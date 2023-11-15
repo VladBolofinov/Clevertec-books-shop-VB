@@ -31,6 +31,9 @@
   filter: blur(4px);
   pointer-events: none;
 }
+.menuInBookSection {
+  display: none;
+}
 
 .allBooksHeader {
   padding: 16px 0 0 20px;
@@ -75,6 +78,21 @@
       left: 45%;
     }
   }
+  .menuInBookSection {
+    display: block;
+    margin-left: 160px;
+    composes: baseMenu;
+    p {
+      padding: 16px 0 0 20px;
+      cursor: pointer;
+    }
+    span {
+      color: #A7A7A7;
+    }
+    .arrowMenu {
+      left: 45%;
+    }
+  }
   .wrapperBottomBlock {
     display: block;
     margin: 32px 0 52px 0px;
@@ -95,6 +113,9 @@
     .arrowMenu {
       left: 80%;
     }
+  }
+  .menuInBookSection {
+    margin-left: 15px;
   }
   .spanLine {
     left: -5%;

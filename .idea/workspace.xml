@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="before refactor api requests">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor api requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/contractOfferPage/ContractOfferPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/contractOfferPage/ContractOfferPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/rulesPage/RulesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/rulesPage/RulesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +114,7 @@
       <workItem from="1699529603887" duration="8347000" />
       <workItem from="1699546275572" duration="2855000" />
       <workItem from="1699883380581" duration="4684000" />
-      <workItem from="1700042839718" duration="7707000" />
+      <workItem from="1700042839718" duration="18002000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -210,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700048331451</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="refactor api requests">
+      <created>1700051030977</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700051030977</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +238,8 @@
     <MESSAGE value="refactor error and created propTypes in component" />
     <MESSAGE value="refactor styles" />
     <MESSAGE value="before refactor api requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="before refactor api requests" />
+    <MESSAGE value="refactor api requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor api requests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -239,7 +251,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/pages/rulesPage/RulesPage.tsx</url>
-          <line>7</line>
+          <line>11</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -249,8 +261,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/menu/Menu.tsx</url>
-          <line>50</line>
+          <line>43</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.tsx</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

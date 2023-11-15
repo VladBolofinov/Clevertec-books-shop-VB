@@ -11,10 +11,7 @@ export const BookItemColumn = ({slicedData, truncateStr}:IBookItemProps) => {
                     <img src={(item.image) ? item.image.url : bookNotFound} alt="book image" />
                     <MyStarReview score={item.rating} width={'144px'} />
                     <NavLink
-                        style={{
-                            color: "black",
-                            textDecoration: "none"
-                        }}
+                        style={{color: "black", textDecoration: "none", marginLeft: "15px"}}
                         to={`/main/book/${item.id}`}>
                         <span className={stylesColumn.bookName}>{truncateStr(item.title)}</span>
                     </NavLink>

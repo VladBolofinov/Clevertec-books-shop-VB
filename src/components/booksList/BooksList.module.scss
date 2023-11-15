@@ -3,7 +3,8 @@
   display: flex;
   width: 825px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-content: flex-start;
   min-height: 650px;
 }
 
