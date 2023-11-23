@@ -5,7 +5,6 @@ const initialState: IBookState = {
     isLoading: false,
     error: '',
     isOpenModal: false,
-    isActiveDropDown: true,
     isActiveInputBtn: false,
     isBookRow: false,
     isBookColumn: true,
@@ -17,9 +16,6 @@ export const bookSlice = createSlice({
     reducers: {
         openModal(state, action: PayloadAction<boolean>) {
             state.isOpenModal = action.payload;
-        },
-        openDropDownList(state, action: PayloadAction<boolean>) {
-            state.isActiveDropDown = action.payload;
         },
         openInputBtn(state, action: PayloadAction<boolean>) {
             state.isActiveInputBtn = action.payload;

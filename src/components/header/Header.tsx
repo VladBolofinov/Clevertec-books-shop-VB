@@ -5,20 +5,22 @@ import avatar from '../../assets/img/avatar.png';
 import {NavLink} from "react-router-dom";
 import {bookSlice} from "../../store/reducers/BookSlice";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import { memo } from 'react';
 
-export const Header = () => {
+export const Header = memo(() => {
     const {openModal} = bookSlice.actions;
     const dispatch = useAppDispatch();
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {isLoading} = useAppSelector(state => state.apiRequestReducer);
+    console.log('Сработал рендер в компоненте Header');
     return (
         <div className={(isLoading) ? styles.headerLoading : styles.header}>
             <div className={styles.logoWrapper}>
                 <NavLink to="/main">
-                <div className={styles.logo}>
+                    <div className={styles.logo}>
                         <Logo/>
                         <LogoName style={{marginLeft:'8px'}}/>
-                </div>
+                    </div>
                 </NavLink>
                 <div className={(!isOpenModal) ? styles.burgerBtn : styles.burgerBtnClose} onClick={() => dispatch(openModal(!isOpenModal))}>
                     <span></span>
@@ -31,4 +33,4 @@ export const Header = () => {
             </div>
         </div>
     )
-}
+})

@@ -7,7 +7,7 @@ export const ModalWrongData = () => {
     const {isOpenModalWrongData} = useAppSelector(state => state.modalReducer);
     const {openModalWrongData} = modalSlice.actions;
     const dispatch = useAppDispatch();
-
+    console.log('Сработал рендер в компоненте ModalWrongData');
     return (
             <div className={(isOpenModalWrongData) ? styles.modalWrapper : styles.modalHide}>
                 <img src={iconAttention} alt="no img"/>

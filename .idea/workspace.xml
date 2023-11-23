@@ -4,17 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor api requests">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="implement closing modal if clicked on link">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modals/modalWrongData/ModalWrongData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modals/modalWrongData/ModalWrongData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookParams/BookParams.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookParams/BookParams.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/contractOfferPage/ContractOfferPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/contractOfferPage/ContractOfferPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/rulesPage/RulesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/rulesPage/RulesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/router/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/BookSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/BookSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/ModalSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ModalSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IBookState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IBookState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IModalState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IModalState.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +124,8 @@
       <workItem from="1699529603887" duration="8347000" />
       <workItem from="1699546275572" duration="2855000" />
       <workItem from="1699883380581" duration="4684000" />
-      <workItem from="1700042839718" duration="18002000" />
+      <workItem from="1700042839718" duration="18384000" />
+      <workItem from="1700736151136" duration="6974000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -221,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700051030977</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="implement closing modal if clicked on link">
+      <created>1700067738967</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700067738967</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +257,8 @@
     <MESSAGE value="refactor styles" />
     <MESSAGE value="before refactor api requests" />
     <MESSAGE value="refactor api requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor api requests" />
+    <MESSAGE value="implement closing modal if clicked on link" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement closing modal if clicked on link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,7 +270,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/pages/rulesPage/RulesPage.tsx</url>
-          <line>11</line>
+          <line>12</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -260,14 +279,8 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/menu/Menu.tsx</url>
-          <line>43</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.tsx</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

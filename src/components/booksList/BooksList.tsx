@@ -4,11 +4,11 @@ import {BookItemColumn} from "./bookItemColumn/BookItemColumn";
 import {BookItemRow} from "./bookItemRow/BookItemRow";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
-import {useEffect, useMemo} from "react";
+import {memo, useEffect, useMemo} from "react";
 import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSlice";
 import {useLocation} from "react-router-dom";
 
-const BooksList = () => {
+const BooksList = memo(() => {
     const {isBookRow} = useAppSelector(state => state.userReducer);
     const {isLoading, allData, jwt, filteredData, categories} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
@@ -20,7 +20,7 @@ const BooksList = () => {
         return (text: string, maxLength = 55): string => (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
     }, []);
     const findPath = (res: any) => {
-       return res.filter((category:any) => {
+        return res.filter((category:any) => {
             return  category.path === pathname.slice(6);
         });
     }
@@ -34,6 +34,7 @@ const BooksList = () => {
         }
     }, [categories]);
 
+    console.log('Сработал рендер в компоненте BooksList');
     return (
         <div className={styles.wrapper}>
             {(isLoading)
@@ -46,5 +47,5 @@ const BooksList = () => {
                 </>}
         </div>
     )
-}
+})
 export default BooksList;

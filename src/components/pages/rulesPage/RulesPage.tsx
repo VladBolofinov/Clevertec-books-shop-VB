@@ -3,6 +3,7 @@ import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 import {useAppSelector} from "../../hooks/redux";
 const RulesPage = () => {
     const {isLoading} = useAppSelector(state => state.apiRequestReducer);
+    console.log('Сработал рендер в компоненте RulesPage');
     return (
         <div className={styles.wrapperMiddleSection}>
             {(isLoading)

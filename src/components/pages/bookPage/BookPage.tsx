@@ -1,7 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import styles from './BookPage.module.scss';
-import {Menu} from "../../menu/Menu";
 import {BookParams} from "./BookParams/BookParams";
 import {BookReview} from "./BookReview/BookReview";
 import {Slider} from "../../sharedComponents/swiper-sliders/Slider";
@@ -12,7 +11,7 @@ const BookPage = () => {
     const {id} = useParams();
     const {currentBookData,jwt, isLoading} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
-
+    console.log('Сработал рендер в компоненте BookPage');
     useEffect(() => {
         if (jwt) {
             dispatch(fetchBookByID({ idNum: Number(id), token: jwt }));

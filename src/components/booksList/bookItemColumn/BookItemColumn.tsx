@@ -3,7 +3,9 @@ import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
 import {IBookItemProps} from "../BookItemTypes";
-export const BookItemColumn = ({slicedData, truncateStr}:IBookItemProps) => {
+import {memo} from "react";
+export const BookItemColumn = memo(({slicedData, truncateStr}:IBookItemProps) => {
+    console.log('Сработал рендер в компоненте BookItemColumn');
     return (
         <>
             {slicedData.map((item:any) => (
@@ -21,4 +23,4 @@ export const BookItemColumn = ({slicedData, truncateStr}:IBookItemProps) => {
             ))}
         </>
     );
-}
+})

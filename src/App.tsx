@@ -21,7 +21,7 @@ const App = () => {
                 dispatch(fetchToken())
             }
     },[jwt])
-
+    console.log('Сработал рендер в компоненте App');
     return (
         <>
             <Suspense fallback={<MyLoader/>}>

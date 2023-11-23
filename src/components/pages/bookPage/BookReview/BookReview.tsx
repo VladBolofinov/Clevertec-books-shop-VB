@@ -5,24 +5,25 @@ import ArrowMenuBottom from "../../../../assets/img/icons/ArrowMenuBottom.svg";
 import ReviewersAvatar from "../../../../assets/img/icons/reviewsAvatar.svg";
 import MyStarReview from "../../../sharedComponents/MyStarReview/MyStarReview";
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
-import {bookSlice} from "../../../../store/reducers/BookSlice";
+import {modalSlice} from "../../../../store/reducers/ModalSlice";
 
 export const BookReview = () => {
-    const {isActiveDropDown} = useAppSelector(state => state.userReducer);
+    const {isActiveDropDownReviews} = useAppSelector(state => state.modalReducer);
     const {currentBookData} = useAppSelector(state => state.apiRequestReducer);
-    const {openDropDownList} = bookSlice.actions;
+    const {setDropDownReviews} = modalSlice.actions;
     const dispatch = useAppDispatch();
+    console.log('Сработал рендер в компоненте BookReview');
     return (
         <>
             <h3 className={styles.extraDescrHeader}>Отзывы</h3>
             <div className={styles.arrowMenu}
-                 onClick={() => dispatch(openDropDownList(!isActiveDropDown))}>
-                {(isActiveDropDown) ? <ArrowMenuTop/> : <ArrowMenuBottom/>}
+                 onClick={() => dispatch(setDropDownReviews(!isActiveDropDownReviews))}>
+                {(isActiveDropDownReviews) ? <ArrowMenuTop fill={'#F83600'}/> : <ArrowMenuBottom fill={'#000000'}/>}
             </div>
             <span className={styles.grayLine}></span>
-            <div className={(!isActiveDropDown) ? styles.reviewersWrapperHide : null}>
+            <div className={(!isActiveDropDownReviews) ? styles.reviewersWrapperHide : null}>
                 {(currentBookData.comments) ? currentBookData.comments.map((item:any) => (
-                    <div key={(item.comments) ? item.comments.id : null}>
+                    <div key={item.id}>
                         <div className={styles.reviewersWrapper}>
                             <ReviewersAvatar/>
                             <p className={styles.reviewersPadding}>{item.user.firstName} {item.user.lastName}</p>
