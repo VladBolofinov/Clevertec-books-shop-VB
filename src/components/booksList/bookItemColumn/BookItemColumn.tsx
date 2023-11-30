@@ -3,11 +3,12 @@ import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
 import {IBookItemProps} from "../BookItemTypes";
-import {memo, useMemo} from "react";
-export const BookItemColumn = memo(({slicedData, truncateStr}:IBookItemProps) => {
-    const renderBookCards = useMemo(() => {
-        return slicedData.map((item:any) => (
-            <div key={item.id} className={stylesColumn.bookCard}>
+import {memo} from "react";
+import {useAppSelector} from "../../hooks/redux";
+export const BookItemColumn = memo(({truncateStr}:IBookItemProps) => {
+    const {slicedData} = useAppSelector(state => state.apiRequestReducer);
+    const renderBookCards = slicedData.map((item:any) => (
+            <div className={stylesColumn.bookCard}>
                 <img src={(item.image) ? item.image.url : bookNotFound} alt="book image" />
                 <MyStarReview score={item.rating} width={'144px'} />
                 <NavLink
@@ -19,7 +20,7 @@ export const BookItemColumn = memo(({slicedData, truncateStr}:IBookItemProps) =>
                 <button className={stylesColumn.btnStyles}>ЗАБРОНИРОВАТЬ</button>
             </div>
         ))
-    },[slicedData])
+
     return (
         <>
             {renderBookCards}

@@ -2,6 +2,8 @@ export default interface IApiRequest {
     allData: any;
     filteredData: any;
     currentBookData: any;
+    slicedData: any;
+    sliceValue: number;
     jwt: string;
     error: string;
     isLoadingToken: boolean;
