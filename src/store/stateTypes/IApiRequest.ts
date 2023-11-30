@@ -4,7 +4,9 @@ export default interface IApiRequest {
     currentBookData: any;
     jwt: string;
     error: string;
-    isLoading: boolean;
+    isLoadingToken: boolean;
+    isLoadingCategories: boolean;
+    isLoadingBook: boolean;
     categories: any;
 }
 

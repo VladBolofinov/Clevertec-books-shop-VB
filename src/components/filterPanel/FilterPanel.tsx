@@ -13,7 +13,6 @@ export const  FilterPanel = memo(() => {
     const {isActiveInputBtn, isBookColumn, isBookRow} = useAppSelector(state => state.userReducer);
     const {openInputBtn, changeDirection} = bookSlice.actions;
     const dispatch = useAppDispatch();
-    console.log('Сработал рендер в компоненте FilterPanel');
     return (
         (isActiveInputBtn)
             ?

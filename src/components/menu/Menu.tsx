@@ -11,13 +11,13 @@ import {modalSlice} from "../../store/reducers/ModalSlice";
 export const Menu = memo(() => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {isActiveDropDownMenu} = useAppSelector(state => state.modalReducer);
-    const {isLoading,categories} = useAppSelector(state => state.apiRequestReducer);
+    const {isLoadingToken,categories, isLoadingCategories, isLoadingBook} = useAppSelector(state => state.apiRequestReducer);
     const {setDropDownMenu} = modalSlice.actions;
     const {openModal} = bookSlice.actions;
     const {filterByCategory} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
-    const menuStatus: string = (isLoading) ? styles.menuLoading : styles.menu;
-    console.log('Сработал рендер в компоненте Меню');
+    const menuStatus: string = (isLoadingToken || isLoadingBook || isLoadingCategories) ? styles.menuLoading : styles.menu;
+
     const renderCategories = useMemo(() => {
         return categories.map((item:any) => (
             <>
@@ -36,7 +36,7 @@ export const Menu = memo(() => {
                 </NavLink>
             </>
         ));
-    }, [categories,isOpenModal]);
+    }, [categories]);
 
     return  (
         <div>

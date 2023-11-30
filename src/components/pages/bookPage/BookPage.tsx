@@ -9,9 +9,8 @@ import {fetchBookByID} from "../../../store/reducers/ApiRequestSlice";
 import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 const BookPage = () => {
     const {id} = useParams();
-    const {currentBookData,jwt, isLoading} = useAppSelector(state => state.apiRequestReducer);
+    const {currentBookData,jwt, isLoadingToken, isLoadingBook} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
-    console.log('Сработал рендер в компоненте BookPage');
     useEffect(() => {
         if (jwt) {
             dispatch(fetchBookByID({ idNum: Number(id), token: jwt }));
@@ -21,7 +20,7 @@ const BookPage = () => {
         <div className={styles.globalWrapper}>
             <div className={styles.wrapper}>
                     {
-                        (isLoading)
+                        (isLoadingToken || isLoadingBook)
                             ? <MyLoader/>
                             :
                             <>

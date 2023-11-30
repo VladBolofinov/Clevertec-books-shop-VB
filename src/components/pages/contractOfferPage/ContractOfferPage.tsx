@@ -2,11 +2,10 @@ import styles from './ContractOfferPage.module.scss';
 import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 import {useAppSelector} from "../../hooks/redux";
 const ContractOfferPage = () => {
-    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
-    console.log('Сработал рендер в компоненте ContractOfferPage');
+    const {isLoadingBook, isLoadingToken} = useAppSelector(state => state.apiRequestReducer);
     return (
         <div className={styles.wrapperMiddleSection}>
-            {(isLoading)
+            {(isLoadingToken || isLoadingBook)
             ? <MyLoader/> :
                 <div className={styles.textWrapper}>
                     <h2>Договор Оферты</h2>

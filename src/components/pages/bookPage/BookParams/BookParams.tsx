@@ -5,7 +5,6 @@ import {useAppSelector} from "../../../hooks/redux";
 
 export const BookParams = () => {
     const {currentBookData} = useAppSelector(state => state.apiRequestReducer);
-    console.log('Сработал рендер в компоненте BookParams');
     return (
         <>
             <h3 className={styles.rank}>Рейтинг</h3>

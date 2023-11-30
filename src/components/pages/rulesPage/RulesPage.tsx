@@ -2,11 +2,10 @@ import styles from "./RulesPage.module.scss";
 import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 import {useAppSelector} from "../../hooks/redux";
 const RulesPage = () => {
-    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
-    console.log('Сработал рендер в компоненте RulesPage');
+    const {isLoadingBook, isLoadingToken} = useAppSelector(state => state.apiRequestReducer);
     return (
         <div className={styles.wrapperMiddleSection}>
-            {(isLoading)
+            {(isLoadingToken || isLoadingBook)
                 ? <MyLoader/>
                 : <div className={styles.textWrapper}>
                         <h2>Правила пользования</h2>

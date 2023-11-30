@@ -8,7 +8,9 @@ const initialState: IApiRequest = {
     currentBookData: [],
     jwt: '',
     error: '',
-    isLoading: false,
+    isLoadingToken: false,
+    isLoadingCategories: false,
+    isLoadingBook: false,
     categories: []
 }
 
@@ -50,48 +52,51 @@ export const apiRequestSlice = createSlice({
             state.filteredData = state.allData.filter((book:any) => {
                     return book.categories[0] === action.payload;
                 });
+        },
+        loadMoreBooks(state) {
+
         }
     },
     extraReducers:
         (builder) => {
-        builder.addCase(fetchToken.pending, (state) => {state.isLoading = true;})
+        builder.addCase(fetchToken.pending, (state) => {state.isLoadingToken = true;})
                .addCase(fetchToken.fulfilled, (state,action:PayloadAction<string>) => {
-                   state.isLoading = false;
+                   state.isLoadingToken = false;
                    state.error = '';
                    state.jwt = action.payload;
                })
                .addCase(fetchToken.rejected, (state) => {
-                   state.isLoading = false;
+                   state.isLoadingToken = false;
                    state.error = 'something was wrong!';
                })
-               .addCase(fetchBooksData.pending, (state) => {state.isLoading = true;})
+               .addCase(fetchBooksData.pending, (state) => {state.isLoadingBook = true;})
                .addCase(fetchBooksData.fulfilled, (state,action: PayloadAction<any>) => {//поменяй тип(типизировать приходящие объекты с апишки)
-                   state.isLoading = false;
+                   state.isLoadingBook = false;
                    state.error = '';
                    state.allData = action.payload;
                })
                .addCase(fetchBooksData.rejected, (state) => {
-                   state.isLoading = false;
+                   state.isLoadingBook = false;
                    state.error = 'something was wrong!';
                })
-               .addCase(fetchBookByID.pending, (state) => {state.isLoading = true;})
+               .addCase(fetchBookByID.pending, (state) => {state.isLoadingBook = true;})
                .addCase(fetchBookByID.fulfilled, (state,action: PayloadAction<object>) => {
-                   state.isLoading = false;
+                   state.isLoadingBook = false;
                    state.error = '';
                    state.currentBookData = action.payload;
                })
                .addCase(fetchBookByID.rejected, (state) => {
-                   state.isLoading = false;
+                   state.isLoadingBook = false;
                    state.error = 'something was wrong!';
                })
-                .addCase(fetchCategories.pending, (state) => {state.isLoading = true;})
+                .addCase(fetchCategories.pending, (state) => {state.isLoadingCategories = true;})
                 .addCase(fetchCategories.fulfilled, (state,action: PayloadAction<object>) => {
-                    state.isLoading = false;
+                    state.isLoadingCategories = false;
                     state.error = '';
                     state.categories = action.payload;
                 })
                 .addCase(fetchCategories.rejected, (state) => {
-                    state.isLoading = false;
+                    state.isLoadingCategories = false;
                     state.error = 'something was wrong!';
                 })
                .addDefaultCase(() => {})

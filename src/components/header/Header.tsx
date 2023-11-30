@@ -11,10 +11,9 @@ export const Header = memo(() => {
     const {openModal} = bookSlice.actions;
     const dispatch = useAppDispatch();
     const {isOpenModal} = useAppSelector(state => state.userReducer);
-    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
-    console.log('Сработал рендер в компоненте Header');
+    const {isLoadingBook,isLoadingToken, isLoadingCategories} = useAppSelector(state => state.apiRequestReducer);
     return (
-        <div className={(isLoading) ? styles.headerLoading : styles.header}>
+        <div className={(isLoadingToken || isLoadingBook || isLoadingCategories) ? styles.headerLoading : styles.header}>
             <div className={styles.logoWrapper}>
                 <NavLink to="/main">
                     <div className={styles.logo}>

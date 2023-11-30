@@ -12,7 +12,6 @@ export const BookReview = () => {
     const {currentBookData} = useAppSelector(state => state.apiRequestReducer);
     const {setDropDownReviews} = modalSlice.actions;
     const dispatch = useAppDispatch();
-    console.log('Сработал рендер в компоненте BookReview');
     return (
         <>
             <h3 className={styles.extraDescrHeader}>Отзывы</h3>

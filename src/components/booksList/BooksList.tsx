@@ -4,21 +4,25 @@ import {BookItemColumn} from "./bookItemColumn/BookItemColumn";
 import {BookItemRow} from "./bookItemRow/BookItemRow";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
-import {memo, useEffect, useMemo} from "react";
+import {memo, useCallback, useEffect, useMemo} from "react";
 import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSlice";
 import {useLocation} from "react-router-dom";
 
 const BooksList = memo(() => {
     const {isBookRow} = useAppSelector(state => state.userReducer);
-    const {isLoading, allData, jwt, filteredData, categories} = useAppSelector(state => state.apiRequestReducer);
+    const {isLoadingToken,isLoadingBook,isLoadingCategories, allData, jwt, filteredData, categories} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
     const {filterByCategory} = apiRequestSlice.actions;
     const pathname: string = useLocation().pathname;
-    let slicedData:any = (pathname === '/main') ? allData.slice(0, 12) : filteredData.slice(0, 12);
 
-    const truncateStr = useMemo(() => {
-        return (text: string, maxLength = 55): string => (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
-    }, []);
+    const slicedData = useMemo(() => {
+        return (pathname === '/main') ? allData.slice(0, 12) : filteredData.slice(0, 12);
+    }, [pathname, allData, filteredData]);
+
+    const truncateStr = useCallback(
+        (text: string, maxLength = 55): string => (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text,
+        []
+    );
     const findPath = (res: any) => {
         return res.filter((category:any) => {
             return  category.path === pathname.slice(6);
@@ -34,16 +38,16 @@ const BooksList = memo(() => {
         }
     }, [categories]);
 
-    console.log('Сработал рендер в компоненте BooksList');
     return (
         <div className={styles.wrapper}>
-            {(isLoading)
+            {(isLoadingBook || isLoadingToken || isLoadingCategories)
                 ? <MyLoader/>
                 : <>
                     <FilterPanel/>
                     {(isBookRow)
                         ? <BookItemRow slicedData={slicedData} truncateStr={truncateStr}/>
                         : <BookItemColumn slicedData={slicedData} truncateStr={truncateStr}/>}
+                    <button>Next books</button>
                 </>}
         </div>
     )

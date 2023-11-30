@@ -6,10 +6,9 @@ import LinkedinLogo from '../../assets/img/logo/LinkedinLogo.svg';
 import {useAppSelector} from "../hooks/redux";
 import { memo } from 'react';
 export const Footer = memo(() => {
-    const {isLoading} = useAppSelector(state => state.apiRequestReducer);
-    console.log('Сработал рендер в компоненте Footer');
+    const {isLoadingBook, isLoadingToken, isLoadingCategories} = useAppSelector(state => state.apiRequestReducer);
     return (
-        <div className={(isLoading) ? styles.footerLoading : styles.footer}>
+        <div className={(isLoadingToken || isLoadingBook || isLoadingCategories) ? styles.footerLoading : styles.footer}>
             <p className={styles.trademark}>© 2020-2023 Cleverland. Все права защищены.</p>
             <div className={styles.socialWrapper}>
                 <a href="https://www.facebook.com/" target='_blank'><FacebookLogo/></a>

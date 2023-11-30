@@ -6,12 +6,12 @@ import {IBookItemProps} from "../BookItemTypes";
 import {memo} from "react";
 
 export const BookItemRow = memo(({slicedData,truncateStr}:IBookItemProps) => {
-    console.log('Сработал рендер в компоненте BookItemRow');
     return (
         <>
             {slicedData.map((item:any) => {
                 return(
                     <div key={item.id} className={stylesRow.bookCard}>
+                        {console.log('Сработал айтем')}
                         <img className={stylesRow.bookImg} src={(item.image) ? item.image.url : bookNotFound} alt="book image"/>
                         <div className={stylesRow.wrapperElemsImg}>
                             <NavLink style={() => { return {

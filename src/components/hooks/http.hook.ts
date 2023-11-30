@@ -21,7 +21,7 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: 'https://bookdatabasevb.onrender.com/books',  //http://localhost:8000
+                url: 'https://bookdatabasevb.onrender.com/books',
                 headers: {
                     'Authorization': `${token}`
                 }
@@ -36,7 +36,7 @@ export const useHttp = () => {
         try {
             const response = await axios({
                 method: 'get',
-                url: `https://bookdatabasevb.onrender.com/books/${idNum}`,  //http://localhost:8000
+                url: `https://bookdatabasevb.onrender.com/books/${idNum}`,
                 headers: {
                     'Authorization': `${token}`
                 }
