@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor loader before app init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BookItemTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BookItemTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IApiRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IApiRequest.ts" afterDir="false" />
-    </list>
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="implement func for pagination books by category" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +105,7 @@
       <workItem from="1699883380581" duration="4684000" />
       <workItem from="1700042839718" duration="18384000" />
       <workItem from="1700736151136" duration="14221000" />
-      <workItem from="1701338200674" duration="18307000" />
+      <workItem from="1701338200674" duration="18512000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -241,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701340419726</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="implement func for pagination books by category">
+      <created>1701360045131</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701360045131</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +261,8 @@
     <MESSAGE value="implement closing modal if clicked on link" />
     <MESSAGE value="optimizing re-renders" />
     <MESSAGE value="refactor loader before app init" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor loader before app init" />
+    <MESSAGE value="implement func for pagination books by category" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement func for pagination books by category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

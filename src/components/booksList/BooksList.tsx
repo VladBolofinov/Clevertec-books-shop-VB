@@ -14,6 +14,9 @@ const BooksList = memo(() => {
     const dispatch = useAppDispatch();
     const {filterByCategory, onLoadMoreBooks, sliceData} = apiRequestSlice.actions;
     const pathname: string = useLocation().pathname;
+    let argValue: number = (pathname === '/main')
+        ?  ((allData.length - sliceValue) >= 12) ? 12 : allData.length - sliceValue
+        :  ((filteredData.length - sliceValue) >= 12) ? 12 : filteredData.length - sliceValue;
 
     useEffect(() => {
         dispatch(sliceData(pathname));
@@ -21,10 +24,6 @@ const BooksList = memo(() => {
 
     const truncateStr = useCallback((text: string, maxLength = 55): string => (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text, []);
     const loadMoreBook = () => {
-        let argValue: number = 0;
-        (pathname === '/main')
-        ? argValue = ((allData.length - sliceValue) >= 12) ? 12 : allData.length - sliceValue
-        : argValue = ((filteredData.length - sliceValue) >= 12) ? 12 : filteredData.length - sliceValue;
         dispatch(onLoadMoreBooks(argValue));
         dispatch(sliceData(pathname));
     }
@@ -51,11 +50,14 @@ const BooksList = memo(() => {
                 ? <MyLoader/>
                 : <>
                     <FilterPanel/>
-                    {(isBookRow)
-                        ? <BookItemRow truncateStr={truncateStr}/>
-                        : <BookItemColumn truncateStr={truncateStr}/>}
-                </>}
-            <button onClick={() => loadMoreBook()}>Next books</button>
+                    {(isBookRow) ? <BookItemRow truncateStr={truncateStr}/> : <BookItemColumn truncateStr={truncateStr}/>}
+                    {(argValue > 0)
+                        ? <div className={styles.btnWrapper}>
+                                <button onClick={() => loadMoreBook()}>ЗАГРУЗИТЬ ЕЩЕ</button>
+                            </div>
+                        : null}
+                </>
+            }
         </div>
     )
 })

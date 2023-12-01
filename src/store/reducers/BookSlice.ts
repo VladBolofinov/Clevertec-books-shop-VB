@@ -7,7 +7,7 @@ const initialState: IBookState = {
     isOpenModal: false,
     isActiveInputBtn: false,
     isBookRow: false,
-    isBookColumn: true,
+    isBookColumn: true
 }
 
 export const bookSlice = createSlice({

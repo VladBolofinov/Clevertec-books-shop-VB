@@ -7,6 +7,21 @@
   align-content: flex-start;
   min-height: 650px;
 }
+.btnWrapper {
+  width: 825px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  button {
+    width:100px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+}
 
 @media screen and (max-width: 1110px) {
   .wrapper {
