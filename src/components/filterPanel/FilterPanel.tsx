@@ -6,12 +6,14 @@ import IconView from '../../assets/img/icons/IconView.svg';
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {bookSlice} from "../../store/reducers/BookSlice";
 import { memo } from 'react';
+import {apiRequestSlice} from "../../store/reducers/ApiRequestSlice";
 export const  FilterPanel = memo(() => {
     const onActiveBtnStyles = (activeBtn: boolean) => {
         return (activeBtn) ? {background: 'linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%)'} : {background: 'white'}
     }
     const {isActiveInputBtn, isBookColumn, isBookRow} = useAppSelector(state => state.userReducer);
     const {openInputBtn, changeDirection} = bookSlice.actions;
+    const {searchQuery,setSearchInputValue} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
     return (
         (isActiveInputBtn)
@@ -28,7 +30,13 @@ export const  FilterPanel = memo(() => {
                 <div className={styles.panelWrapper}>
                     <div className={styles.inputWrapper}>
                         <div className={styles.wrapperInputIcon}><IconSearch/></div>
-                        <input type="text" placeholder="Поиск книги или автора..."/>
+                        <input type="text"
+                               placeholder="Поиск книги или автора..."
+                               onChange={(event) => {
+                                   dispatch(setSearchInputValue(event.target.value));
+                                   dispatch(searchQuery());
+                               }
+                               }/>
                     </div>
                     <button className={styles.btnFilter}><IconFilter/>По рейтингу</button>
                     <button className={styles.btnInput}

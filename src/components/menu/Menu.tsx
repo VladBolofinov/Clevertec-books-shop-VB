@@ -14,10 +14,9 @@ export const Menu = memo(() => {
     const {isLoadingToken,categories, isLoadingCategories, isLoadingBook} = useAppSelector(state => state.apiRequestReducer);
     const {setDropDownMenu} = modalSlice.actions;
     const {openModal} = bookSlice.actions;
-    const {filterByCategory} = apiRequestSlice.actions;
+    const {filterByCategory, searchQuery} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
     const menuStatus: string = (isLoadingToken || isLoadingBook || isLoadingCategories) ? styles.menuLoading : styles.menu;
-
     const renderCategories = useMemo(() => {
         return categories.map((item:any) => (
             <>
@@ -27,6 +26,7 @@ export const Menu = memo(() => {
                 })}>
                     <p key={item.id} onClick={() => {
                         dispatch(filterByCategory(item.name));
+                        dispatch(searchQuery());
                         if (isOpenModal) {
                             dispatch(openModal(!isOpenModal));
                         }
@@ -55,6 +55,8 @@ export const Menu = memo(() => {
                         };
                     }}
                     onClick={() => {
+                        dispatch(filterByCategory('Все'));
+                        dispatch(searchQuery());
                         if (isOpenModal) {
                             dispatch(openModal(!isOpenModal));
                         }

@@ -9,38 +9,43 @@ import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSl
 import {useLocation} from "react-router-dom";
 
 const BooksList = memo(() => {
+    console.log('render booklist component');
     const {isBookRow} = useAppSelector(state => state.userReducer);
     const {isLoadingToken,isLoadingBook,isLoadingCategories, allData, jwt, filteredData, categories, sliceValue} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
-    const {filterByCategory, onLoadMoreBooks, sliceData} = apiRequestSlice.actions;
+    const {filterByCategory, onLoadMoreBooks, sliceData, searchQuery} = apiRequestSlice.actions;
     const pathname: string = useLocation().pathname;
     let argValue: number = (pathname === '/main')
         ?  ((allData.length - sliceValue) >= 12) ? 12 : allData.length - sliceValue
         :  ((filteredData.length - sliceValue) >= 12) ? 12 : filteredData.length - sliceValue;
 
     useEffect(() => {
-        dispatch(sliceData(pathname));
+        dispatch(sliceData());
+        dispatch(searchQuery());
     },[pathname])
 
     const truncateStr = useCallback((text: string, maxLength = 55): string => (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text, []);
     const loadMoreBook = () => {
         dispatch(onLoadMoreBooks(argValue));
-        dispatch(sliceData(pathname));
+        dispatch(sliceData());
     }
     const findPath = (res: any) => {
-        return res.filter((category:any) => {
-            return  category.path === pathname.slice(6);
-        });
+        let result = res.filter((category:any) => category.path === pathname.slice(6));
+        if (result.length === 0) {
+            return 'Все';
+        } else {
+            return result;
+        }
     }
 
     useEffect(() => {
         if (jwt && allData.length == 0 && categories.length > 0) {
             const res = findPath(categories);
-            (res.length === 0)
-                ? dispatch(fetchBooksData(jwt)).then(() => dispatch(sliceData(pathname)))
-                : dispatch(fetchBooksData(jwt))
-                    .then(() => dispatch(filterByCategory(res[0].name)))
-                    .then(() => dispatch(sliceData(pathname)));
+            dispatch(fetchBooksData(jwt))
+                .then(() => {
+                    dispatch(filterByCategory(res));
+                    dispatch(sliceData());
+                })
         }
     }, [categories]);
 

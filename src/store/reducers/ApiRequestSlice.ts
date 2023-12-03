@@ -13,7 +13,8 @@ const initialState: IApiRequest = {
     isLoadingToken: false,
     isLoadingCategories: false,
     isLoadingBook: false,
-    categories: []
+    categories: [],
+    searchInputValue: ''
 }
 
 export const fetchToken = createAsyncThunk(
@@ -51,20 +52,27 @@ export const apiRequestSlice = createSlice({
     initialState,
     reducers: {
         filterByCategory(state, action: PayloadAction<string>) {
-            state.sliceValue = 12;
-            state.filteredData = state.allData.filter((book:any) => {
+            if (action.payload === 'Все') {
+                state.sliceValue = 12;
+                state.filteredData = state.allData;
+            } else {
+                state.sliceValue = 12;
+                state.filteredData = state.allData.filter((book:any) => {
                     return book.categories[0] === action.payload;
                 });
+            }
         },
         onLoadMoreBooks(state, action: PayloadAction<number>) {
             state.sliceValue = state.sliceValue + action.payload;
         },
-        sliceData(state, action: PayloadAction<string>) {
-            if (action.payload === '/main') {
-                state.slicedData = state.allData.slice(0, state.sliceValue);
-            } else {
-                state.slicedData = state.filteredData.slice(0, state.sliceValue);
-            }
+        sliceData(state) {
+            state.slicedData = state.filteredData.slice(0, state.sliceValue);
+        },
+        searchQuery(state) {
+                state.slicedData = state.filteredData.filter((item:any) => item.title.toLowerCase().includes(state.searchInputValue.toLowerCase()));
+            },
+        setSearchInputValue(state, action: PayloadAction<string>){
+            state.searchInputValue = action.payload;
         }
     },
     extraReducers:

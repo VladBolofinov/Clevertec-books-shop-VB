@@ -10,6 +10,7 @@ export default interface IApiRequest {
     isLoadingCategories: boolean;
     isLoadingBook: boolean;
     categories: any;
+    searchInputValue: string;
 }
 
 // поменяй все типы any на так как должно быть
