@@ -5,8 +5,9 @@ import IconMenu from '../../assets/img/icons/IconMenu.svg';
 import IconView from '../../assets/img/icons/IconView.svg';
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {bookSlice} from "../../store/reducers/BookSlice";
-import { memo } from 'react';
 import {apiRequestSlice} from "../../store/reducers/ApiRequestSlice";
+import { memo } from 'react';
+
 export const  FilterPanel = memo(() => {
     const onActiveBtnStyles = (activeBtn: boolean) => {
         return (activeBtn) ? {background: 'linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%)'} : {background: 'white'}
@@ -23,7 +24,12 @@ export const  FilterPanel = memo(() => {
                     <div className={styles.inputWrapperSmVisible}>
                         <div className={styles.wrapperInputIconSmVisible}><IconSearch/></div>
                         <span onClick={() => dispatch(openInputBtn(!isActiveInputBtn))}>X</span>
-                        <input type="text" placeholder="Поиск книги или автора..."/>
+                        <input type="text" placeholder="Поиск книги или автора..."
+                               onChange={(event) => {
+                                   dispatch(setSearchInputValue(event.target.value));
+                                   dispatch(searchQuery());
+                               }
+                               }/>
                     </div>
                 </div>
             ) : (

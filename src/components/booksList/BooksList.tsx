@@ -43,7 +43,7 @@ const BooksList = memo(() => {
             const res = findPath(categories);
             dispatch(fetchBooksData(jwt))
                 .then(() => {
-                    dispatch(filterByCategory(res));
+                    dispatch(filterByCategory(res[0].name));
                     dispatch(sliceData());
                 })
         }
