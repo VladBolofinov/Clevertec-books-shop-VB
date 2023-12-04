@@ -11,7 +11,7 @@ import {modalSlice} from "../../store/reducers/ModalSlice";
 export const Menu = memo(() => {
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {isActiveDropDownMenu} = useAppSelector(state => state.modalReducer);
-    const {isLoadingToken,categories, isLoadingCategories, isLoadingBook} = useAppSelector(state => state.apiRequestReducer);
+    const {isLoadingToken,categories, isLoadingCategories, isLoadingBook, searchInputValue} = useAppSelector(state => state.apiRequestReducer);
     const {setDropDownMenu} = modalSlice.actions;
     const {openModal} = bookSlice.actions;
     const {filterByCategory, searchQuery} = apiRequestSlice.actions;
@@ -26,7 +26,9 @@ export const Menu = memo(() => {
                 })}>
                     <p key={item.id} onClick={() => {
                         dispatch(filterByCategory(item.name));
-                        dispatch(searchQuery());
+                        if (searchInputValue) {
+                            dispatch(searchQuery());
+                        }
                         if (isOpenModal) {
                             dispatch(openModal(!isOpenModal));
                         }

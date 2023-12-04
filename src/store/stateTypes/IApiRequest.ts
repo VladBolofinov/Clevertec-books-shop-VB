@@ -3,6 +3,7 @@ export default interface IApiRequest {
     filteredData: any;
     currentBookData: any;
     slicedData: any;
+    searchQueryData: any;
     sliceValue: number;
     jwt: string;
     error: string;
@@ -11,6 +12,7 @@ export default interface IApiRequest {
     isLoadingBook: boolean;
     categories: any;
     searchInputValue: string;
+    isActiveBtnSlice: boolean;
 }
 
 // поменяй все типы any на так как должно быть

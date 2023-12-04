@@ -16,6 +16,7 @@ export const  FilterPanel = memo(() => {
     const {openInputBtn, changeDirection} = bookSlice.actions;
     const {searchQuery,setSearchInputValue} = apiRequestSlice.actions;
     const dispatch = useAppDispatch();
+    //перепиши в отдельный компонент MyInput
     return (
         (isActiveInputBtn)
             ?

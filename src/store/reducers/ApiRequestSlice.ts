@@ -7,6 +7,7 @@ const initialState: IApiRequest = {
     filteredData: [],
     currentBookData: [],
     slicedData: [],
+    searchQueryData:[],
     sliceValue: 12,
     jwt: '',
     error: '',
@@ -14,7 +15,8 @@ const initialState: IApiRequest = {
     isLoadingCategories: false,
     isLoadingBook: false,
     categories: [],
-    searchInputValue: ''
+    searchInputValue: '',
+    isActiveBtnSlice: false
 }
 
 export const fetchToken = createAsyncThunk(
@@ -53,26 +55,50 @@ export const apiRequestSlice = createSlice({
     reducers: {
         filterByCategory(state, action: PayloadAction<string>) {
             if (action.payload === 'Все') {
-                state.sliceValue = 12;
                 state.filteredData = state.allData;
             } else {
-                state.sliceValue = 12;
                 state.filteredData = state.allData.filter((book:any) => {
                     return book.categories[0] === action.payload;
                 });
             }
+            state.sliceValue = 12;
         },
-        onLoadMoreBooks(state, action: PayloadAction<number>) {
-            state.sliceValue = state.sliceValue + action.payload;
+        onLoadMoreBooks(state) {
+            if (state.searchInputValue) {
+                let intermediaValue = (state.searchQueryData.length - state.sliceValue >= 12) ? 12 : state.searchQueryData.length - state.sliceValue;
+                state.sliceValue = state.sliceValue + intermediaValue;
+                state.slicedData = state.searchQueryData.slice(0, state.sliceValue);
+                state.isActiveBtnSlice = ((state.searchQueryData.length - state.slicedData.length) > 0);
+            } else {
+                let intermediaValue = (state.filteredData.length - state.sliceValue >= 12) ? 12 : state.filteredData.length - state.sliceValue;
+                state.sliceValue = state.sliceValue + intermediaValue;
+                state.slicedData = state.filteredData.slice(0, state.sliceValue);
+                state.isActiveBtnSlice = ((state.filteredData.length - state.slicedData.length) > 0);
+            }
         },
         sliceData(state) {
-            state.slicedData = state.filteredData.slice(0, state.sliceValue);
+            if (state.filteredData.length > 12) {
+                state.slicedData = state.filteredData.slice(0, state.sliceValue);
+                state.isActiveBtnSlice = ((state.filteredData.length - state.slicedData.length) > 0);
+            } else {
+                state.slicedData = state.filteredData;
+            }
         },
         searchQuery(state) {
-                state.slicedData = state.filteredData.filter((item:any) => item.title.toLowerCase().includes(state.searchInputValue.toLowerCase()));
-            },
-        setSearchInputValue(state, action: PayloadAction<string>){
+            state.searchQueryData = state.filteredData.filter((item:any) => item.title.toLowerCase().includes(state.searchInputValue.toLowerCase()));
+            if (state.searchQueryData.length > 12) {
+                state.slicedData = state.searchQueryData.slice(0, state.sliceValue);
+                state.isActiveBtnSlice = ((state.searchQueryData.length - state.slicedData.length) > 0);
+            } else {
+                state.slicedData = state.searchQueryData;
+                state.isActiveBtnSlice = false;
+            }
+        },
+        setSearchInputValue(state, action: PayloadAction<string>) {
             state.searchInputValue = action.payload;
+            if (!state.searchInputValue) {
+                state.sliceValue = 12;
+            }
         }
     },
     extraReducers:
