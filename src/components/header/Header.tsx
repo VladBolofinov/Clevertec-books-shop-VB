@@ -12,6 +12,7 @@ export const Header = memo(() => {
     const dispatch = useAppDispatch();
     const {isOpenModal} = useAppSelector(state => state.userReducer);
     const {isLoadingBook,isLoadingToken, isLoadingCategories} = useAppSelector(state => state.apiRequestReducer);
+
     return (
         <div className={(isLoadingToken || isLoadingBook || isLoadingCategories) ? styles.headerLoading : styles.header}>
             <div className={styles.logoWrapper}>

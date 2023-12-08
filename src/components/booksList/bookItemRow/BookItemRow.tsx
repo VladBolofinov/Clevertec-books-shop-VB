@@ -6,8 +6,8 @@ import {IBookItemProps} from "../BookItemTypes";
 import {memo, useMemo} from "react";
 import {useAppSelector} from "../../hooks/redux";
 
-export const BookItemRow = memo(({truncateStr}:IBookItemProps) => {
-    const {slicedData} = useAppSelector(state => state.apiRequestReducer);
+export const BookItemRow = memo(({truncateStr, highlightSearchMatch}:IBookItemProps) => {
+    const {slicedData,searchInputValue} = useAppSelector(state => state.apiRequestReducer);
     const renderBooksCards = useMemo(() => {
         return slicedData.map((item:any) => {
             return(
@@ -18,7 +18,7 @@ export const BookItemRow = memo(({truncateStr}:IBookItemProps) => {
                             color: "black",
                             textDecoration: "none"
                         }}} to={`/main/book/${item.id}`}>
-                            <p className={stylesRow.bookName}>{truncateStr(item.title)}</p>
+                            <p className={stylesRow.bookName}>{highlightSearchMatch(truncateStr(item.title), searchInputValue)}</p>
                         </NavLink>
                         <p className={stylesRow.bookAuthor}>{item.authors[0]}, {item.issueYear}</p>
                         <div className={stylesRow.wrapperBtnStars}>

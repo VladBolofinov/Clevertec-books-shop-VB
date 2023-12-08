@@ -9,19 +9,42 @@ import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSl
 import {useLocation} from "react-router-dom";
 
 const BooksList = memo(() => {
-    console.log('render booklist component');
     const {isBookRow} = useAppSelector(state => state.userReducer);
     const {isLoadingToken,isLoadingBook,isLoadingCategories,
         allData, jwt, categories, isActiveBtnSlice, searchInputValue} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
     const {filterByCategory, onLoadMoreBooks, sliceData, searchQuery} = apiRequestSlice.actions;
     const pathname: string = useLocation().pathname;
-    const truncateStr = useCallback((text: string, maxLength = 55): string => (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text, []);
+    const truncateStr = useCallback((text: string, maxLength = 55): string => {
+            return (text.length > maxLength) ? text.substring(0, maxLength - 3) + '...' : text;
+        },[]);
 
     const findPath = (res: any) => {
         let result = res.filter((category:any) => category.path === pathname.slice(6));
         return (result.length === 0) ? 'Все' : result[0].name;
     }
+    const highlightSearchMatch = useCallback((str:string, searchValue:string) => {
+        if (searchValue === '') {
+            return str;
+        } else {
+            let output = [];
+            if (searchInputValue.length === 1) {
+                for (let i = 0; i < str.length; i++) {
+                    (str[i].toLowerCase() !== searchValue.toLowerCase()) ? output.push(str[i]) : output.push(<span>{str[i]}</span>);
+                }
+            } else if (searchInputValue.length > 1) {
+                let indexFound = str.toLowerCase().indexOf(searchValue,0);
+                if (indexFound !== -1) {
+                    output.push(str.slice(0,indexFound));
+                    output.push(<span>{str.slice(indexFound,indexFound + searchValue.length)}</span>);
+                    output.push(str.slice(indexFound + searchValue.length, str.length));
+                } else {
+                    return str;
+                }
+            }
+            return output;
+        }
+    },[searchInputValue]);
     useEffect(() => {
         (searchInputValue) ? dispatch(searchQuery()) : dispatch(sliceData());
     },[pathname])
@@ -42,7 +65,11 @@ const BooksList = memo(() => {
                 ? <MyLoader/>
                 : <>
                     <FilterPanel/>
-                    {(isBookRow) ? <BookItemRow truncateStr={truncateStr}/> : <BookItemColumn truncateStr={truncateStr}/>}
+                    {(isBookRow)
+                        ? <BookItemRow truncateStr={truncateStr}
+                                       highlightSearchMatch={highlightSearchMatch}/>
+                        : <BookItemColumn truncateStr={truncateStr}
+                                          highlightSearchMatch={highlightSearchMatch}/>}
                     {(isActiveBtnSlice)
                         ? <div className={styles.btnWrapper}>
                                 <button onClick={() => dispatch(onLoadMoreBooks())}>ЗАГРУЗИТЬ ЕЩЕ</button>

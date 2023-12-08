@@ -5,24 +5,25 @@ import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
 import {IBookItemProps} from "../BookItemTypes";
 import {memo, useMemo} from "react";
 import {useAppSelector} from "../../hooks/redux";
-export const BookItemColumn = memo(({truncateStr}:IBookItemProps) => {
-    const {slicedData} = useAppSelector(state => state.apiRequestReducer);
+export const BookItemColumn = memo(({truncateStr, highlightSearchMatch}:IBookItemProps) => {
+    const {slicedData, searchInputValue} = useAppSelector(state => state.apiRequestReducer);
     const renderBookCards = useMemo(() => {
-        return slicedData.map((item:any) => (
-            <div className={stylesColumn.bookCard}>
-                <img src={(item.image) ? item.image.url : bookNotFound} alt="book image" />
-                <MyStarReview score={item.rating} width={'144px'} />
-                <NavLink
-                    style={{color: "black", textDecoration: "none", marginLeft: "15px"}}
-                    to={`/main/book/${item.id}`}>
-                    <span className={stylesColumn.bookName}>{truncateStr(item.title)}</span>
-                </NavLink>
-                <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>
-                <button className={stylesColumn.btnStyles}>ЗАБРОНИРОВАТЬ</button>
-            </div>
-        ))
-    },[slicedData])
-    return (
-        <>{renderBookCards}</>
-    );
+        return slicedData.map((item: any) => {
+            return (
+                <div className={stylesColumn.bookCard}>
+                    <img src={(item.image) ? item.image.url : bookNotFound} alt="book image" />
+                    <MyStarReview score={item.rating} width={'144px'} />
+                    <NavLink
+                        style={{ color: "black", textDecoration: "none", marginLeft: "15px" }}
+                        to={`/main/book/${item.id}`}
+                    >
+                        <span className={stylesColumn.bookName}>{highlightSearchMatch(truncateStr(item.title), searchInputValue)}</span>
+                    </NavLink>
+                    <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>
+                    <button className={stylesColumn.btnStyles}>ЗАБРОНИРОВАТЬ</button>
+                </div>
+            );
+        });
+    }, [slicedData]);
+    return <>{renderBookCards}</>;
 })

@@ -82,6 +82,7 @@ export const apiRequestSlice = createSlice({
                 state.isActiveBtnSlice = ((state.filteredData.length - state.slicedData.length) > 0);
             } else {
                 state.slicedData = state.filteredData;
+                state.isActiveBtnSlice = false;
             }
         },
         searchQuery(state) {
