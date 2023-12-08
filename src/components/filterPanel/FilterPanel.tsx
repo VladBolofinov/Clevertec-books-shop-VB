@@ -24,7 +24,9 @@ export const  FilterPanel = memo(() => {
                 <div className={styles.panelWrapperSmVisible}>
                     <div className={styles.inputWrapperSmVisible}>
                         <div className={styles.wrapperInputIconSmVisible}><IconSearch/></div>
-                        <span onClick={() => dispatch(openInputBtn(!isActiveInputBtn))}>X</span>
+                        <span onClick={() => {
+                            dispatch(openInputBtn(!isActiveInputBtn));
+                        }}>X</span>
                         <input type="text" placeholder="Поиск книги или автора..."
                                onChange={(event) => {
                                    dispatch(setSearchInputValue(event.target.value));

@@ -12,7 +12,9 @@ export const BookItemColumn = memo(({truncateStr, highlightSearchMatch}:IBookIte
             return (
                 <div className={stylesColumn.bookCard}>
                     <img src={(item.image) ? item.image.url : bookNotFound} alt="book image" />
-                    <MyStarReview score={item.rating} width={'144px'} />
+                    {(item.rating === null)
+                        ? <span className={stylesColumn.score}>еще нет оценок</span>
+                        : <MyStarReview score={item.rating} width={'144px'} />}
                     <NavLink
                         style={{ color: "black", textDecoration: "none", marginLeft: "15px" }}
                         to={`/main/book/${item.id}`}

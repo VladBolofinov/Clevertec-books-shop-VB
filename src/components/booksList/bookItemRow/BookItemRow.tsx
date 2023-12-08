@@ -22,7 +22,9 @@ export const BookItemRow = memo(({truncateStr, highlightSearchMatch}:IBookItemPr
                         </NavLink>
                         <p className={stylesRow.bookAuthor}>{item.authors[0]}, {item.issueYear}</p>
                         <div className={stylesRow.wrapperBtnStars}>
-                            <MyStarReview score={item.rating}/>
+                            {(item.rating === null)
+                                ? <span className={stylesRow.score}>еще нет оценок</span>
+                                : <MyStarReview score={item.rating}/>}
                             <button className={stylesRow.btnStyles}>ЗАБРОНИРОВАТЬ</button>
                         </div>
                     </div>

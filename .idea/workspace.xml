@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor all input logic and button loadMoreBooks">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="implement new feature - highlight books in name title while searching items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BookItemTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BookItemTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemColumn/BookItemColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemRow/BookItemRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyStarReview/MyStarReview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyStarReview/MyStarReview.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <workItem from="1701597562321" duration="13406000" />
       <workItem from="1701689430348" duration="14006000" />
       <workItem from="1701958535671" duration="556000" />
-      <workItem from="1702025811664" duration="12102000" />
+      <workItem from="1702025811664" duration="15716000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -274,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701703611273</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="implement new feature - highlight books in name title while searching items">
+      <created>1702038990552</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702038990552</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +305,8 @@
     <MESSAGE value="implement logic search by input" />
     <MESSAGE value="refactor input logic" />
     <MESSAGE value="refactor all input logic and button loadMoreBooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor all input logic and button loadMoreBooks" />
+    <MESSAGE value="implement new feature - highlight books in name title while searching items" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement new feature - highlight books in name title while searching items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
