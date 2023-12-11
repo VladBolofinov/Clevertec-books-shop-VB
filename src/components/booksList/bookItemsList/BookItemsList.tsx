@@ -51,9 +51,13 @@ export const BookItemsList = memo(({truncateStr, highlightSearchMatch}:IBookItem
         )
     }
     const renderBookCards = useMemo(() => {
-        return slicedData.map((item: any) => {
-            return bookListMarkup(item);
-        });
+        if (slicedData.length === 0) {
+            return <div className={stylesRow.notFound}>По запросу ничего не найдено</div>
+        } else {
+            return slicedData.map((item: any) => {
+                return bookListMarkup(item);
+            });
+        }
     }, [slicedData,isBookRow]);
 
     return <>{renderBookCards}</>;
