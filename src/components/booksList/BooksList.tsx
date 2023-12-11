@@ -1,7 +1,6 @@
 import styles from './BooksList.module.scss';
 import {FilterPanel} from "../filterPanel/FilterPanel";
-import {BookItemColumn} from "./bookItemColumn/BookItemColumn";
-import {BookItemRow} from "./bookItemRow/BookItemRow";
+import {BookItemsList} from "./bookItemsList/BookItemsList";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
 import {memo, useCallback, useEffect} from "react";
@@ -9,7 +8,6 @@ import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSl
 import {useLocation} from "react-router-dom";
 
 const BooksList = memo(() => {
-    const {isBookRow} = useAppSelector(state => state.userReducer);
     const {isLoadingToken,isLoadingBook,isLoadingCategories,
         allData, jwt, categories, isActiveBtnSlice, searchInputValue} = useAppSelector(state => state.apiRequestReducer);
     const dispatch = useAppDispatch();
@@ -65,11 +63,7 @@ const BooksList = memo(() => {
                 ? <MyLoader/>
                 : <>
                     <FilterPanel/>
-                    {(isBookRow)
-                        ? <BookItemRow truncateStr={truncateStr}
-                                       highlightSearchMatch={highlightSearchMatch}/>
-                        : <BookItemColumn truncateStr={truncateStr}
-                                          highlightSearchMatch={highlightSearchMatch}/>}
+                    <BookItemsList truncateStr={truncateStr} highlightSearchMatch={highlightSearchMatch}/>
                     {(isActiveBtnSlice)
                         ? <div className={styles.btnWrapper}>
                                 <button onClick={() => dispatch(onLoadMoreBooks())}>ЗАГРУЗИТЬ ЕЩЕ</button>
