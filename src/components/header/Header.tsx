@@ -5,7 +5,7 @@ import avatar from '../../assets/img/avatar.png';
 import {NavLink} from "react-router-dom";
 import {bookSlice} from "../../store/reducers/BookSlice";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
-import { memo } from 'react';
+import React, { memo } from 'react';
 
 export const Header = memo(() => {
     const {openModal} = bookSlice.actions;
@@ -29,7 +29,7 @@ export const Header = memo(() => {
             </div>
             <div className={styles.authorisation}>
                 <span className={styles.avatarText}>Привет, новый пользователь {} !</span>
-                <img src={avatar} alt="user-icon"/>
+                <NavLink to={`/authorization`}><img src={avatar} alt="user-icon"/></NavLink>
             </div>
         </div>
     )

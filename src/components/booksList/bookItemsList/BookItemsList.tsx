@@ -12,7 +12,7 @@ export const BookItemsList = memo(({truncateStr, highlightSearchMatch}:IBookItem
     const bookListMarkup = (item: any) => {
         return (isBookRow)
             ?
-             (
+             ( 
                 <div className={stylesRow.bookCard}>
                     <img className={stylesRow.bookImg} src={(item.image) ? item.image.url : bookNotFound} alt="book image"/>
                     <div className={stylesRow.wrapperElemsImg}>

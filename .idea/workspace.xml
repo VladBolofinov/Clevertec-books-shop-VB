@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="little refactor">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="added notifications if empty search output">
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/AuthPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +58,11 @@
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\pages\ContractOfferPage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\authPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\pages" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\bookPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\store" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src" />
-      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -112,6 +123,8 @@
       <workItem from="1701689430348" duration="14006000" />
       <workItem from="1701958535671" duration="556000" />
       <workItem from="1702025811664" duration="16230000" />
+      <workItem from="1702318610221" duration="10659000" />
+      <workItem from="1702461444673" duration="9216000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
