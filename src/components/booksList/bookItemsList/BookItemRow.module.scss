@@ -39,14 +39,6 @@
   justify-content: space-between;
   align-items: center;
 }
-.btnStyles {
-  width:166px;
-  height:40px;
-  background:linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
-  font-size:12px;
-  font-weight:600;
-  color:white;
-}
 .notFound {
   color: #A7A7A7;
   font-size: 32px;
@@ -93,10 +85,7 @@
   .wrapperBtnStars {
     margin-top: 3px;
     flex-direction: column;
-  }
-  .btnStyles {
-    width:186px;
-    margin-top: 8px;
+    height: 70px;
   }
   .notFound {
     font-size: 18px;

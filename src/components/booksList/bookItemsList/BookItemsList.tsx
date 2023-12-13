@@ -2,10 +2,11 @@ import bookNotFound from '../../../assets/img/pictures/bookNotFound.png';
 import {NavLink} from "react-router-dom";
 import MyStarReview from "../../sharedComponents/MyStarReview/MyStarReview";
 import {IBookItemProps} from "../BookItemTypes";
-import {memo, useMemo} from "react";
+import React, {memo, useMemo} from "react";
 import {useAppSelector} from "../../hooks/redux";
 import stylesColumn from './BookItemColumn.module.scss';
 import stylesRow from "./BookItemRow.module.scss";
+import {MyButton} from "../../sharedComponents/MyButton/MyButton";
 export const BookItemsList = memo(({truncateStr, highlightSearchMatch}:IBookItemProps) => {
     const {slicedData, searchInputValue} = useAppSelector(state => state.apiRequestReducer);
     const {isBookRow} = useAppSelector(state => state.userReducer);
@@ -27,7 +28,7 @@ export const BookItemsList = memo(({truncateStr, highlightSearchMatch}:IBookItem
                             {(item.rating === null)
                                 ? <span className={stylesRow.score}>еще нет оценок</span>
                                 : <MyStarReview score={item.rating}/>}
-                            <button className={stylesRow.btnStyles}>ЗАБРОНИРОВАТЬ</button>
+                            <MyButton content={'Забронировать'} size={'btnSm'}/>
                         </div>
                     </div>
                 </div>
@@ -46,7 +47,7 @@ export const BookItemsList = memo(({truncateStr, highlightSearchMatch}:IBookItem
                     <span className={stylesColumn.bookName}>{highlightSearchMatch(truncateStr(item.title), searchInputValue)}</span>
                 </NavLink>
                 <p className={stylesColumn.bookAuthor}>{item.authors[0]}</p>
-                <button className={stylesColumn.btnStyles}>ЗАБРОНИРОВАТЬ</button>
+                <MyButton content={'Забронировать'} size={'btnSm'}/>
             </div>
         )
     }

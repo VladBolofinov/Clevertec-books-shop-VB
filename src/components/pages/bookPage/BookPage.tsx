@@ -7,6 +7,7 @@ import {Slider} from "../../sharedComponents/swiper-sliders/Slider";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {fetchBookByID} from "../../../store/reducers/ApiRequestSlice";
 import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
+import {MyButton} from "../../sharedComponents/MyButton/MyButton";
 const BookPage = () => {
     const {id} = useParams();
     const {currentBookData,jwt, isLoadingToken, isLoadingBook} = useAppSelector(state => state.apiRequestReducer);
@@ -29,7 +30,7 @@ const BookPage = () => {
                                 <div className={styles.wrapperBookDescr}>
                                     <h1 className={styles.bookHeader}>{currentBookData.title}</h1>
                                     <span className={styles.textAuthor}>{(currentBookData.authors) ? currentBookData.authors[0] : null}</span>
-                                    <button className={styles.btnStyles}>ЗАБРОНИРОВАТЬ</button>
+                                    <MyButton content={'Забронировать'} margin={'32px 0 62px 0'} size={'btnMd'}/>
                                     <h3>О книге</h3>
                                     <p className={styles.aboutBook}>{currentBookData.description}</p>
                                 </div>

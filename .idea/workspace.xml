@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="added notifications if empty search output">
-      <change afterPath="$PROJECT_DIR$/src/components/authPage/AuthPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" afterDir="false" />
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="added authPage">
+      <change afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemColumn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemColumn.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemRow.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemRow.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/bookItemsList/BookItemsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterPanel/FilterPanel.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/bookPage/BookReview/BookReview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables/global.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +63,8 @@
       <recent name="C:\Users\100nout\Desktop\Clevertec-books-shop-VB\src\pages\ContractOfferPage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\authPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\pages" />
+      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\authPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\bookPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\store" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src" />
@@ -124,7 +129,7 @@
       <workItem from="1701958535671" duration="556000" />
       <workItem from="1702025811664" duration="16230000" />
       <workItem from="1702318610221" duration="10659000" />
-      <workItem from="1702461444673" duration="9216000" />
+      <workItem from="1702461444673" duration="20569000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -294,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702053909406</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added authPage">
+      <created>1702472182552</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702472182553</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +332,8 @@
     <MESSAGE value="refactor all input logic and button loadMoreBooks" />
     <MESSAGE value="implement new feature - highlight books in name title while searching items" />
     <MESSAGE value="little refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="little refactor" />
+    <MESSAGE value="added authPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="added authPage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,9 +3,10 @@ import {FilterPanel} from "../filterPanel/FilterPanel";
 import {BookItemsList} from "./bookItemsList/BookItemsList";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {MyLoader} from "../sharedComponents/MyLoader/MyLoader";
-import {memo, useCallback, useEffect} from "react";
+import React, {memo, useCallback, useEffect} from "react";
 import {apiRequestSlice, fetchBooksData} from "../../store/reducers/ApiRequestSlice";
 import {useLocation} from "react-router-dom";
+import {MyButton} from "../sharedComponents/MyButton/MyButton";
 
 const BooksList = memo(() => {
     const {isLoadingToken,isLoadingBook,isLoadingCategories,
@@ -65,9 +66,7 @@ const BooksList = memo(() => {
                     <FilterPanel/>
                     <BookItemsList truncateStr={truncateStr} highlightSearchMatch={highlightSearchMatch}/>
                     {(isActiveBtnSlice)
-                        ? <div className={styles.btnWrapper}>
-                                <button onClick={() => dispatch(onLoadMoreBooks())}>ЗАГРУЗИТЬ ЕЩЕ</button>
-                            </div>
+                        ? <MyButton content={'Загрузить еще'} size={'btnSm'} width={'100px'} onClickFn={() => dispatch(onLoadMoreBooks())}/>
                         : null}
                 </>
             }

@@ -25,14 +25,14 @@
     }
     .notFocusPlaceholder {
       position: relative;
-      top: 70px;
+      top: 54px;
       left: 12px;
       font-size: 14px;
       width: 55px;
     }
     .onFocusPlaceholder {
       position: relative;
-      top: 55px;
+      top: 34px;
       left: 12px;
       font-size: 12px;
       font-weight: 500;
@@ -41,7 +41,6 @@
     input {
       width: 416px;
       height: 56px;
-      margin-top: 36px;
       background-color: rgba(249, 249, 250, 1);
       border-radius: 3px;
       border-top: none;
@@ -52,6 +51,12 @@
       font-size: 14px;
       color: #363636;
     }
+    .loginInput {
+      margin-top: 16px;
+    }
+    .passwordInput {
+      margin-top: 20px;
+    }
     :focus {
       outline: none;
     }
@@ -59,7 +64,20 @@
       font-size: 12px;
       font-weight: 500;
       color: #A7A7A7FF;
-      margin: 20px 0 0 12px;
+      margin: 20px 0 32px 12px;
+      cursor: pointer;
+    }
+    .registrationLink {
+      margin-top: 16px;
+      display: flex;
+      span {
+        color: #A7A7A7FF;
+      }
+      p {
+        margin-left: 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
     }
   }
 

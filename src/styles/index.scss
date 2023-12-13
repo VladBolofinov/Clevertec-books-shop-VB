@@ -1,15 +1,13 @@
-@import "variables/global";
 @import "reset";
 .app {
   min-height: 100vh;
-  font-family: var(--font-family-main);
+  font-family: Montserrat, serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
   button {
     border-radius: 30px;
-    font-family: Montserrat;
     border: none;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     display: flex;

@@ -1,0 +1,37 @@
+.btnStyles {
+  border-radius: 30px;
+  font-family: Montserrat, serif;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  height: 52px;
+}
+.btnLg{
+  composes: btnStyles;
+  width: 416px;
+}
+.btnMd {
+  composes: btnStyles;
+  width: 350px;
+}
+.btnSm {
+  composes: btnStyles;
+  width: 166px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .btnMd {
+    width: 250px;
+  }
+}

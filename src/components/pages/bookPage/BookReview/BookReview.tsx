@@ -6,6 +6,7 @@ import ReviewersAvatar from "../../../../assets/img/icons/reviewsAvatar.svg";
 import MyStarReview from "../../../sharedComponents/MyStarReview/MyStarReview";
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
 import {modalSlice} from "../../../../store/reducers/ModalSlice";
+import {MyButton} from "../../../sharedComponents/MyButton/MyButton";
 
 export const BookReview = () => {
     const {isActiveDropDownReviews} = useAppSelector(state => state.modalReducer);
@@ -33,7 +34,7 @@ export const BookReview = () => {
                     </div>
                 )) : null}
             </div>
-            <button className={styles.btnStyles}>ОЦЕНИТЬ КНИГУ</button>
+            <MyButton content={'Оценить книгу'} margin={'32px 0 62px 0'} size={'btnMd'}/>
         </>
     );
 };
