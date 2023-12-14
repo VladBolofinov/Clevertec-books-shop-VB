@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
-import Logo from '../../assets/img/MainLogo.svg';
-import LogoName from '../../assets/img/MainLogoName.svg';
-import avatar from '../../assets/img/avatar.png';
+import Logo from '../../assets/img/logo/MainLogo.svg';
+import LogoName from '../../assets/img/logo/MainLogoName.svg';
+import avatar from '../../assets/img/icons/avatar.png';
 import {NavLink} from "react-router-dom";
 import {bookSlice} from "../../store/reducers/BookSlice";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
