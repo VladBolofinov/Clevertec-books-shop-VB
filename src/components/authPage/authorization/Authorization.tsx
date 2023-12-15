@@ -6,12 +6,14 @@ import {MyButton} from "../../sharedComponents/MyButton/MyButton";
 import IconEye from '../../../assets/img/icons/AuthIcons/Eye.svg';
 import IconEyeClosed from '../../../assets/img/icons/AuthIcons/EyeClosed.svg';
 import IconArrowRight from '../../../assets/img/icons/AuthIcons/IconChevron.svg';
+import {registerNewUser} from "./../../../store/reducers/AuthorizationSlice";
 const Authorization = () => {
     const {isOnFocusLoginPlaceholder, isOnFocusPasswordPlaceholder, inputLoginValue, inputPasswordValue, inputType} = useAppSelector(state => state.authorizationReducer);
     const {setOnFocusPlaceholder, setInputLoginValue, setInputPasswordValue, setInputType} = authorizationSlice.actions;
     const dispatch = useAppDispatch();
     return (
         <div className={styles.wrapper}>
+            {/*<button onClick={() => dispatch(registerNewUser({username:'aq]sdawq', password: 'asdwqqd'}))}>Register</button>*/}
             <h1>Cleverland</h1>
             <div className={styles.modal}>
                 <p className={styles.enterAccount}>Вход в личный кабинет</p>

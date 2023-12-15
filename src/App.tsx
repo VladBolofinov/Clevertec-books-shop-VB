@@ -20,7 +20,7 @@ const App = () => {
             if (jwt && !categories.length) {
                 dispatch(fetchCategories(jwt));
             } else {
-                dispatch(fetchToken())
+                dispatch(fetchToken());
             }
     },[jwt])
     return (

@@ -1,13 +1,13 @@
 import axios from "axios";
 export const useHttp = () => {
-    const getToken = async () => {
+    const getToken = async (username : string = 'admin', password: string = '123') => {
         try {
             const response = await axios({
                 method: 'post',
                 url: 'https://bookdatabasevb.onrender.com/login',
                 data: {
-                    "username": "admin",
-                    "password": "123"
+                    "username": username,
+                    "password": password
                 }
             })
             //напиши проверку на успех запроса
@@ -17,6 +17,22 @@ export const useHttp = () => {
         }
     }
 
+
+    const registerNewUser = async (username : string, password: string) => {
+        try {
+            const response = await axios({
+                method: 'post',
+                url: 'https://bookdatabasevb.onrender.com/register',
+                data: {
+                    username,
+                    password
+                }
+            })
+            return response.status;
+        } catch (e) {
+            throw e;
+        }
+    }
     const fetchBooksData = async (token:string) => {
         try {
             const response = await axios({
@@ -66,6 +82,7 @@ export const useHttp = () => {
         getToken,
         fetchBooksData,
         fetchBookByID,
-        fetchCategories
+        fetchCategories,
+        registerNewUser
     }
 }

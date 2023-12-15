@@ -4,4 +4,7 @@ export default interface IAuthorization {
     inputLoginValue: string;
     inputPasswordValue: string;
     inputType: 'text' | 'password';
+    isLoadingRegReq: boolean;
+    error: string;
+    registrationSuccess: boolean;
 }
