@@ -11,9 +11,11 @@ export const useHttp = () => {
                 }
             })
             //напиши проверку на успех запроса
+            //console.log(response.status);
             return response.data.token;
         } catch (e) {
-            throw e;
+            //console.log(e.response);
+            return e.response.status;
         }
     }
 
@@ -28,6 +30,7 @@ export const useHttp = () => {
                     password
                 }
             })
+            console.log(response);
             return response.status;
         } catch (e) {
             throw e;
@@ -78,11 +81,28 @@ export const useHttp = () => {
         }
     }
 
+    const fetchLogIn = async (username : string = 'admin', password: string = '123') => {
+        try {
+            const response = await axios({
+                method: 'post',
+                url: 'https://bookdatabasevb.onrender.com/login',
+                data: {
+                    "username": username,
+                    "password": password
+                }
+            })
+            return response.status;
+        } catch (e) {
+            return e.response.status;
+        }
+    }
+
     return {
         getToken,
         fetchBooksData,
         fetchBookByID,
         fetchCategories,
-        registerNewUser
+        registerNewUser,
+        fetchLogIn
     }
 }

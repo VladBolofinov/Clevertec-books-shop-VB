@@ -21,9 +21,9 @@ const initialState: IApiRequest = {
 
 export const fetchToken = createAsyncThunk(
     'apiRequest/fetchToken',
-    () => {
+    ({username, password}:{username:string, password: string}) => {
         const {getToken} = useHttp();
-        return getToken();
+        return getToken(username, password);
     }
 )
 export const fetchBooksData = createAsyncThunk(
@@ -110,7 +110,7 @@ export const apiRequestSlice = createSlice({
                    state.error = '';
                    state.jwt = action.payload;
                })
-               .addCase(fetchToken.rejected, (state) => {
+               .addCase(fetchToken.rejected, (state,action:PayloadAction<any>) => {
                    state.isLoadingToken = false;
                    state.error = 'something was wrong!';
                })

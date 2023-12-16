@@ -10,7 +10,9 @@ const initialState: IAuthorization = {
     inputType: 'password',
     isLoadingRegReq: false,
     error: '',
-    registrationSuccess: false
+    registrationSuccess: false,
+    authSuccess: false,
+    requestStatus: 0,
 }
 
 export const registerNewUser = createAsyncThunk(
@@ -18,6 +20,14 @@ export const registerNewUser = createAsyncThunk(
     ({username, password}:{username:string, password: string}) => {
         const {registerNewUser} = useHttp();
         return registerNewUser(username,password);
+    }
+)
+
+export const fetchLogIn = createAsyncThunk(
+    'apiRequest/fetchLogIn',
+    ({username, password}:{username:string, password: string}) => {
+        const {fetchLogIn} = useHttp();
+        return fetchLogIn(username, password);
     }
 )
 
@@ -51,6 +61,21 @@ export const authorizationSlice = createSlice({
                     state.error = '';
                 })
                 .addCase(registerNewUser.rejected, (state) => {
+                    state.isLoadingRegReq = false;
+                    state.error = 'something was wrong!';
+                })
+                .addCase(fetchLogIn.pending, (state) => {state.isLoadingRegReq = true;})
+                .addCase(fetchLogIn.fulfilled, (state, action: PayloadAction<number>) => {
+                    state.isLoadingRegReq = false;
+                    state.error = '';
+                    if (action.payload > 199 && action.payload < 300) {
+                        state.authSuccess = true;
+                    } else {
+                        state.authSuccess = false;
+                    }
+                    state.requestStatus = action.payload;
+                })
+                .addCase(fetchLogIn.rejected, (state) => {
                     state.isLoadingRegReq = false;
                     state.error = 'something was wrong!';
                 })

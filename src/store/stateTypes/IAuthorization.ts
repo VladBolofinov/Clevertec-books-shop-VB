@@ -7,4 +7,6 @@ export default interface IAuthorization {
     isLoadingRegReq: boolean;
     error: string;
     registrationSuccess: boolean;
+    authSuccess: boolean;
+    requestStatus: number;
 }
