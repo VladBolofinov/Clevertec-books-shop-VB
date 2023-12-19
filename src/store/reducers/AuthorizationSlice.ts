@@ -50,6 +50,11 @@ export const authorizationSlice = createSlice({
         },
         setInputType(state, action: PayloadAction<'text' | 'password'>) {
             state.inputType = action.payload;
+        },
+        repeatLogIn(state) {
+            state.error = '';
+            state.inputLoginValue = '';
+            state.inputPasswordValue = '';
         }
     },
     extraReducers:

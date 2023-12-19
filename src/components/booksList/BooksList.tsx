@@ -66,7 +66,7 @@ const BooksList = memo(() => {
                     <FilterPanel/>
                     <BookItemsList truncateStr={truncateStr} highlightSearchMatch={highlightSearchMatch}/>
                     {(isActiveBtnSlice)
-                        ? <MyButton content={'Загрузить еще'} size={'btnSm'} width={'100px'} onClickFn={() => dispatch(onLoadMoreBooks())}/>
+                        ? <MyButton content={'Загрузить еще'} size={'btnSm'} width={'100px'} onClick={() => dispatch(onLoadMoreBooks())}/>
                         : null}
                 </>
             }

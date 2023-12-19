@@ -7,13 +7,13 @@ interface IButtonProps {
     height?: string;
     margin?: string;
     size?: string;
-    onClickFn?: () => void
+    onClick?: () => void
 
 }
-export const MyButton = ({content, width, height, margin, size, onClickFn}:IButtonProps) => {
+export const MyButton = ({content, width, height, margin, size, onClick}:IButtonProps) => {
     return (
         <button style={{width, height, margin}}
                 className={(size) ? styles[size] : styles.btnStyles}
-                onClick={onClickFn}>{content}</button>
+                onClick={onClick}>{content}</button>
     );
 };

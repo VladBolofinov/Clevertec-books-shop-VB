@@ -11,6 +11,7 @@ import {fetchCategories, fetchToken} from "./store/reducers/ApiRequestSlice";
 import {useAppDispatch, useAppSelector} from "./components/hooks/redux";
 import Authorization from "./components/authPage/authorization/Authorization";
 import AuthPage from "./components/authPage/AuthPage";
+import {Registration} from "./components/authPage/registration/Registration";
 
 const App = () => {
     const {categories,jwt} = useAppSelector(state => state.apiRequestReducer);
@@ -35,7 +36,8 @@ const App = () => {
                         <Route key={5} path={':category'} element={<BooksListAsync/>}/>
                     </Route>
                     <Route path={'/authorization'} element={<AuthPage/>}>
-                        <Route key={1} index element={<Authorization/>}/>
+                        <Route key={6} index element={<Authorization/>}/>
+                        <Route key={7} path={'registration'} element={<Registration/>}/>
                     </Route>
                     {/*{Object.values(routeConfig).map(({element,path}) => (<Route key={path} path={path} element={element}/>))}*/}
                 </Routes>

@@ -1,0 +1,35 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 48px 56px;
+  text-align: center;
+  .headerText {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .descrText {
+    margin: 32px 0;
+  }
+}
+.modalLoading {
+  composes: modal;
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 42px 16px;
+    align-items: center;
+    .headerText {
+      font-size: 18px;
+    }
+    .descrText {
+      font-size: 15px;
+      margin: 24px 0;
+    }
+  }
+}

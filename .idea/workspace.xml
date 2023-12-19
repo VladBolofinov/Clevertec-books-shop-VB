@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="implement registration logic">
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/AuthPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/authModal/AuthModal.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/authModal/AuthModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/registration/Registration.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/registration/Registration.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/AuthPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hooks/http.hook.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyLoader/MyLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyLoader/MyLoader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ApiRequestSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/booksList/BooksList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +61,10 @@
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\pictures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\authPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\icons" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\assets\img\logo" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\pages" />
-      <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\authPage" />
       <recent name="C:\Users\100nout\Desktop\PROGRAMMING\Clevertec-books-shop-VB\src\components\bookPage" />
     </key>
   </component>
@@ -125,7 +131,8 @@
       <workItem from="1702548871950" duration="16902000" />
       <workItem from="1702667307273" duration="4457000" />
       <workItem from="1702730925743" duration="13376000" />
-      <workItem from="1702747654889" duration="2415000" />
+      <workItem from="1702747654889" duration="2583000" />
+      <workItem from="1702899518124" duration="9424000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -323,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702671867527</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="refactor auth logic">
+      <created>1702750238283</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702750238283</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +367,8 @@
     <MESSAGE value="added auth modal" />
     <MESSAGE value="refactor styles in modal auth" />
     <MESSAGE value="implement registration logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement registration logic" />
+    <MESSAGE value="refactor auth logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor auth logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

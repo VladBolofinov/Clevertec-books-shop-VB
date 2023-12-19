@@ -14,7 +14,7 @@
     top: 54px;
     left: 12px;
     font-size: 14px;
-    width: 55px;
+    width: 220px;  //был 55px//может плохо кликаться по инпуту т.к. по всей ширине занимает (пересмотри потом этот момент)
     transition: top 0.2s;
   }
   .onFocusPlaceholder {
@@ -111,40 +111,37 @@
 }
 
 @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 18px;
+  h1 {
+    font-size: 18px;
+  }
+  .modal {
+    margin-top: 2%;
+    width: 288px;
+    height: 456px;
+    padding: 24px 16px;
+    input {
+      width: 256px;
     }
-    .modal {
-      margin-top: 2%;
-      width: 288px;
-      height: 456px;
-      padding: 24px 16px;
-      input {
-        width: 256px;
+    .passwordInput {
+      margin-top: 16px;
+    }
+    .forgetEntryData {
+      margin: 20px 0 32px 0;
+    }
+    .registrationLink {
+      flex-direction: column;
+      align-items: flex-start;
+      span {
+        font-size: 15px;
       }
-      .passwordInput {
-        margin-top: 16px;
-      }
-      .forgetEntryData {
-        margin: 20px 0 32px 0;
-      }
-      .registrationLink {
-        flex-direction: column;
-        align-items: flex-start;
-        span {
-          font-size: 15px;
-        }
-        p {
-          margin: 0 12px 0 0;
-          font-size: 12px;
-        }
-      }
-      .wrapperIcon {
-        bottom: 15px;
-        left: 87%;
+      p {
+        margin: 0 12px 0 0;
+        font-size: 12px;
       }
     }
+    .wrapperIcon {
+      bottom: 15px;
+      left: 87%;
+    }
+  }
 }
-
-
-
