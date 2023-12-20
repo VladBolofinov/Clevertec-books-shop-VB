@@ -9,6 +9,10 @@
     font-weight: 700;
     font-size: 24px;
   }
+  .stepText {
+    font-weight: 600;
+    font-size: 14px;
+  }
   .notFocusPlaceholder {
     position: relative;
     top: 54px;
@@ -58,6 +62,12 @@
   .passwordInputWrong {
     margin-top: 20px;
     border-bottom-color: #F42C4FFF;
+  }
+  .inputTooltip {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 12px;
+    color: #A7A7A7FF;
   }
   .forgetEntryData {
     font-size: 12px;
