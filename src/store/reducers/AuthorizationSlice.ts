@@ -1,10 +1,10 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import IAuthorization from "../stateTypes/IAuthorization";
+import {IAuthorization, IRegistrationData} from "../stateTypes/IAuthorization";
 import {useHttp} from "../../components/hooks/http.hook";
 
 const initialState: IAuthorization = {
-    isOnFocusLoginPlaceholder: false,
-    isOnFocusPasswordPlaceholder: false,
+    isOnFocusFirstPlaceholder: false,
+    isOnFocusSecondPlaceholder: false,
     inputLoginValue: '',
     inputPasswordValue: '',
     inputType: 'password',
@@ -13,6 +13,15 @@ const initialState: IAuthorization = {
     registrationSuccess: false,
     authSuccess: false,
     requestStatus: 0,
+    registrationData: {
+        login: '',
+        password: '',
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        email: ''
+    },
+    registrationStep: 1,
 }
 
 export const registerNewUser = createAsyncThunk(
@@ -36,10 +45,10 @@ export const authorizationSlice = createSlice({
     initialState,
     reducers: {
         setOnFocusPlaceholder(state, action: PayloadAction<string>) {
-            if (action.payload === 'Логин') {
-                state.isOnFocusLoginPlaceholder = !state.isOnFocusLoginPlaceholder;
-            } else if (action.payload === 'Пароль') {
-                state.isOnFocusPasswordPlaceholder = !state.isOnFocusPasswordPlaceholder;
+            if (action.payload === 'First') {
+                state.isOnFocusFirstPlaceholder = !state.isOnFocusFirstPlaceholder;
+            } else if (action.payload === 'Second') {
+                state.isOnFocusSecondPlaceholder = !state.isOnFocusSecondPlaceholder;
             }
         },
         setInputLoginValue(state, action: PayloadAction<string>) {
@@ -55,6 +64,12 @@ export const authorizationSlice = createSlice({
             state.error = '';
             state.inputLoginValue = '';
             state.inputPasswordValue = '';
+        },
+        setRegistrationData(state, action: PayloadAction<{type: keyof IRegistrationData, value: string}>) {
+            state.registrationData[action.payload.type] = action.payload.value;
+        },
+        setNextStepRegistration(state) {
+            state.registrationStep = state.registrationStep + 1;
         }
     },
     extraReducers:

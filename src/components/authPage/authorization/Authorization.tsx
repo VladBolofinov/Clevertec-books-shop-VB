@@ -10,7 +10,7 @@ import {MyLoader} from "../../sharedComponents/MyLoader/MyLoader";
 import {AuthModal} from "../authModal/AuthModal";
 import {NavLink} from "react-router-dom";
 const Authorization = () => {
-    const {isOnFocusLoginPlaceholder, isOnFocusPasswordPlaceholder, inputLoginValue, inputPasswordValue, inputType,
+    const {isOnFocusFirstPlaceholder, isOnFocusSecondPlaceholder, inputLoginValue, inputPasswordValue, inputType,
         requestStatus, isLoadingRegReq, error, authSuccess} = useAppSelector(state => state.authorizationReducer);
     const {setOnFocusPlaceholder, setInputLoginValue, setInputPasswordValue, setInputType, repeatLogIn} = authorizationSlice.actions;
     const dispatch = useAppDispatch();
@@ -24,16 +24,16 @@ const Authorization = () => {
                         {/*<button onClick={() => dispatch(registerNewUser({username:'admin999', password: '123'}))}>Register</button>*/}
                         <div className={(isLoadingRegReq) ? styles.modalLoading : styles.modal}>
                             <p className={styles.enterAccount}>Вход в личный кабинет</p>
-                            <p className={(isOnFocusLoginPlaceholder || inputLoginValue) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>Логин</p>
+                            <p className={(isOnFocusFirstPlaceholder || inputLoginValue) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>Логин</p>
                             <input className={(authSuccess) ? styles.loginInput : (requestStatus === 0) ? styles.loginInput : styles.loginInputWrong} type="text"
-                                   onFocus={() => dispatch(setOnFocusPlaceholder('Логин'))}
-                                   onBlur={() => dispatch(setOnFocusPlaceholder('Логин'))}
+                                   onFocus={() => dispatch(setOnFocusPlaceholder('First'))}
+                                   onBlur={() => dispatch(setOnFocusPlaceholder('First'))}
                                    onChange={(e) => dispatch(setInputLoginValue(e.target.value))}/>
                             <div className={styles.wrapperInput}>
-                                <p className={(isOnFocusPasswordPlaceholder || inputPasswordValue) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>Пароль</p>
+                                <p className={(isOnFocusSecondPlaceholder || inputPasswordValue) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>Пароль</p>
                                 <input className={(authSuccess) ? styles.passwordInput : (requestStatus === 0) ? styles.passwordInput : styles.passwordInputWrong} type={inputType}
-                                       onFocus={() => dispatch(setOnFocusPlaceholder('Пароль'))}
-                                       onBlur={() => dispatch(setOnFocusPlaceholder('Пароль'))}
+                                       onFocus={() => dispatch(setOnFocusPlaceholder('Second'))}
+                                       onBlur={() => dispatch(setOnFocusPlaceholder('Second'))}
                                        onChange={(e) => dispatch(setInputPasswordValue(e.target.value))}/>
                                 {(inputPasswordValue) ? <div className={styles.wrapperIcon}>
                                     {(inputType === 'password') ? <IconEye onClick={() => dispatch(setInputType('text'))}/>
@@ -62,7 +62,6 @@ const Authorization = () => {
                         </div>
                     </>}
         </>
-
     );
 };
 

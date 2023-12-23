@@ -42,7 +42,7 @@
     border-left: none;
     border-right: none;
     border-bottom-color: #BFC4C9FF;
-    padding: 19px 45px 19px 12px;
+    padding: 19px 55px 19px 12px;
     font-size: 14px;
     color: #363636;
   }
@@ -106,12 +106,13 @@
     align-items: center;
   }
   .wrapperIcon {
+    display: flex;
     position: absolute;
     bottom: 15px;
-    left: 90%;
-    width: 24px;
-    height: 24px;
+    left: 85%;
     cursor: pointer;
+    justify-content: center;
+    width: 55px;
   }
 }
 .modalLoading {
@@ -151,7 +152,7 @@
     }
     .wrapperIcon {
       bottom: 15px;
-      left: 87%;
+      left: 78%;
     }
   }
 }

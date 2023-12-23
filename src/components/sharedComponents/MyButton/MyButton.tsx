@@ -7,13 +7,13 @@ interface IButtonProps {
     height?: string;
     margin?: string;
     size?: string;
-    onClick?: () => void
-
+    onClick?: () => void;
+    active?: boolean;
 }
-export const MyButton = ({content, width, height, margin, size, onClick}:IButtonProps) => {
+export const MyButton = ({content, width, height, margin, size, onClick, active}:IButtonProps) => {
     return (
         <button style={{width, height, margin}}
                 className={(size) ? styles[size] : styles.btnStyles}
-                onClick={onClick}>{content}</button>
+                onClick={onClick} disabled={(active) ? active : false}>{content}</button>
     );
 };

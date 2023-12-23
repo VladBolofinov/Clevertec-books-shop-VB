@@ -2,7 +2,6 @@
   border-radius: 30px;
   font-family: Montserrat, serif;
   border: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +12,9 @@
   color: white;
   text-transform: uppercase;
   height: 52px;
+}
+.btnStyles:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .btnLg{
   composes: btnStyles;
@@ -28,6 +30,10 @@
   height: 40px;
   font-size: 12px;
   font-weight: 600;
+}
+button:disabled {
+  background: #EBEBEBFF;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

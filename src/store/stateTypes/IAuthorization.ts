@@ -1,6 +1,14 @@
-export default interface IAuthorization {
-    isOnFocusLoginPlaceholder: boolean;
-    isOnFocusPasswordPlaceholder: boolean;
+export interface IRegistrationData {
+    login: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    email: string;
+};
+export interface IAuthorization {
+    isOnFocusFirstPlaceholder: boolean;
+    isOnFocusSecondPlaceholder: boolean;
     inputLoginValue: string;
     inputPasswordValue: string;
     inputType: 'text' | 'password';
@@ -9,4 +17,6 @@ export default interface IAuthorization {
     registrationSuccess: boolean;
     authSuccess: boolean;
     requestStatus: number;
+    registrationData: IRegistrationData;
+    registrationStep: number;
 }

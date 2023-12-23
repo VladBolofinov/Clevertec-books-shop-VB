@@ -10,16 +10,16 @@ interface IAuthInputProps {
     inputPlaceholder?: string;
 }
 export const AuthInput = ({needValidate, inputPlaceholder}:IAuthInputProps) => {
-    const {isOnFocusPasswordPlaceholder, inputPasswordValue, inputType,
-        requestStatus,authSuccess} = useAppSelector(state => state.authorizationReducer);
+    const { inputPasswordValue, inputType,
+        requestStatus,authSuccess, isOnFocusSecondPlaceholder} = useAppSelector(state => state.authorizationReducer);
     const {setOnFocusPlaceholder, setInputPasswordValue, setInputType} = authorizationSlice.actions;
     const dispatch = useAppDispatch();
     return (
         <div className={styles.wrapperInput}>
-            <p className={(isOnFocusPasswordPlaceholder || inputPasswordValue) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>{inputPlaceholder}</p>
+            <p className={(isOnFocusSecondPlaceholder || inputPasswordValue) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>{inputPlaceholder}</p>
             <input className={(authSuccess) ? styles.passwordInput : (requestStatus === 0) ? styles.passwordInput : styles.passwordInputWrong} type={inputType}
-                   onFocus={() => dispatch(setOnFocusPlaceholder('Пароль'))}
-                   onBlur={() => dispatch(setOnFocusPlaceholder('Пароль'))}
+                   onFocus={() => dispatch(setOnFocusPlaceholder('Second'))}
+                   onBlur={() => dispatch(setOnFocusPlaceholder('Second'))}
                    onChange={(e) => dispatch(setInputPasswordValue(e.target.value))}/>
             {(inputPasswordValue) ? <div className={styles.wrapperIcon}>
                 {(inputType === 'password') ? <IconEye onClick={() => dispatch(setInputType('text'))}/>

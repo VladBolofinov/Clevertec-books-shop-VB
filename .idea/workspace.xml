@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="refactor auth logic" />
+    <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="made registration step 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/icons/AuthIcons/Icon_Other.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/icons/AuthIcons/IconCheck.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/registration/Registration.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/registration/Registration.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/registration/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/registration/Registration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,6 +130,9 @@
       <workItem from="1702747654889" duration="2583000" />
       <workItem from="1702899518124" duration="9424000" />
       <workItem from="1702976858359" duration="20910000" />
+      <workItem from="1703087441750" duration="6779000" />
+      <workItem from="1703250652719" duration="938000" />
+      <workItem from="1703336056521" duration="7325000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -329,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703004112557</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="made registration step 1">
+      <created>1703095376992</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1703095376992</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +382,8 @@
     <MESSAGE value="refactor styles in modal auth" />
     <MESSAGE value="implement registration logic" />
     <MESSAGE value="refactor auth logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor auth logic" />
+    <MESSAGE value="made registration step 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="made registration step 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
