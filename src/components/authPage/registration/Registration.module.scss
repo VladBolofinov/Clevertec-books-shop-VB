@@ -46,17 +46,14 @@
     font-size: 14px;
     color: #363636;
   }
-  .loginInput {
-    margin-top: 16px;
-  }
-  .passwordInput {
-    margin-top: 20px;
+  .inputValid {
+    margin-top: 18px;
   }
   :focus {
     outline: none;
   }
-  .loginInputWrong {
-    margin-top: 16px;
+  .inputWrong {
+    margin-top: 18px;
     border-bottom-color: #F42C4FFF;
   }
   .passwordInputWrong {
@@ -105,15 +102,15 @@
     display: flex;
     align-items: center;
   }
-  .wrapperIcon {
-    display: flex;
-    position: absolute;
-    bottom: 15px;
-    left: 85%;
-    cursor: pointer;
-    justify-content: center;
-    width: 55px;
-  }
+}
+.wrapperIcon {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 85%;
+  cursor: pointer;
+  justify-content: center;
+  width: 55px;
 }
 .modalLoading {
   composes: modal;

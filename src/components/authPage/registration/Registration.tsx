@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {useForm, SubmitHandler} from "react-hook-form";
 import styles from "./Registration.module.scss";
 import IconEye from "../../../assets/img/icons/AuthIcons/Eye.svg";
@@ -9,7 +9,8 @@ import {authorizationSlice} from "../../../store/reducers/AuthorizationSlice";
 import {NavLink} from "react-router-dom";
 import IconArrowRight from "../../../assets/img/icons/AuthIcons/IconChevron.svg";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-
+import {highlightedText} from "./highlightedTextFunc";
+import {AuthInput} from "../authInput/AuthInput";
 type Inputs = {
     login: string;
     password: string
@@ -38,63 +39,20 @@ export const Registration = () => {
         dispatch(setNextStepRegistration());
     }
 
-    const highlightedText = (inputType: string, validateResult: string) => {
-        const redText = {color: "red"};
-        if (!validateResult) {
-            return null;
-        }
-        if (inputType === 'login') {
-            if (validateResult === 'латинский алфавит') {
-                return <p>Используйте для логина <span style={redText}>латинский алфавит</span> и цифры</p>
-            } else {
-                return <p style={redText}>Используйте для логина латинский алфавит и цифры</p>
-            }
-        } else if (inputType === 'password') {
-            if (validateResult === 'с заглавной буквой') {
-                return <p>Пароль не менее 8 символов, <span style={redText}>с заглавной буквой</span> и цифрой</p>
-            } else if (validateResult === 'не менее 8 символов') {
-                return <p><span style={redText}>Пароль не менее 8 символов,</span> с заглавной буквой и цифрой</p>
-            } else {
-                return <p style={redText}>Пароль не менее 8 символов, с заглавной буквой и цифрой</p>
-            }
-        }
-    }
-
     return (
             <>
             <div className={styles.modal}>
                 <p className={styles.enterAccount}>Регистрация</p>
                 <p className={styles.stepText}>{registrationStep} шаг из 3</p>
-                <p className={(isOnFocusFirstPlaceholder || registrationData.login) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>Придумайте логин для входа</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                <input className={(errors.login?.message) ? styles.loginInputWrong  : styles.loginInput} type="text"
-                       onFocus={() => dispatch(setOnFocusPlaceholder('First'))}
-                       {...register("login",
-                           {
-                               onBlur: () => dispatch(setOnFocusPlaceholder('First')),
-                               onChange:(e) => dispatch(setRegistrationData({type: 'login', value: e.target.value})),
-                               required: true,
-                               validate: {
-                                   checkLogin: (value) => {
-                                       const hasSpecificSymbols = /[^a-zA-Z0-9]/g.test(value);
-                                       const hasNumbersOnly = /\d/.test(value);
-                                       const hasAllParams = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$/.test(value);
-                                       if (hasAllParams) {
-                                           return true;
-                                       } else if (hasSpecificSymbols && hasNumbersOnly) {
-                                           return 'латинский алфавит';
-                                       } else {
-                                           return 'Используйте для логина латинский алфавит и цифры';
-                                       }
-                                   },
-                               },
-                           })}/>
-                <p className={styles.inputTooltip}>{(errors.login?.message)
-                    ? highlightedText('login',errors.login.message)
-                    : 'Используйте для логина латинский алфавит и цифры'}</p>
+                    <AuthInput placeholderValue={'Придумайте логин для входа'}
+                               inputRegistrationData={'login'}
+                               needValidate={true}
+                               inputNumber={'First'}
+                               inputTypeProp={'text'}/>
                 <div className={styles.wrapperInput}>
                     <p className={(isOnFocusSecondPlaceholder || registrationData.password) ? styles.onFocusPlaceholder : styles.notFocusPlaceholder}>Пароль</p>
-                    <input className={(errors.password?.message) ? styles.passwordInputWrong  : styles.passwordInput} type={inputType}
+                    <input className={(errors.password?.message) ? styles.inputWrong  : styles.inputValid} type={inputType}
                            onFocus={() => dispatch(setOnFocusPlaceholder('Second'))}
                            {...register("password",
                                {

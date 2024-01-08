@@ -1,0 +1,66 @@
+input {
+  width: 416px;
+  height: 56px;
+  background-color: rgba(249, 249, 250, 1);
+  border-radius: 3px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #BFC4C9FF;
+  padding: 19px 55px 19px 12px;
+  font-size: 14px;
+  color: #363636;
+}
+.wrapperInput {
+  position: relative;
+}
+.notFocusPlaceholder {
+  position: relative;
+  top: 54px;
+  left: 12px;
+  font-size: 14px;
+  width: 220px; //был 55px//может плохо кликаться по инпуту т.к. по всей ширине занимает (пересмотри потом этот момент)
+  transition: top 0.2s;
+}
+.onFocusPlaceholder {
+  position: relative;
+  top: 34px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #A7A7A7FF;
+  transition: top 0.2s;
+}
+.inputValid {
+  margin-top: 18px;
+}
+.inputWrong {
+  margin-top: 18px;
+  border-bottom-color: #F42C4FFF;
+}
+:focus {
+  outline: none;
+}
+.loginInputWrong {
+  margin-top: 16px;
+  border-bottom-color: #F42C4FFF;
+}
+.passwordInputWrong {
+  margin-top: 20px;
+  border-bottom-color: #F42C4FFF;
+}
+.inputTooltip {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 12px;
+  color: #A7A7A7FF;
+}
+.wrapperIcon {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 85%;
+  cursor: pointer;
+  justify-content: center;
+  width: 55px;
+}

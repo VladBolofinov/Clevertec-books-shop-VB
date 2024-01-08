@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7080eea9-9892-4754-8565-f740703bb2e3" name="Changes" comment="made registration step 1">
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/registration/highlightedTextFunc.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authPage/validationLogic.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/icons/AuthIcons/Icon_Other.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/icons/AuthIcons/IconCheck.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authInput/AuthInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/authorization/Authorization.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authPage/registration/Registration.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/registration/Registration.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authPage/registration/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authPage/registration/Registration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sharedComponents/MyButton/MyButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/AuthorizationSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stateTypes/IAuthorization.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +128,9 @@
       <workItem from="1702976858359" duration="20910000" />
       <workItem from="1703087441750" duration="6779000" />
       <workItem from="1703250652719" duration="938000" />
-      <workItem from="1703336056521" duration="7325000" />
+      <workItem from="1703336056521" duration="7653000" />
+      <workItem from="1704367197164" duration="425000" />
+      <workItem from="1704715424260" duration="19674000" />
     </task>
     <task id="LOCAL-00001" summary="refactor api requests and created modalWrongData">
       <created>1698863249883</created>
@@ -356,6 +354,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor api requests and created modalWrongData" />
