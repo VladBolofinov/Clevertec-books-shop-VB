@@ -43,6 +43,7 @@ export const AuthInput = ({needValidate, inputNumber, inputRegistrationData, inp
     } = useForm<IRegistrationData>({
         mode: 'onChange'
     })
+
     return (
         <>
             <div className={styles.wrapperInput}>
